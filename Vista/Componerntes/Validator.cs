@@ -39,6 +39,8 @@ namespace Vista.Componerntes
                 throw ex;
             }
         }
+        
+        // validacion de textos para los campos de tipo texto
         public static void isString(KeyPressEventArgs e)
         {
             try
