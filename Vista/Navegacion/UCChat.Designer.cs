@@ -52,7 +52,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(148, 35);
             this.button3.TabIndex = 22;
-            this.button3.Text = " Empresas";
+            this.button3.Text = "Salir";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
@@ -71,7 +71,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(148, 35);
             this.button2.TabIndex = 21;
-            this.button2.Text = " Empresas";
+            this.button2.Text = "Configuracion";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
@@ -90,7 +90,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 35);
             this.button1.TabIndex = 20;
-            this.button1.Text = " Empresas";
+            this.button1.Text = "Modificar cuenta";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
@@ -119,7 +119,7 @@
             this.btnEmpresas.Name = "btnEmpresas";
             this.btnEmpresas.Size = new System.Drawing.Size(148, 35);
             this.btnEmpresas.TabIndex = 18;
-            this.btnEmpresas.Text = " Empresas";
+            this.btnEmpresas.Text = "Perfil";
             this.btnEmpresas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmpresas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEmpresas.UseVisualStyleBackColor = true;
@@ -129,11 +129,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(18, 20);
+            this.label1.Location = new System.Drawing.Point(11, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 29);
+            this.label1.Size = new System.Drawing.Size(116, 29);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Chat";
+            this.label1.Text = "Usuarios";
             // 
             // UCChat
             // 
