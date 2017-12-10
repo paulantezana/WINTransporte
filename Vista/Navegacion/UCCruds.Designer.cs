@@ -198,7 +198,7 @@
             this.btnTipoEmpresa.Name = "btnTipoEmpresa";
             this.btnTipoEmpresa.Size = new System.Drawing.Size(148, 35);
             this.btnTipoEmpresa.TabIndex = 25;
-            this.btnTipoEmpresa.Text = " Timpos Empresa";
+            this.btnTipoEmpresa.Text = " Tipos Empresa";
             this.btnTipoEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTipoEmpresa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTipoEmpresa.UseVisualStyleBackColor = true;
