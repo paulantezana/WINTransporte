@@ -103,7 +103,7 @@
             // partidaLabel
             // 
             partidaLabel.AutoSize = true;
-            partidaLabel.Location = new System.Drawing.Point(48, 113);
+            partidaLabel.Location = new System.Drawing.Point(24, 74);
             partidaLabel.Name = "partidaLabel";
             partidaLabel.Size = new System.Drawing.Size(42, 13);
             partidaLabel.TabIndex = 27;
@@ -112,7 +112,7 @@
             // destinoLabel
             // 
             destinoLabel.AutoSize = true;
-            destinoLabel.Location = new System.Drawing.Point(70, 144);
+            destinoLabel.Location = new System.Drawing.Point(24, 131);
             destinoLabel.Name = "destinoLabel";
             destinoLabel.Size = new System.Drawing.Size(44, 13);
             destinoLabel.TabIndex = 28;
@@ -121,7 +121,7 @@
             // frecuenciaLabel
             // 
             frecuenciaLabel.AutoSize = true;
-            frecuenciaLabel.Location = new System.Drawing.Point(77, 190);
+            frecuenciaLabel.Location = new System.Drawing.Point(24, 170);
             frecuenciaLabel.Name = "frecuenciaLabel";
             frecuenciaLabel.Size = new System.Drawing.Size(60, 13);
             frecuenciaLabel.TabIndex = 29;
@@ -221,16 +221,16 @@
             // frecuenciaTextBox
             // 
             this.frecuenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rutasBindingSource, "frecuencia", true));
-            this.frecuenciaTextBox.Location = new System.Drawing.Point(143, 187);
+            this.frecuenciaTextBox.Location = new System.Drawing.Point(27, 186);
             this.frecuenciaTextBox.Name = "frecuenciaTextBox";
-            this.frecuenciaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.frecuenciaTextBox.Size = new System.Drawing.Size(247, 20);
             this.frecuenciaTextBox.TabIndex = 30;
             this.frecuenciaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frecuenciaTextBox_KeyPress);
             // 
             // destinoTextBox
             // 
             this.destinoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rutasBindingSource, "destino", true));
-            this.destinoTextBox.Location = new System.Drawing.Point(120, 141);
+            this.destinoTextBox.Location = new System.Drawing.Point(27, 147);
             this.destinoTextBox.Name = "destinoTextBox";
             this.destinoTextBox.Size = new System.Drawing.Size(100, 20);
             this.destinoTextBox.TabIndex = 29;
@@ -238,7 +238,7 @@
             // partidaTextBox
             // 
             this.partidaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rutasBindingSource, "partida", true));
-            this.partidaTextBox.Location = new System.Drawing.Point(96, 110);
+            this.partidaTextBox.Location = new System.Drawing.Point(27, 90);
             this.partidaTextBox.Name = "partidaTextBox";
             this.partidaTextBox.Size = new System.Drawing.Size(100, 20);
             this.partidaTextBox.TabIndex = 28;
