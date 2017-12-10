@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E123671-EC56-4254-96EA-4680EA1C4FA0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Vista</RootNamespace>
+    <AssemblyName>Vista</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>C:\Users\yoel\Documents\Bunifu_UI\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Componerntes\Validator.cs" />
+    <Compile Include="Crud\UCChoferes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Crud\UCChoferes.Designer.cs">
+      <DependentUpon>UCChoferes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\UCEmpresas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Crud\UCEmpresas.Designer.cs">
+      <DependentUpon>UCEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\UCLicencias.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Crud\UCLicencias.Designer.cs">
+      <DependentUpon>UCLicencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\UCPapeletas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Crud\UCPapeletas.Designer.cs">
+      <DependentUpon>UCPapeletas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\UCRutas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Crud\UCRutas.Designer.cs">
+      <DependentUpon>UCRutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\UCTipoEmpresa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Crud\UCTipoEmpresa.Designer.cs">
+      <DependentUpon>UCTipoEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\UCTipoVehiculo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Crud\UCTipoVehiculo.Designer.cs">
+      <DependentUpon>UCTipoVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\UCUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Crud\UCUsuarios.Designer.cs">
+      <DependentUpon>UCUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\UCVehiculos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Crud\UCVehiculos.Designer.cs">
+      <DependentUpon>UCVehiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBTransporte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBTransporte.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHelp.Designer.cs">
+      <DependentUpon>FormHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHome.Designer.cs">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Navegacion\UCChat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Navegacion\UCChat.Designer.cs">
+      <DependentUpon>UCChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Navegacion\UCConsultas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Navegacion\UCConsultas.Designer.cs">
+      <DependentUpon>UCConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Navegacion\UCCruds.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Navegacion\UCCruds.Designer.cs">
+      <DependentUpon>UCCruds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Navegacion\UCMovimientos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Navegacion\UCMovimientos.Designer.cs">
+      <DependentUpon>UCMovimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Navegacion\UCReportes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Navegacion\UCReportes.Designer.cs">
+      <DependentUpon>UCReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Crud\UCChoferes.resx">
+      <DependentUpon>UCChoferes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\UCEmpresas.resx">
+      <DependentUpon>UCEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\UCLicencias.resx">
+      <DependentUpon>UCLicencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\UCPapeletas.resx">
+      <DependentUpon>UCPapeletas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\UCRutas.resx">
+      <DependentUpon>UCRutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\UCTipoEmpresa.resx">
+      <DependentUpon>UCTipoEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\UCTipoVehiculo.resx">
+      <DependentUpon>UCTipoVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\UCUsuarios.resx">
+      <DependentUpon>UCUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\UCVehiculos.resx">
+      <DependentUpon>UCVehiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHelp.resx">
+      <DependentUpon>FormHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHome.resx">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navegacion\UCChat.resx">
+      <DependentUpon>UCChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navegacion\UCConsultas.resx">
+      <DependentUpon>UCConsultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navegacion\UCCruds.resx">
+      <DependentUpon>UCCruds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navegacion\UCMovimientos.resx">
+      <DependentUpon>UCMovimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navegacion\UCReportes.resx">
+      <DependentUpon>UCReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="DBTransporte.xsc">
+      <DependentUpon>DBTransporte.xsd</DependentUpon>
+    </None>
+    <None Include="DBTransporte.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBTransporte.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DBTransporte.xss">
+      <DependentUpon>DBTransporte.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuracion\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controlador\Controlador.csproj">
+      <Project>{49c2e927-b5a9-4e43-b121-45ea69ecf606}</Project>
+      <Name>Controlador</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidad\Entidad.csproj">
+      <Project>{74b8f551-c21d-4d1c-b54f-1090759bab6e}</Project>
+      <Name>Entidad</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
