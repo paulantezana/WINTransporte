@@ -37,7 +37,7 @@
             System.Windows.Forms.Label direccionLabel;
             System.Windows.Forms.Label id_licenciaLabel;
             System.Windows.Forms.Label id_empresaLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCChoferes));
             this.panel5 = new System.Windows.Forms.Panel();
             this.id_empresaComboBox = new System.Windows.Forms.ComboBox();
@@ -117,74 +117,82 @@
             // dniLabel
             // 
             dniLabel.AutoSize = true;
-            dniLabel.Location = new System.Drawing.Point(41, 93);
+            dniLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dniLabel.Location = new System.Drawing.Point(40, 93);
             dniLabel.Name = "dniLabel";
-            dniLabel.Size = new System.Drawing.Size(24, 13);
+            dniLabel.Size = new System.Drawing.Size(31, 16);
             dniLabel.TabIndex = 27;
-            dniLabel.Text = "dni:";
+            dniLabel.Text = "Dni:";
             // 
             // nombresLabel
             // 
             nombresLabel.AutoSize = true;
-            nombresLabel.Location = new System.Drawing.Point(41, 134);
+            nombresLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombresLabel.Location = new System.Drawing.Point(38, 147);
             nombresLabel.Name = "nombresLabel";
-            nombresLabel.Size = new System.Drawing.Size(50, 13);
+            nombresLabel.Size = new System.Drawing.Size(67, 16);
             nombresLabel.TabIndex = 28;
-            nombresLabel.Text = "nombres:";
+            nombresLabel.Text = "Nombres:";
             // 
             // apellidosLabel
             // 
             apellidosLabel.AutoSize = true;
-            apellidosLabel.Location = new System.Drawing.Point(68, 187);
+            apellidosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            apellidosLabel.Location = new System.Drawing.Point(40, 203);
             apellidosLabel.Name = "apellidosLabel";
-            apellidosLabel.Size = new System.Drawing.Size(51, 13);
+            apellidosLabel.Size = new System.Drawing.Size(68, 16);
             apellidosLabel.TabIndex = 29;
-            apellidosLabel.Text = "apellidos:";
+            apellidosLabel.Text = "Apellidos:";
             // 
             // telefonoLabel
             // 
             telefonoLabel.AutoSize = true;
-            telefonoLabel.Location = new System.Drawing.Point(60, 222);
+            telefonoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            telefonoLabel.Location = new System.Drawing.Point(40, 262);
             telefonoLabel.Name = "telefonoLabel";
-            telefonoLabel.Size = new System.Drawing.Size(48, 13);
+            telefonoLabel.Size = new System.Drawing.Size(65, 16);
             telefonoLabel.TabIndex = 30;
-            telefonoLabel.Text = "telefono:";
+            telefonoLabel.Text = "Telefono:";
             // 
             // emailLabel
             // 
             emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(57, 259);
+            emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            emailLabel.Location = new System.Drawing.Point(40, 313);
             emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(34, 13);
+            emailLabel.Size = new System.Drawing.Size(48, 16);
             emailLabel.TabIndex = 31;
-            emailLabel.Text = "email:";
+            emailLabel.Text = "e-mail:";
             // 
             // direccionLabel
             // 
             direccionLabel.AutoSize = true;
-            direccionLabel.Location = new System.Drawing.Point(55, 294);
+            direccionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            direccionLabel.Location = new System.Drawing.Point(40, 361);
             direccionLabel.Name = "direccionLabel";
-            direccionLabel.Size = new System.Drawing.Size(53, 13);
+            direccionLabel.Size = new System.Drawing.Size(68, 16);
             direccionLabel.TabIndex = 32;
-            direccionLabel.Text = "direccion:";
+            direccionLabel.Text = "Direccion:";
             // 
             // id_licenciaLabel
             // 
             id_licenciaLabel.AutoSize = true;
-            id_licenciaLabel.Location = new System.Drawing.Point(51, 336);
+            id_licenciaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            id_licenciaLabel.Location = new System.Drawing.Point(40, 408);
             id_licenciaLabel.Name = "id_licenciaLabel";
-            id_licenciaLabel.Size = new System.Drawing.Size(57, 13);
+            id_licenciaLabel.Size = new System.Drawing.Size(61, 16);
             id_licenciaLabel.TabIndex = 33;
-            id_licenciaLabel.Text = "id licencia:";
+            id_licenciaLabel.Text = "Licencia:";
             // 
             // id_empresaLabel
             // 
             id_empresaLabel.AutoSize = true;
-            id_empresaLabel.Location = new System.Drawing.Point(105, 380);
+            id_empresaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            id_empresaLabel.Location = new System.Drawing.Point(39, 458);
             id_empresaLabel.Name = "id_empresaLabel";
-            id_empresaLabel.Size = new System.Drawing.Size(61, 13);
+            id_empresaLabel.Size = new System.Drawing.Size(66, 16);
             id_empresaLabel.TabIndex = 34;
-            id_empresaLabel.Text = "id empresa:";
+            id_empresaLabel.Text = "Empresa:";
             // 
             // panel5
             // 
@@ -214,7 +222,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Location = new System.Drawing.Point(555, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(313, 503);
+            this.panel5.Size = new System.Drawing.Size(313, 639);
             this.panel5.TabIndex = 11;
             // 
             // id_empresaComboBox
@@ -223,10 +231,11 @@
             this.id_empresaComboBox.DataSource = this.empresasBindingSource;
             this.id_empresaComboBox.DisplayMember = "nombre";
             this.id_empresaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.id_empresaComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.id_empresaComboBox.FormattingEnabled = true;
-            this.id_empresaComboBox.Location = new System.Drawing.Point(172, 377);
+            this.id_empresaComboBox.Location = new System.Drawing.Point(42, 474);
             this.id_empresaComboBox.Name = "id_empresaComboBox";
-            this.id_empresaComboBox.Size = new System.Drawing.Size(121, 21);
+            this.id_empresaComboBox.Size = new System.Drawing.Size(121, 24);
             this.id_empresaComboBox.TabIndex = 35;
             this.id_empresaComboBox.ValueMember = "id_empresa";
             // 
@@ -251,10 +260,11 @@
             this.id_licenciaComboBox.DataSource = this.licenciasBindingSource;
             this.id_licenciaComboBox.DisplayMember = "licencia";
             this.id_licenciaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.id_licenciaComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.id_licenciaComboBox.FormattingEnabled = true;
-            this.id_licenciaComboBox.Location = new System.Drawing.Point(114, 333);
+            this.id_licenciaComboBox.Location = new System.Drawing.Point(42, 424);
             this.id_licenciaComboBox.Name = "id_licenciaComboBox";
-            this.id_licenciaComboBox.Size = new System.Drawing.Size(121, 21);
+            this.id_licenciaComboBox.Size = new System.Drawing.Size(121, 24);
             this.id_licenciaComboBox.TabIndex = 34;
             this.id_licenciaComboBox.ValueMember = "id_licencia";
             // 
@@ -266,51 +276,58 @@
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(114, 291);
+            this.direccionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.direccionTextBox.Location = new System.Drawing.Point(43, 377);
             this.direccionTextBox.Name = "direccionTextBox";
-            this.direccionTextBox.Size = new System.Drawing.Size(100, 20);
+            this.direccionTextBox.Size = new System.Drawing.Size(245, 22);
             this.direccionTextBox.TabIndex = 33;
             // 
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(97, 256);
+            this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTextBox.Location = new System.Drawing.Point(43, 329);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(100, 20);
+            this.emailTextBox.Size = new System.Drawing.Size(245, 22);
             this.emailTextBox.TabIndex = 32;
             // 
             // telefonoTextBox
             // 
             this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "telefono", true));
-            this.telefonoTextBox.Location = new System.Drawing.Point(114, 219);
+            this.telefonoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.telefonoTextBox.Location = new System.Drawing.Point(43, 278);
             this.telefonoTextBox.Name = "telefonoTextBox";
-            this.telefonoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.telefonoTextBox.Size = new System.Drawing.Size(121, 22);
             this.telefonoTextBox.TabIndex = 31;
             this.telefonoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.telefonoTextBox_KeyPress);
             // 
             // apellidosTextBox
             // 
             this.apellidosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "apellidos", true));
-            this.apellidosTextBox.Location = new System.Drawing.Point(125, 184);
+            this.apellidosTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apellidosTextBox.Location = new System.Drawing.Point(43, 219);
             this.apellidosTextBox.Name = "apellidosTextBox";
-            this.apellidosTextBox.Size = new System.Drawing.Size(100, 20);
+            this.apellidosTextBox.Size = new System.Drawing.Size(245, 22);
             this.apellidosTextBox.TabIndex = 30;
             // 
             // nombresTextBox
             // 
             this.nombresTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "nombres", true));
-            this.nombresTextBox.Location = new System.Drawing.Point(97, 131);
+            this.nombresTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombresTextBox.Location = new System.Drawing.Point(43, 163);
             this.nombresTextBox.Name = "nombresTextBox";
-            this.nombresTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nombresTextBox.Size = new System.Drawing.Size(245, 22);
             this.nombresTextBox.TabIndex = 29;
             // 
             // dniTextBox
             // 
             this.dniTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "dni", true));
-            this.dniTextBox.Location = new System.Drawing.Point(71, 90);
+            this.dniTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dniTextBox.Location = new System.Drawing.Point(43, 109);
             this.dniTextBox.Name = "dniTextBox";
-            this.dniTextBox.Size = new System.Drawing.Size(100, 20);
+            this.dniTextBox.Size = new System.Drawing.Size(121, 22);
             this.dniTextBox.TabIndex = 28;
+            this.dniTextBox.TextChanged += new System.EventHandler(this.dniTextBox_TextChanged);
             // 
             // btnNuevo
             // 
@@ -364,7 +381,7 @@
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(213)))), ((int)(((byte)(217)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.btnCancelar.Location = new System.Drawing.Point(111, 452);
+            this.btnCancelar.Location = new System.Drawing.Point(111, 588);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(85, 30);
             this.btnCancelar.TabIndex = 25;
@@ -382,7 +399,7 @@
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(114)))), ((int)(((byte)(220)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(202, 452);
+            this.btnGuardar.Location = new System.Drawing.Point(202, 588);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(85, 30);
             this.btnGuardar.TabIndex = 22;
@@ -398,7 +415,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(555, 503);
+            this.panel4.Size = new System.Drawing.Size(555, 639);
             this.panel4.TabIndex = 12;
             // 
             // panel3
@@ -410,7 +427,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 74);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.panel3.Size = new System.Drawing.Size(555, 379);
+            this.panel3.Size = new System.Drawing.Size(555, 515);
             this.panel3.TabIndex = 6;
             // 
             // choferesDataGridView
@@ -421,14 +438,14 @@
             this.choferesDataGridView.AutoGenerateColumns = false;
             this.choferesDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.choferesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.choferesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.choferesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.choferesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.choferesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -445,7 +462,7 @@
             this.choferesDataGridView.Location = new System.Drawing.Point(20, 0);
             this.choferesDataGridView.Name = "choferesDataGridView";
             this.choferesDataGridView.ReadOnly = true;
-            this.choferesDataGridView.Size = new System.Drawing.Size(515, 354);
+            this.choferesDataGridView.Size = new System.Drawing.Size(515, 490);
             this.choferesDataGridView.TabIndex = 14;
             // 
             // dataGridViewTextBoxColumn1
@@ -528,7 +545,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.choferesBindingNavigator.Location = new System.Drawing.Point(20, 354);
+            this.choferesBindingNavigator.Location = new System.Drawing.Point(20, 490);
             this.choferesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.choferesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.choferesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -680,7 +697,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.textBuscar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 453);
+            this.panel2.Location = new System.Drawing.Point(0, 589);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.panel2.Size = new System.Drawing.Size(555, 50);
@@ -738,7 +755,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Name = "UCChoferes";
-            this.Size = new System.Drawing.Size(868, 503);
+            this.Size = new System.Drawing.Size(868, 639);
             this.Load += new System.EventHandler(this.UCChoferes_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();

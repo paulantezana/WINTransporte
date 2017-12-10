@@ -122,5 +122,15 @@ namespace Vista.Crud
         {
             Validator.isNumber(e);
         }
+
+        private void cruce_rutaTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cerradaCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

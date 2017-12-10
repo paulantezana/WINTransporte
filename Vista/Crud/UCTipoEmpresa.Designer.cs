@@ -86,9 +86,9 @@
             tipoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(48)))), ((int)(((byte)(55)))));
             tipoLabel.Location = new System.Drawing.Point(24, 80);
             tipoLabel.Name = "tipoLabel";
-            tipoLabel.Size = new System.Drawing.Size(33, 16);
+            tipoLabel.Size = new System.Drawing.Size(119, 16);
             tipoLabel.TabIndex = 27;
-            tipoLabel.Text = "tipo:";
+            tipoLabel.Text = "Tipo de Empresa :";
             // 
             // panel4
             // 

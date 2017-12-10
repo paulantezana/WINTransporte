@@ -83,11 +83,12 @@
             // tipoLabel
             // 
             tipoLabel.AutoSize = true;
-            tipoLabel.Location = new System.Drawing.Point(110, 163);
+            tipoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tipoLabel.Location = new System.Drawing.Point(24, 88);
             tipoLabel.Name = "tipoLabel";
-            tipoLabel.Size = new System.Drawing.Size(27, 13);
+            tipoLabel.Size = new System.Drawing.Size(116, 16);
             tipoLabel.TabIndex = 27;
-            tipoLabel.Text = "tipo:";
+            tipoLabel.Text = "Tipo de Vehiculo :";
             // 
             // panel5
             // 
@@ -109,9 +110,10 @@
             // tipoTextBox
             // 
             this.tipoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tipo_vehiculosBindingSource, "tipo", true));
-            this.tipoTextBox.Location = new System.Drawing.Point(143, 160);
+            this.tipoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tipoTextBox.Location = new System.Drawing.Point(27, 104);
             this.tipoTextBox.Name = "tipoTextBox";
-            this.tipoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.tipoTextBox.Size = new System.Drawing.Size(247, 22);
             this.tipoTextBox.TabIndex = 28;
             // 
             // tipo_vehiculosBindingSource

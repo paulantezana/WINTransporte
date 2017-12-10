@@ -35,7 +35,7 @@
             System.Windows.Forms.Label distanciaLabel;
             System.Windows.Forms.Label cruce_rutaLabel;
             System.Windows.Forms.Label cerradaLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCRutas));
             this.panel5 = new System.Windows.Forms.Panel();
             this.cerradaCheckBox = new System.Windows.Forms.CheckBox();
@@ -103,54 +103,60 @@
             // partidaLabel
             // 
             partidaLabel.AutoSize = true;
+            partidaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             partidaLabel.Location = new System.Drawing.Point(24, 74);
             partidaLabel.Name = "partidaLabel";
-            partidaLabel.Size = new System.Drawing.Size(42, 13);
+            partidaLabel.Size = new System.Drawing.Size(54, 16);
             partidaLabel.TabIndex = 27;
-            partidaLabel.Text = "partida:";
+            partidaLabel.Text = "Partida:";
             // 
             // destinoLabel
             // 
             destinoLabel.AutoSize = true;
-            destinoLabel.Location = new System.Drawing.Point(24, 131);
+            destinoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            destinoLabel.Location = new System.Drawing.Point(24, 122);
             destinoLabel.Name = "destinoLabel";
-            destinoLabel.Size = new System.Drawing.Size(44, 13);
+            destinoLabel.Size = new System.Drawing.Size(57, 16);
             destinoLabel.TabIndex = 28;
-            destinoLabel.Text = "destino:";
+            destinoLabel.Text = "Destino:";
             // 
             // frecuenciaLabel
             // 
             frecuenciaLabel.AutoSize = true;
+            frecuenciaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             frecuenciaLabel.Location = new System.Drawing.Point(24, 170);
             frecuenciaLabel.Name = "frecuenciaLabel";
-            frecuenciaLabel.Size = new System.Drawing.Size(60, 13);
+            frecuenciaLabel.Size = new System.Drawing.Size(78, 16);
             frecuenciaLabel.TabIndex = 29;
-            frecuenciaLabel.Text = "frecuencia:";
+            frecuenciaLabel.Text = "Frecuencia:";
             // 
             // distanciaLabel
             // 
             distanciaLabel.AutoSize = true;
-            distanciaLabel.Location = new System.Drawing.Point(86, 233);
+            distanciaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            distanciaLabel.Location = new System.Drawing.Point(24, 219);
             distanciaLabel.Name = "distanciaLabel";
-            distanciaLabel.Size = new System.Drawing.Size(52, 13);
+            distanciaLabel.Size = new System.Drawing.Size(67, 16);
             distanciaLabel.TabIndex = 30;
-            distanciaLabel.Text = "distancia:";
+            distanciaLabel.Text = "Distancia:";
             // 
             // cruce_rutaLabel
             // 
             cruce_rutaLabel.AutoSize = true;
-            cruce_rutaLabel.Location = new System.Drawing.Point(54, 278);
+            cruce_rutaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cruce_rutaLabel.Location = new System.Drawing.Point(159, 219);
             cruce_rutaLabel.Name = "cruce_rutaLabel";
-            cruce_rutaLabel.Size = new System.Drawing.Size(58, 13);
+            cruce_rutaLabel.Size = new System.Drawing.Size(71, 16);
             cruce_rutaLabel.TabIndex = 31;
-            cruce_rutaLabel.Text = "cruce ruta:";
+            cruce_rutaLabel.Text = "Cruce ruta:";
             // 
             // cerradaLabel
             // 
             cerradaLabel.AutoSize = true;
-            cerradaLabel.Location = new System.Drawing.Point(68, 320);
+            cerradaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cerradaLabel.Location = new System.Drawing.Point(24, 267);
             cerradaLabel.Name = "cerradaLabel";
-            cerradaLabel.Size = new System.Drawing.Size(46, 13);
+            cerradaLabel.Size = new System.Drawing.Size(58, 16);
             cerradaLabel.TabIndex = 32;
             cerradaLabel.Text = "cerrada:";
             // 
@@ -184,12 +190,13 @@
             // cerradaCheckBox
             // 
             this.cerradaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.rutasBindingSource, "cerrada", true));
-            this.cerradaCheckBox.Location = new System.Drawing.Point(120, 315);
+            this.cerradaCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cerradaCheckBox.Location = new System.Drawing.Point(27, 283);
             this.cerradaCheckBox.Name = "cerradaCheckBox";
             this.cerradaCheckBox.Size = new System.Drawing.Size(104, 24);
             this.cerradaCheckBox.TabIndex = 33;
-            this.cerradaCheckBox.Text = "checkBox1";
             this.cerradaCheckBox.UseVisualStyleBackColor = true;
+            this.cerradaCheckBox.CheckedChanged += new System.EventHandler(this.cerradaCheckBox_CheckedChanged);
             // 
             // rutasBindingSource
             // 
@@ -204,43 +211,49 @@
             // cruce_rutaTextBox
             // 
             this.cruce_rutaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rutasBindingSource, "cruce_ruta", true));
-            this.cruce_rutaTextBox.Location = new System.Drawing.Point(118, 275);
+            this.cruce_rutaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cruce_rutaTextBox.Location = new System.Drawing.Point(162, 235);
             this.cruce_rutaTextBox.Name = "cruce_rutaTextBox";
-            this.cruce_rutaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cruce_rutaTextBox.Size = new System.Drawing.Size(112, 22);
             this.cruce_rutaTextBox.TabIndex = 32;
+            this.cruce_rutaTextBox.TextChanged += new System.EventHandler(this.cruce_rutaTextBox_TextChanged);
             // 
             // distanciaTextBox
             // 
             this.distanciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rutasBindingSource, "distancia", true));
-            this.distanciaTextBox.Location = new System.Drawing.Point(144, 230);
+            this.distanciaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.distanciaTextBox.Location = new System.Drawing.Point(27, 235);
             this.distanciaTextBox.Name = "distanciaTextBox";
-            this.distanciaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.distanciaTextBox.Size = new System.Drawing.Size(114, 22);
             this.distanciaTextBox.TabIndex = 31;
             this.distanciaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.distanciaTextBox_KeyPress);
             // 
             // frecuenciaTextBox
             // 
             this.frecuenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rutasBindingSource, "frecuencia", true));
+            this.frecuenciaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.frecuenciaTextBox.Location = new System.Drawing.Point(27, 186);
             this.frecuenciaTextBox.Name = "frecuenciaTextBox";
-            this.frecuenciaTextBox.Size = new System.Drawing.Size(247, 20);
+            this.frecuenciaTextBox.Size = new System.Drawing.Size(247, 22);
             this.frecuenciaTextBox.TabIndex = 30;
             this.frecuenciaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frecuenciaTextBox_KeyPress);
             // 
             // destinoTextBox
             // 
             this.destinoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rutasBindingSource, "destino", true));
-            this.destinoTextBox.Location = new System.Drawing.Point(27, 147);
+            this.destinoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.destinoTextBox.Location = new System.Drawing.Point(27, 138);
             this.destinoTextBox.Name = "destinoTextBox";
-            this.destinoTextBox.Size = new System.Drawing.Size(247, 20);
+            this.destinoTextBox.Size = new System.Drawing.Size(247, 22);
             this.destinoTextBox.TabIndex = 29;
             // 
             // partidaTextBox
             // 
             this.partidaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rutasBindingSource, "partida", true));
-            this.partidaTextBox.Location = new System.Drawing.Point(27, 108);
+            this.partidaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.partidaTextBox.Location = new System.Drawing.Point(27, 90);
             this.partidaTextBox.Name = "partidaTextBox";
-            this.partidaTextBox.Size = new System.Drawing.Size(247, 20);
+            this.partidaTextBox.Size = new System.Drawing.Size(247, 22);
             this.partidaTextBox.TabIndex = 28;
             // 
             // btnNuevo
@@ -352,14 +365,14 @@
             this.rutasDataGridView.AutoGenerateColumns = false;
             this.rutasDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.rutasDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.rutasDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.rutasDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.rutasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.rutasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
