@@ -17,12 +17,6 @@ namespace Vista.Crud
             InitializeComponent();
         }
 
-        private void licenciasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-          
-
-        }
-
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             licenciasBindingSource.AddNew();
@@ -62,6 +56,13 @@ namespace Vista.Crud
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (licenciaTextBox.Text == "")
+            {
+                errorProvider1.SetError(licenciaTextBox, "El campo licencia esta vacía");
+                licenciaTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
             this.Validate();
             this.licenciasBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dBTransporte);
@@ -71,6 +72,7 @@ namespace Vista.Crud
         private void UCLicencias_Load(object sender, EventArgs e)
         {
             licenciasTableAdapter.Fill(dBTransporte.licencias);
+            estado(false);
         }
     }
 }

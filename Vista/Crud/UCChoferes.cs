@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vista.Componerntes;
 
 namespace Vista.Crud
 {
@@ -15,12 +16,6 @@ namespace Vista.Crud
         public UCChoferes()
         {
             InitializeComponent();
-        }
-
-        private void choferesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-
-
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -62,6 +57,63 @@ namespace Vista.Crud
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            // validaciones
+            if(dniTextBox.Text == "")
+            {
+                errorProvider1.SetError(dniTextBox, "El campo dni esta vacía");
+                dniTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+            if (nombresTextBox.Text == "")
+            {
+                errorProvider1.SetError(nombresTextBox, "El campo nombre esta vacía");
+                nombresTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+            if (apellidosTextBox.Text == "")
+            {
+                errorProvider1.SetError(apellidosTextBox, "El campo apellidos esta vacía");
+                apellidosTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+            if (telefonoTextBox.Text == "")
+            {
+                errorProvider1.SetError(telefonoTextBox, "El campo telefono esta vacía");
+                telefonoTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+            if (emailTextBox.Text == "")
+            {
+                errorProvider1.SetError(emailTextBox, "El campo email esta vacía");
+                emailTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+            if (direccionTextBox.Text == "")
+            {
+                errorProvider1.SetError(direccionTextBox, "El campo dirrecion esta vacía");
+                direccionTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+            if (id_licenciaComboBox.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(id_licenciaComboBox, "El campo licencia esta vacía");
+                id_licenciaComboBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+            if (id_empresaComboBox.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(id_empresaComboBox, "El campo empresa esta vacía");
+                id_empresaComboBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
             this.Validate();
             this.choferesBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dBTransporte);
@@ -73,6 +125,12 @@ namespace Vista.Crud
             choferesTableAdapter.Fill(dBTransporte.choferes);
             licenciasTableAdapter.Fill(dBTransporte.licencias);
             empresasTableAdapter.Fill(dBTransporte.empresas);
+            estado(false);
+        }
+
+        private void telefonoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validator.isNumber(e);
         }
     }
 }

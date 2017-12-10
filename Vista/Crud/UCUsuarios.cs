@@ -17,11 +17,6 @@ namespace Vista.Crud
             InitializeComponent();
         }
 
-        private void usuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             usuariosBindingSource.AddNew();
@@ -61,6 +56,38 @@ namespace Vista.Crud
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+
+            if (usuarioTextBox.Text == "")
+            {
+                errorProvider1.SetError(usuarioTextBox, "El campo usuario esta vacía");
+                usuarioTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+
+            if (claveTextBox.Text == "")
+            {
+                errorProvider1.SetError(claveTextBox, "El campo clave esta vacía");
+                claveTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+            if (nombreTextBox.Text == "")
+            {
+                errorProvider1.SetError(nombreTextBox, "El campo nombre esta vacía");
+                nombreTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+
+            if (roolComboBox.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(roolComboBox, "El campo rool esta vacía");
+                roolComboBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+
             this.Validate();
             this.usuariosBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dBTransporte);
@@ -70,6 +97,7 @@ namespace Vista.Crud
         private void UCUsuarios_Load(object sender, EventArgs e)
         {
             usuariosTableAdapter.Fill(dBTransporte.usuarios);
+            estado(false);
         }
     }
 }

@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCLicencias));
             System.Windows.Forms.Label licenciaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCLicencias));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.licenciaTextBox = new System.Windows.Forms.TextBox();
+            this.licenciasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBTransporte = new Vista.DBTransporte();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -39,6 +42,19 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.licenciasDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.licenciasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnImportar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
@@ -46,36 +62,31 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBuscar = new System.Windows.Forms.TextBox();
-            this.dBTransporte = new Vista.DBTransporte();
-            this.licenciasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.licenciasTableAdapter = new Vista.DBTransporteTableAdapters.LicenciasTableAdapter();
             this.tableAdapterManager = new Vista.DBTransporteTableAdapters.TableAdapterManager();
-            this.licenciasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.licenciaTextBox = new System.Windows.Forms.TextBox();
-            this.licenciasDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             licenciaLabel = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.licenciasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTransporte)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dBTransporte)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.licenciasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.licenciasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.licenciasBindingNavigator)).BeginInit();
             this.licenciasBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.licenciasDataGridView)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // licenciaLabel
+            // 
+            licenciaLabel.AutoSize = true;
+            licenciaLabel.Location = new System.Drawing.Point(125, 221);
+            licenciaLabel.Name = "licenciaLabel";
+            licenciaLabel.Size = new System.Drawing.Size(46, 13);
+            licenciaLabel.TabIndex = 27;
+            licenciaLabel.Text = "licencia:";
             // 
             // panel5
             // 
@@ -93,6 +104,24 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(300, 491);
             this.panel5.TabIndex = 11;
+            // 
+            // licenciaTextBox
+            // 
+            this.licenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.licenciasBindingSource, "licencia", true));
+            this.licenciaTextBox.Location = new System.Drawing.Point(177, 218);
+            this.licenciaTextBox.Name = "licenciaTextBox";
+            this.licenciaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.licenciaTextBox.TabIndex = 28;
+            // 
+            // licenciasBindingSource
+            // 
+            this.licenciasBindingSource.DataMember = "licencias";
+            this.licenciasBindingSource.DataSource = this.dBTransporte;
+            // 
+            // dBTransporte
+            // 
+            this.dBTransporte.DataSetName = "DBTransporte";
+            this.dBTransporte.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnNuevo
             // 
@@ -195,6 +224,135 @@
             this.panel3.Size = new System.Drawing.Size(553, 367);
             this.panel3.TabIndex = 6;
             // 
+            // licenciasDataGridView
+            // 
+            this.licenciasDataGridView.AllowUserToAddRows = false;
+            this.licenciasDataGridView.AllowUserToDeleteRows = false;
+            this.licenciasDataGridView.AllowUserToOrderColumns = true;
+            this.licenciasDataGridView.AutoGenerateColumns = false;
+            this.licenciasDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            this.licenciasDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.licenciasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.licenciasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.licenciasDataGridView.DataSource = this.licenciasBindingSource;
+            this.licenciasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.licenciasDataGridView.Location = new System.Drawing.Point(20, 0);
+            this.licenciasDataGridView.Name = "licenciasDataGridView";
+            this.licenciasDataGridView.ReadOnly = true;
+            this.licenciasDataGridView.Size = new System.Drawing.Size(513, 342);
+            this.licenciasDataGridView.TabIndex = 14;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_licencia";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id_licencia";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "licencia";
+            this.dataGridViewTextBoxColumn2.HeaderText = "licencia";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // licenciasBindingNavigator
+            // 
+            this.licenciasBindingNavigator.AddNewItem = null;
+            this.licenciasBindingNavigator.BindingSource = this.licenciasBindingSource;
+            this.licenciasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.licenciasBindingNavigator.DeleteItem = null;
+            this.licenciasBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.licenciasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2});
+            this.licenciasBindingNavigator.Location = new System.Drawing.Point(20, 342);
+            this.licenciasBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.licenciasBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.licenciasBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.licenciasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.licenciasBindingNavigator.Name = "licenciasBindingNavigator";
+            this.licenciasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.licenciasBindingNavigator.Size = new System.Drawing.Size(513, 25);
+            this.licenciasBindingNavigator.TabIndex = 13;
+            this.licenciasBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Posición";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnImportar);
@@ -287,16 +445,6 @@
             this.textBuscar.Size = new System.Drawing.Size(513, 26);
             this.textBuscar.TabIndex = 0;
             // 
-            // dBTransporte
-            // 
-            this.dBTransporte.DataSetName = "DBTransporte";
-            this.dBTransporte.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // licenciasBindingSource
-            // 
-            this.licenciasBindingSource.DataMember = "licencias";
-            this.licenciasBindingSource.DataSource = this.dBTransporte;
-            // 
             // licenciasTableAdapter
             // 
             this.licenciasTableAdapter.ClearBeforeFill = true;
@@ -318,150 +466,9 @@
             this.tableAdapterManager.UsuariosTableAdapter = null;
             this.tableAdapterManager.VehiculosTableAdapter = null;
             // 
-            // licenciasBindingNavigator
+            // errorProvider1
             // 
-            this.licenciasBindingNavigator.AddNewItem = null;
-            this.licenciasBindingNavigator.BindingSource = this.licenciasBindingSource;
-            this.licenciasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.licenciasBindingNavigator.DeleteItem = null;
-            this.licenciasBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.licenciasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2});
-            this.licenciasBindingNavigator.Location = new System.Drawing.Point(20, 342);
-            this.licenciasBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.licenciasBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.licenciasBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.licenciasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.licenciasBindingNavigator.Name = "licenciasBindingNavigator";
-            this.licenciasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.licenciasBindingNavigator.Size = new System.Drawing.Size(513, 25);
-            this.licenciasBindingNavigator.TabIndex = 13;
-            this.licenciasBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posición";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // licenciaLabel
-            // 
-            licenciaLabel.AutoSize = true;
-            licenciaLabel.Location = new System.Drawing.Point(125, 221);
-            licenciaLabel.Name = "licenciaLabel";
-            licenciaLabel.Size = new System.Drawing.Size(46, 13);
-            licenciaLabel.TabIndex = 27;
-            licenciaLabel.Text = "licencia:";
-            // 
-            // licenciaTextBox
-            // 
-            this.licenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.licenciasBindingSource, "licencia", true));
-            this.licenciaTextBox.Location = new System.Drawing.Point(177, 218);
-            this.licenciaTextBox.Name = "licenciaTextBox";
-            this.licenciaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.licenciaTextBox.TabIndex = 28;
-            // 
-            // licenciasDataGridView
-            // 
-            this.licenciasDataGridView.AllowUserToAddRows = false;
-            this.licenciasDataGridView.AllowUserToDeleteRows = false;
-            this.licenciasDataGridView.AllowUserToOrderColumns = true;
-            this.licenciasDataGridView.AutoGenerateColumns = false;
-            this.licenciasDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            this.licenciasDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.licenciasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.licenciasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.licenciasDataGridView.DataSource = this.licenciasBindingSource;
-            this.licenciasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.licenciasDataGridView.Location = new System.Drawing.Point(20, 0);
-            this.licenciasDataGridView.Name = "licenciasDataGridView";
-            this.licenciasDataGridView.ReadOnly = true;
-            this.licenciasDataGridView.Size = new System.Drawing.Size(513, 342);
-            this.licenciasDataGridView.TabIndex = 14;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_licencia";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_licencia";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "licencia";
-            this.dataGridViewTextBoxColumn2.HeaderText = "licencia";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.errorProvider1.ContainerControl = this;
             // 
             // UCLicencias
             // 
@@ -474,19 +481,20 @@
             this.Load += new System.EventHandler(this.UCLicencias_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.licenciasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTransporte)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.licenciasDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.licenciasBindingNavigator)).EndInit();
+            this.licenciasBindingNavigator.ResumeLayout(false);
+            this.licenciasBindingNavigator.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dBTransporte)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.licenciasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.licenciasBindingNavigator)).EndInit();
-            this.licenciasBindingNavigator.ResumeLayout(false);
-            this.licenciasBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.licenciasDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -526,5 +534,6 @@
         private System.Windows.Forms.DataGridView licenciasDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

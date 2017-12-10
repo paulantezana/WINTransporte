@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCTipoVehiculo));
             System.Windows.Forms.Label tipoLabel;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCTipoVehiculo));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.tipoTextBox = new System.Windows.Forms.TextBox();
+            this.tipo_vehiculosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBTransporte = new Vista.DBTransporte();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -40,6 +43,19 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tipo_vehiculosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_vehiculosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnImportar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
@@ -47,36 +63,31 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBuscar = new System.Windows.Forms.TextBox();
-            this.dBTransporte = new Vista.DBTransporte();
-            this.tipo_vehiculosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipo_vehiculosTableAdapter = new Vista.DBTransporteTableAdapters.Tipo_vehiculosTableAdapter();
             this.tableAdapterManager = new Vista.DBTransporteTableAdapters.TableAdapterManager();
-            this.tipo_vehiculosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tipoTextBox = new System.Windows.Forms.TextBox();
-            this.tipo_vehiculosDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             tipoLabel = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tipo_vehiculosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTransporte)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dBTransporte)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipo_vehiculosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipo_vehiculosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipo_vehiculosBindingNavigator)).BeginInit();
             this.tipo_vehiculosBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tipo_vehiculosDataGridView)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tipoLabel
+            // 
+            tipoLabel.AutoSize = true;
+            tipoLabel.Location = new System.Drawing.Point(110, 163);
+            tipoLabel.Name = "tipoLabel";
+            tipoLabel.Size = new System.Drawing.Size(27, 13);
+            tipoLabel.TabIndex = 27;
+            tipoLabel.Text = "tipo:";
             // 
             // panel5
             // 
@@ -94,6 +105,24 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(300, 505);
             this.panel5.TabIndex = 11;
+            // 
+            // tipoTextBox
+            // 
+            this.tipoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tipo_vehiculosBindingSource, "tipo", true));
+            this.tipoTextBox.Location = new System.Drawing.Point(143, 160);
+            this.tipoTextBox.Name = "tipoTextBox";
+            this.tipoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.tipoTextBox.TabIndex = 28;
+            // 
+            // tipo_vehiculosBindingSource
+            // 
+            this.tipo_vehiculosBindingSource.DataMember = "tipo_vehiculos";
+            this.tipo_vehiculosBindingSource.DataSource = this.dBTransporte;
+            // 
+            // dBTransporte
+            // 
+            this.dBTransporte.DataSetName = "DBTransporte";
+            this.dBTransporte.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnNuevo
             // 
@@ -196,6 +225,143 @@
             this.panel3.Size = new System.Drawing.Size(563, 381);
             this.panel3.TabIndex = 6;
             // 
+            // tipo_vehiculosDataGridView
+            // 
+            this.tipo_vehiculosDataGridView.AllowUserToAddRows = false;
+            this.tipo_vehiculosDataGridView.AllowUserToDeleteRows = false;
+            this.tipo_vehiculosDataGridView.AllowUserToOrderColumns = true;
+            this.tipo_vehiculosDataGridView.AutoGenerateColumns = false;
+            this.tipo_vehiculosDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            this.tipo_vehiculosDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tipo_vehiculosDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.tipo_vehiculosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tipo_vehiculosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.tipo_vehiculosDataGridView.DataSource = this.tipo_vehiculosBindingSource;
+            this.tipo_vehiculosDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tipo_vehiculosDataGridView.Location = new System.Drawing.Point(20, 0);
+            this.tipo_vehiculosDataGridView.Name = "tipo_vehiculosDataGridView";
+            this.tipo_vehiculosDataGridView.ReadOnly = true;
+            this.tipo_vehiculosDataGridView.Size = new System.Drawing.Size(523, 356);
+            this.tipo_vehiculosDataGridView.TabIndex = 14;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_tipo_vehiculo";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id_tipo_vehiculo";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "tipo";
+            this.dataGridViewTextBoxColumn2.HeaderText = "tipo";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // tipo_vehiculosBindingNavigator
+            // 
+            this.tipo_vehiculosBindingNavigator.AddNewItem = null;
+            this.tipo_vehiculosBindingNavigator.BindingSource = this.tipo_vehiculosBindingSource;
+            this.tipo_vehiculosBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.tipo_vehiculosBindingNavigator.DeleteItem = null;
+            this.tipo_vehiculosBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tipo_vehiculosBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2});
+            this.tipo_vehiculosBindingNavigator.Location = new System.Drawing.Point(20, 356);
+            this.tipo_vehiculosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.tipo_vehiculosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.tipo_vehiculosBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.tipo_vehiculosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.tipo_vehiculosBindingNavigator.Name = "tipo_vehiculosBindingNavigator";
+            this.tipo_vehiculosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.tipo_vehiculosBindingNavigator.Size = new System.Drawing.Size(523, 25);
+            this.tipo_vehiculosBindingNavigator.TabIndex = 13;
+            this.tipo_vehiculosBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Posición";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnImportar);
@@ -288,16 +454,6 @@
             this.textBuscar.Size = new System.Drawing.Size(523, 26);
             this.textBuscar.TabIndex = 0;
             // 
-            // dBTransporte
-            // 
-            this.dBTransporte.DataSetName = "DBTransporte";
-            this.dBTransporte.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tipo_vehiculosBindingSource
-            // 
-            this.tipo_vehiculosBindingSource.DataMember = "tipo_vehiculos";
-            this.tipo_vehiculosBindingSource.DataSource = this.dBTransporte;
-            // 
             // tipo_vehiculosTableAdapter
             // 
             this.tipo_vehiculosTableAdapter.ClearBeforeFill = true;
@@ -319,159 +475,9 @@
             this.tableAdapterManager.UsuariosTableAdapter = null;
             this.tableAdapterManager.VehiculosTableAdapter = null;
             // 
-            // tipo_vehiculosBindingNavigator
+            // errorProvider1
             // 
-            this.tipo_vehiculosBindingNavigator.AddNewItem = null;
-            this.tipo_vehiculosBindingNavigator.BindingSource = this.tipo_vehiculosBindingSource;
-            this.tipo_vehiculosBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.tipo_vehiculosBindingNavigator.DeleteItem = null;
-            this.tipo_vehiculosBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tipo_vehiculosBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2});
-            this.tipo_vehiculosBindingNavigator.Location = new System.Drawing.Point(20, 356);
-            this.tipo_vehiculosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.tipo_vehiculosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.tipo_vehiculosBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.tipo_vehiculosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.tipo_vehiculosBindingNavigator.Name = "tipo_vehiculosBindingNavigator";
-            this.tipo_vehiculosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.tipo_vehiculosBindingNavigator.Size = new System.Drawing.Size(523, 25);
-            this.tipo_vehiculosBindingNavigator.TabIndex = 13;
-            this.tipo_vehiculosBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posición";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // tipoLabel
-            // 
-            tipoLabel.AutoSize = true;
-            tipoLabel.Location = new System.Drawing.Point(110, 163);
-            tipoLabel.Name = "tipoLabel";
-            tipoLabel.Size = new System.Drawing.Size(27, 13);
-            tipoLabel.TabIndex = 27;
-            tipoLabel.Text = "tipo:";
-            // 
-            // tipoTextBox
-            // 
-            this.tipoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tipo_vehiculosBindingSource, "tipo", true));
-            this.tipoTextBox.Location = new System.Drawing.Point(143, 160);
-            this.tipoTextBox.Name = "tipoTextBox";
-            this.tipoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.tipoTextBox.TabIndex = 28;
-            // 
-            // tipo_vehiculosDataGridView
-            // 
-            this.tipo_vehiculosDataGridView.AllowUserToAddRows = false;
-            this.tipo_vehiculosDataGridView.AllowUserToDeleteRows = false;
-            this.tipo_vehiculosDataGridView.AllowUserToOrderColumns = true;
-            this.tipo_vehiculosDataGridView.AutoGenerateColumns = false;
-            this.tipo_vehiculosDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            this.tipo_vehiculosDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tipo_vehiculosDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.tipo_vehiculosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tipo_vehiculosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.tipo_vehiculosDataGridView.DataSource = this.tipo_vehiculosBindingSource;
-            this.tipo_vehiculosDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tipo_vehiculosDataGridView.Location = new System.Drawing.Point(20, 0);
-            this.tipo_vehiculosDataGridView.Name = "tipo_vehiculosDataGridView";
-            this.tipo_vehiculosDataGridView.ReadOnly = true;
-            this.tipo_vehiculosDataGridView.Size = new System.Drawing.Size(523, 356);
-            this.tipo_vehiculosDataGridView.TabIndex = 14;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_tipo_vehiculo";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_tipo_vehiculo";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "tipo";
-            this.dataGridViewTextBoxColumn2.HeaderText = "tipo";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.errorProvider1.ContainerControl = this;
             // 
             // UCTipoVehiculo
             // 
@@ -484,19 +490,20 @@
             this.Load += new System.EventHandler(this.UCTipoVehiculo_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tipo_vehiculosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTransporte)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tipo_vehiculosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipo_vehiculosBindingNavigator)).EndInit();
+            this.tipo_vehiculosBindingNavigator.ResumeLayout(false);
+            this.tipo_vehiculosBindingNavigator.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dBTransporte)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipo_vehiculosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipo_vehiculosBindingNavigator)).EndInit();
-            this.tipo_vehiculosBindingNavigator.ResumeLayout(false);
-            this.tipo_vehiculosBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tipo_vehiculosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -536,5 +543,6 @@
         private System.Windows.Forms.DataGridView tipo_vehiculosDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

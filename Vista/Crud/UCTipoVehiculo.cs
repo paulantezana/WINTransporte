@@ -33,12 +33,6 @@ namespace Vista.Crud
             btnEliminar.Enabled = !state;
         }
 
-        private void tipo_vehiculosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
         private void btnModificar_Click(object sender, EventArgs e)
         {
             estado(true);
@@ -62,6 +56,14 @@ namespace Vista.Crud
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (tipoTextBox.Text == "")
+            {
+                errorProvider1.SetError(tipoTextBox, "El campo tipo esta vacía");
+                tipoTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+
             this.Validate();
             this.tipo_vehiculosBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dBTransporte);
@@ -71,6 +73,7 @@ namespace Vista.Crud
         private void UCTipoVehiculo_Load(object sender, EventArgs e)
         {
             tipo_vehiculosTableAdapter.Fill(dBTransporte.tipo_vehiculos);
+            estado(false);
         }
     }
 }

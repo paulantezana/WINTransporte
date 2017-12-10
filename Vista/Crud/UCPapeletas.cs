@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vista.Componerntes;
 
 namespace Vista.Crud
 {
@@ -15,12 +16,6 @@ namespace Vista.Crud
         public UCPapeletas()
         {
             InitializeComponent();
-        }
-
-        private void papeletasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-           
-
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -62,6 +57,21 @@ namespace Vista.Crud
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (nombreTextBox.Text == "")
+            {
+                errorProvider1.SetError(nombreTextBox, "El campo nombre esta vacía");
+                nombreTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+            if (tipoComboBox.Text == "")
+            {
+                errorProvider1.SetError(nombreTextBox, "El campo tipo esta vacía");
+                nombreTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+
             this.Validate();
             this.papeletasBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dBTransporte);
@@ -71,6 +81,12 @@ namespace Vista.Crud
         private void UCPapeletas_Load(object sender, EventArgs e)
         {
             papeletasTableAdapter.Fill(dBTransporte.papeletas);
+            estado(false);
+        }
+
+        private void montoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validator.isNumber(e);
         }
     }
 }
