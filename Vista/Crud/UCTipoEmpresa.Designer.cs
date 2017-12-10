@@ -29,10 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCTipoEmpresa));
             System.Windows.Forms.Label tipoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCTipoEmpresa));
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tipo_empresasDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_empresasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBTransporte = new Vista.DBTransporte();
+            this.tipo_empresasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnImportar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
@@ -46,38 +61,34 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.dBTransporte = new Vista.DBTransporte();
-            this.tipo_empresasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoTextBox = new System.Windows.Forms.TextBox();
             this.tipo_empresasTableAdapter = new Vista.DBTransporteTableAdapters.Tipo_empresasTableAdapter();
             this.tableAdapterManager = new Vista.DBTransporteTableAdapters.TableAdapterManager();
-            this.tipo_empresasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tipo_empresasDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoTextBox = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             tipoLabel = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tipo_empresasDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipo_empresasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTransporte)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipo_empresasBindingNavigator)).BeginInit();
+            this.tipo_empresasBindingNavigator.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dBTransporte)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipo_empresasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipo_empresasBindingNavigator)).BeginInit();
-            this.tipo_empresasBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tipo_empresasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tipoLabel
+            // 
+            tipoLabel.AutoSize = true;
+            tipoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tipoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(48)))), ((int)(((byte)(55)))));
+            tipoLabel.Location = new System.Drawing.Point(24, 80);
+            tipoLabel.Name = "tipoLabel";
+            tipoLabel.Size = new System.Drawing.Size(33, 16);
+            tipoLabel.TabIndex = 27;
+            tipoLabel.Text = "tipo:";
             // 
             // panel4
             // 
@@ -101,6 +112,145 @@
             this.panel3.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.panel3.Size = new System.Drawing.Size(843, 353);
             this.panel3.TabIndex = 6;
+            // 
+            // tipo_empresasDataGridView
+            // 
+            this.tipo_empresasDataGridView.AllowUserToAddRows = false;
+            this.tipo_empresasDataGridView.AllowUserToDeleteRows = false;
+            this.tipo_empresasDataGridView.AllowUserToOrderColumns = true;
+            this.tipo_empresasDataGridView.AutoGenerateColumns = false;
+            this.tipo_empresasDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            this.tipo_empresasDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tipo_empresasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tipo_empresasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.tipo_empresasDataGridView.DataSource = this.tipo_empresasBindingSource;
+            this.tipo_empresasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tipo_empresasDataGridView.Location = new System.Drawing.Point(20, 0);
+            this.tipo_empresasDataGridView.Name = "tipo_empresasDataGridView";
+            this.tipo_empresasDataGridView.ReadOnly = true;
+            this.tipo_empresasDataGridView.Size = new System.Drawing.Size(803, 328);
+            this.tipo_empresasDataGridView.TabIndex = 13;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_tipo_empresa";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id_tipo_empresa";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "tipo";
+            this.dataGridViewTextBoxColumn2.HeaderText = "tipo";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // tipo_empresasBindingSource
+            // 
+            this.tipo_empresasBindingSource.DataMember = "tipo_empresas";
+            this.tipo_empresasBindingSource.DataSource = this.dBTransporte;
+            // 
+            // dBTransporte
+            // 
+            this.dBTransporte.DataSetName = "DBTransporte";
+            this.dBTransporte.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tipo_empresasBindingNavigator
+            // 
+            this.tipo_empresasBindingNavigator.AddNewItem = null;
+            this.tipo_empresasBindingNavigator.BindingSource = this.tipo_empresasBindingSource;
+            this.tipo_empresasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.tipo_empresasBindingNavigator.DeleteItem = null;
+            this.tipo_empresasBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tipo_empresasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2});
+            this.tipo_empresasBindingNavigator.Location = new System.Drawing.Point(20, 328);
+            this.tipo_empresasBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.tipo_empresasBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.tipo_empresasBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.tipo_empresasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.tipo_empresasBindingNavigator.Name = "tipo_empresasBindingNavigator";
+            this.tipo_empresasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.tipo_empresasBindingNavigator.Size = new System.Drawing.Size(803, 25);
+            this.tipo_empresasBindingNavigator.TabIndex = 12;
+            this.tipo_empresasBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Posición";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // panel1
             // 
@@ -289,165 +439,6 @@
             this.panel5.Size = new System.Drawing.Size(300, 477);
             this.panel5.TabIndex = 10;
             // 
-            // dBTransporte
-            // 
-            this.dBTransporte.DataSetName = "DBTransporte";
-            this.dBTransporte.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tipo_empresasBindingSource
-            // 
-            this.tipo_empresasBindingSource.DataMember = "tipo_empresas";
-            this.tipo_empresasBindingSource.DataSource = this.dBTransporte;
-            // 
-            // tipo_empresasTableAdapter
-            // 
-            this.tipo_empresasTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.EmpresasTableAdapter = null;
-            this.tableAdapterManager.Tipo_empresasTableAdapter = this.tipo_empresasTableAdapter;
-            this.tableAdapterManager.UpdateOrder = Vista.DBTransporteTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // tipo_empresasBindingNavigator
-            // 
-            this.tipo_empresasBindingNavigator.AddNewItem = null;
-            this.tipo_empresasBindingNavigator.BindingSource = this.tipo_empresasBindingSource;
-            this.tipo_empresasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.tipo_empresasBindingNavigator.DeleteItem = null;
-            this.tipo_empresasBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tipo_empresasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2});
-            this.tipo_empresasBindingNavigator.Location = new System.Drawing.Point(20, 328);
-            this.tipo_empresasBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.tipo_empresasBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.tipo_empresasBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.tipo_empresasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.tipo_empresasBindingNavigator.Name = "tipo_empresasBindingNavigator";
-            this.tipo_empresasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.tipo_empresasBindingNavigator.Size = new System.Drawing.Size(803, 25);
-            this.tipo_empresasBindingNavigator.TabIndex = 12;
-            this.tipo_empresasBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posición";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // tipo_empresasDataGridView
-            // 
-            this.tipo_empresasDataGridView.AllowUserToAddRows = false;
-            this.tipo_empresasDataGridView.AllowUserToDeleteRows = false;
-            this.tipo_empresasDataGridView.AllowUserToOrderColumns = true;
-            this.tipo_empresasDataGridView.AutoGenerateColumns = false;
-            this.tipo_empresasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tipo_empresasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.tipo_empresasDataGridView.DataSource = this.tipo_empresasBindingSource;
-            this.tipo_empresasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tipo_empresasDataGridView.Location = new System.Drawing.Point(20, 0);
-            this.tipo_empresasDataGridView.Name = "tipo_empresasDataGridView";
-            this.tipo_empresasDataGridView.ReadOnly = true;
-            this.tipo_empresasDataGridView.Size = new System.Drawing.Size(803, 328);
-            this.tipo_empresasDataGridView.TabIndex = 13;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_tipo_empresa";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_tipo_empresa";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "tipo";
-            this.dataGridViewTextBoxColumn2.HeaderText = "tipo";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // tipoLabel
-            // 
-            tipoLabel.AutoSize = true;
-            tipoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tipoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(48)))), ((int)(((byte)(55)))));
-            tipoLabel.Location = new System.Drawing.Point(24, 80);
-            tipoLabel.Name = "tipoLabel";
-            tipoLabel.Size = new System.Drawing.Size(33, 16);
-            tipoLabel.TabIndex = 27;
-            tipoLabel.Text = "tipo:";
-            // 
             // tipoTextBox
             // 
             this.tipoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tipo_empresasBindingSource, "tipo", true));
@@ -456,6 +447,27 @@
             this.tipoTextBox.Name = "tipoTextBox";
             this.tipoTextBox.Size = new System.Drawing.Size(247, 22);
             this.tipoTextBox.TabIndex = 28;
+            // 
+            // tipo_empresasTableAdapter
+            // 
+            this.tipo_empresasTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AutorizacionDetallesTableAdapter = null;
+            this.tableAdapterManager.AutorizacionesTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ChoferesTableAdapter = null;
+            this.tableAdapterManager.EmpresasTableAdapter = null;
+            this.tableAdapterManager.LicenciasTableAdapter = null;
+            this.tableAdapterManager.PapeletasTableAdapter = null;
+            this.tableAdapterManager.RutasTableAdapter = null;
+            this.tableAdapterManager.SancionesTableAdapter = null;
+            this.tableAdapterManager.Tipo_empresasTableAdapter = this.tipo_empresasTableAdapter;
+            this.tableAdapterManager.Tipo_vehiculosTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Vista.DBTransporteTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = null;
+            this.tableAdapterManager.VehiculosTableAdapter = null;
             // 
             // errorProvider1
             // 
@@ -473,18 +485,18 @@
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tipo_empresasDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipo_empresasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTransporte)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipo_empresasBindingNavigator)).EndInit();
+            this.tipo_empresasBindingNavigator.ResumeLayout(false);
+            this.tipo_empresasBindingNavigator.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dBTransporte)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipo_empresasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipo_empresasBindingNavigator)).EndInit();
-            this.tipo_empresasBindingNavigator.ResumeLayout(false);
-            this.tipo_empresasBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tipo_empresasDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 

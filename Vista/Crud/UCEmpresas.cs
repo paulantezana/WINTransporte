@@ -19,17 +19,7 @@ namespace Vista.Crud
 
         private void empresasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.empresasBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dBTransporte);
 
-        }
-
-        private void empresasBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.empresasBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dBTransporte);
 
         }
 
@@ -47,15 +37,6 @@ namespace Vista.Crud
 
         private void estado(bool state)
         {
-            codigoTextBox.Enabled = state;
-            nombreTextBox.Enabled = state;
-            propietarioTextBox.Enabled = state;
-            gerenteTextBox.Enabled = state;
-            telefonoTextBox.Enabled = state;
-            direccionTextBox.Enabled = state;
-            ciudadTextBox.Enabled = state;
-            id_tipo_empresaComboBox.Enabled = state;
-
             btnGuardar.Enabled = state;
             btnCancelar.Enabled = state;
 
@@ -87,26 +68,10 @@ namespace Vista.Crud
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            /*if (tipoTextBox.Text == "")
-            {
-                errorProvider1.SetError(tipoTextBox, "El campo tipo esta vacía");
-                tipoTextBox.Focus();
-                return;
-            }
-            errorProvider1.Clear();*/
-
             this.Validate();
             this.empresasBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dBTransporte);
             estado(false);
-        }
-
-        private void empresasBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.empresasBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dBTransporte);
-
         }
     }
 }

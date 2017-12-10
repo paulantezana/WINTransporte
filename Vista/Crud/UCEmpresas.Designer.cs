@@ -38,6 +38,7 @@
             System.Windows.Forms.Label direccionLabel;
             System.Windows.Forms.Label ciudadLabel;
             System.Windows.Forms.Label id_tipo_empresaLabel;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -67,19 +68,6 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.empresasBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.empresasDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.gerenteTextBox = new System.Windows.Forms.TextBox();
@@ -90,6 +78,16 @@
             this.id_tipo_empresaComboBox = new System.Windows.Forms.ComboBox();
             this.tipoempresasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipo_empresasTableAdapter = new Vista.DBTransporteTableAdapters.Tipo_empresasTableAdapter();
+            this.empresasDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             codigoLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             gerenteLabel = new System.Windows.Forms.Label();
@@ -107,8 +105,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.empresasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empresasBindingNavigator)).BeginInit();
             this.empresasBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.empresasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoempresasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empresasDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -137,10 +135,10 @@
             this.panel5.Controls.Add(this.btnCancelar);
             this.panel5.Controls.Add(this.btnGuardar);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(2976, 0);
+            this.panel5.Location = new System.Drawing.Point(580, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(300, 752);
-            this.panel5.TabIndex = 11;
+            this.panel5.Size = new System.Drawing.Size(300, 502);
+            this.panel5.TabIndex = 12;
             // 
             // btnNuevo
             // 
@@ -194,7 +192,7 @@
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(213)))), ((int)(((byte)(217)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.btnCancelar.Location = new System.Drawing.Point(98, 701);
+            this.btnCancelar.Location = new System.Drawing.Point(98, 451);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(85, 30);
             this.btnCancelar.TabIndex = 25;
@@ -212,7 +210,7 @@
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(114)))), ((int)(((byte)(220)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(189, 701);
+            this.btnGuardar.Location = new System.Drawing.Point(189, 451);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(85, 30);
             this.btnGuardar.TabIndex = 22;
@@ -228,18 +226,19 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(2976, 752);
-            this.panel4.TabIndex = 12;
+            this.panel4.Size = new System.Drawing.Size(580, 502);
+            this.panel4.TabIndex = 13;
             // 
             // panel3
             // 
             this.panel3.AutoScroll = true;
             this.panel3.Controls.Add(this.empresasDataGridView);
+            this.panel3.Controls.Add(this.empresasBindingNavigator);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 74);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.panel3.Size = new System.Drawing.Size(2976, 628);
+            this.panel3.Size = new System.Drawing.Size(580, 378);
             this.panel3.TabIndex = 6;
             // 
             // panel1
@@ -251,7 +250,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2976, 74);
+            this.panel1.Size = new System.Drawing.Size(580, 74);
             this.panel1.TabIndex = 5;
             // 
             // btnImportar
@@ -264,7 +263,7 @@
             this.btnImportar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.btnImportar.Image = ((System.Drawing.Image)(resources.GetObject("btnImportar.Image")));
             this.btnImportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImportar.Location = new System.Drawing.Point(2719, 25);
+            this.btnImportar.Location = new System.Drawing.Point(323, 25);
             this.btnImportar.Name = "btnImportar";
             this.btnImportar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnImportar.Size = new System.Drawing.Size(109, 35);
@@ -282,7 +281,7 @@
             this.btnImprimir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(2847, 25);
+            this.btnImprimir.Location = new System.Drawing.Point(451, 25);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnImprimir.Size = new System.Drawing.Size(109, 35);
@@ -307,19 +306,19 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(48)))), ((int)(((byte)(55)))));
             this.label1.Location = new System.Drawing.Point(20, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 25);
+            this.label1.Size = new System.Drawing.Size(103, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Empresas";
+            this.label1.Text = "Licencias";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.textBuscar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 702);
+            this.panel2.Location = new System.Drawing.Point(0, 452);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.panel2.Size = new System.Drawing.Size(2976, 50);
+            this.panel2.Size = new System.Drawing.Size(580, 50);
             this.panel2.TabIndex = 1;
             // 
             // textBuscar
@@ -331,7 +330,7 @@
             this.textBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBuscar.Location = new System.Drawing.Point(20, 12);
             this.textBuscar.Name = "textBuscar";
-            this.textBuscar.Size = new System.Drawing.Size(2936, 26);
+            this.textBuscar.Size = new System.Drawing.Size(540, 26);
             this.textBuscar.TabIndex = 0;
             // 
             // dBTransporte
@@ -350,10 +349,20 @@
             // 
             // tableAdapterManager
             // 
+            this.tableAdapterManager.AutorizacionDetallesTableAdapter = null;
+            this.tableAdapterManager.AutorizacionesTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ChoferesTableAdapter = null;
             this.tableAdapterManager.EmpresasTableAdapter = this.empresasTableAdapter;
+            this.tableAdapterManager.LicenciasTableAdapter = null;
+            this.tableAdapterManager.PapeletasTableAdapter = null;
+            this.tableAdapterManager.RutasTableAdapter = null;
+            this.tableAdapterManager.SancionesTableAdapter = null;
             this.tableAdapterManager.Tipo_empresasTableAdapter = this.tipo_empresasTableAdapter;
+            this.tableAdapterManager.Tipo_vehiculosTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Vista.DBTransporteTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = null;
+            this.tableAdapterManager.VehiculosTableAdapter = null;
             // 
             // empresasBindingNavigator
             // 
@@ -361,6 +370,7 @@
             this.empresasBindingNavigator.BindingSource = this.empresasBindingSource;
             this.empresasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.empresasBindingNavigator.DeleteItem = null;
+            this.empresasBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.empresasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -370,19 +380,16 @@
             this.bindingNavigatorSeparator1,
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.empresasBindingNavigatorSaveItem});
-            this.empresasBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigatorSeparator2});
+            this.empresasBindingNavigator.Location = new System.Drawing.Point(20, 353);
             this.empresasBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.empresasBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.empresasBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.empresasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.empresasBindingNavigator.Name = "empresasBindingNavigator";
             this.empresasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.empresasBindingNavigator.Size = new System.Drawing.Size(2976, 25);
-            this.empresasBindingNavigator.TabIndex = 13;
+            this.empresasBindingNavigator.Size = new System.Drawing.Size(540, 25);
+            this.empresasBindingNavigator.TabIndex = 14;
             this.empresasBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
@@ -452,112 +459,10 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
-            // 
-            // empresasBindingNavigatorSaveItem
-            // 
-            this.empresasBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.empresasBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("empresasBindingNavigatorSaveItem.Image")));
-            this.empresasBindingNavigatorSaveItem.Name = "empresasBindingNavigatorSaveItem";
-            this.empresasBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.empresasBindingNavigatorSaveItem.Text = "Guardar datos";
-            this.empresasBindingNavigatorSaveItem.Click += new System.EventHandler(this.empresasBindingNavigatorSaveItem_Click_2);
-            // 
-            // empresasDataGridView
-            // 
-            this.empresasDataGridView.AutoGenerateColumns = false;
-            this.empresasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.empresasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
-            this.empresasDataGridView.DataSource = this.empresasBindingSource;
-            this.empresasDataGridView.Location = new System.Drawing.Point(45, 61);
-            this.empresasDataGridView.Name = "empresasDataGridView";
-            this.empresasDataGridView.Size = new System.Drawing.Size(300, 220);
-            this.empresasDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_empresa";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_empresa";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "codigo";
-            this.dataGridViewTextBoxColumn2.HeaderText = "codigo";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "nombre";
-            this.dataGridViewTextBoxColumn3.HeaderText = "nombre";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "gerente";
-            this.dataGridViewTextBoxColumn4.HeaderText = "gerente";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "propietario";
-            this.dataGridViewTextBoxColumn5.HeaderText = "propietario";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "telefono";
-            this.dataGridViewTextBoxColumn6.HeaderText = "telefono";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "direccion";
-            this.dataGridViewTextBoxColumn7.HeaderText = "direccion";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "ciudad";
-            this.dataGridViewTextBoxColumn8.HeaderText = "ciudad";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "id_tipo_empresa";
-            this.dataGridViewTextBoxColumn9.HeaderText = "id_tipo_empresa";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
             // codigoLabel
             // 
             codigoLabel.AutoSize = true;
-            codigoLabel.Location = new System.Drawing.Point(28, 78);
+            codigoLabel.Location = new System.Drawing.Point(50, 98);
             codigoLabel.Name = "codigoLabel";
             codigoLabel.Size = new System.Drawing.Size(42, 13);
             codigoLabel.TabIndex = 27;
@@ -566,7 +471,7 @@
             // codigoTextBox
             // 
             this.codigoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasBindingSource, "codigo", true));
-            this.codigoTextBox.Location = new System.Drawing.Point(76, 75);
+            this.codigoTextBox.Location = new System.Drawing.Point(98, 95);
             this.codigoTextBox.Name = "codigoTextBox";
             this.codigoTextBox.Size = new System.Drawing.Size(100, 20);
             this.codigoTextBox.TabIndex = 28;
@@ -574,7 +479,7 @@
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(30, 122);
+            nombreLabel.Location = new System.Drawing.Point(64, 139);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(45, 13);
             nombreLabel.TabIndex = 28;
@@ -583,7 +488,7 @@
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasBindingSource, "nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(81, 119);
+            this.nombreTextBox.Location = new System.Drawing.Point(115, 136);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
             this.nombreTextBox.TabIndex = 29;
@@ -591,7 +496,7 @@
             // gerenteLabel
             // 
             gerenteLabel.AutoSize = true;
-            gerenteLabel.Location = new System.Drawing.Point(40, 170);
+            gerenteLabel.Location = new System.Drawing.Point(87, 178);
             gerenteLabel.Name = "gerenteLabel";
             gerenteLabel.Size = new System.Drawing.Size(46, 13);
             gerenteLabel.TabIndex = 29;
@@ -600,7 +505,7 @@
             // gerenteTextBox
             // 
             this.gerenteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasBindingSource, "gerente", true));
-            this.gerenteTextBox.Location = new System.Drawing.Point(92, 167);
+            this.gerenteTextBox.Location = new System.Drawing.Point(139, 175);
             this.gerenteTextBox.Name = "gerenteTextBox";
             this.gerenteTextBox.Size = new System.Drawing.Size(100, 20);
             this.gerenteTextBox.TabIndex = 30;
@@ -608,7 +513,7 @@
             // propietarioLabel
             // 
             propietarioLabel.AutoSize = true;
-            propietarioLabel.Location = new System.Drawing.Point(35, 212);
+            propietarioLabel.Location = new System.Drawing.Point(50, 210);
             propietarioLabel.Name = "propietarioLabel";
             propietarioLabel.Size = new System.Drawing.Size(59, 13);
             propietarioLabel.TabIndex = 30;
@@ -617,7 +522,7 @@
             // propietarioTextBox
             // 
             this.propietarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasBindingSource, "propietario", true));
-            this.propietarioTextBox.Location = new System.Drawing.Point(100, 209);
+            this.propietarioTextBox.Location = new System.Drawing.Point(115, 207);
             this.propietarioTextBox.Name = "propietarioTextBox";
             this.propietarioTextBox.Size = new System.Drawing.Size(100, 20);
             this.propietarioTextBox.TabIndex = 31;
@@ -625,7 +530,7 @@
             // telefonoLabel
             // 
             telefonoLabel.AutoSize = true;
-            telefonoLabel.Location = new System.Drawing.Point(41, 261);
+            telefonoLabel.Location = new System.Drawing.Point(44, 244);
             telefonoLabel.Name = "telefonoLabel";
             telefonoLabel.Size = new System.Drawing.Size(48, 13);
             telefonoLabel.TabIndex = 31;
@@ -634,7 +539,7 @@
             // telefonoTextBox
             // 
             this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasBindingSource, "telefono", true));
-            this.telefonoTextBox.Location = new System.Drawing.Point(95, 258);
+            this.telefonoTextBox.Location = new System.Drawing.Point(98, 241);
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(100, 20);
             this.telefonoTextBox.TabIndex = 32;
@@ -642,7 +547,7 @@
             // direccionLabel
             // 
             direccionLabel.AutoSize = true;
-            direccionLabel.Location = new System.Drawing.Point(48, 307);
+            direccionLabel.Location = new System.Drawing.Point(78, 295);
             direccionLabel.Name = "direccionLabel";
             direccionLabel.Size = new System.Drawing.Size(53, 13);
             direccionLabel.TabIndex = 32;
@@ -651,7 +556,7 @@
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasBindingSource, "direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(107, 304);
+            this.direccionTextBox.Location = new System.Drawing.Point(137, 292);
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(100, 20);
             this.direccionTextBox.TabIndex = 33;
@@ -659,7 +564,7 @@
             // ciudadLabel
             // 
             ciudadLabel.AutoSize = true;
-            ciudadLabel.Location = new System.Drawing.Point(56, 367);
+            ciudadLabel.Location = new System.Drawing.Point(75, 337);
             ciudadLabel.Name = "ciudadLabel";
             ciudadLabel.Size = new System.Drawing.Size(42, 13);
             ciudadLabel.TabIndex = 33;
@@ -668,7 +573,7 @@
             // ciudadTextBox
             // 
             this.ciudadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasBindingSource, "ciudad", true));
-            this.ciudadTextBox.Location = new System.Drawing.Point(104, 364);
+            this.ciudadTextBox.Location = new System.Drawing.Point(123, 334);
             this.ciudadTextBox.Name = "ciudadTextBox";
             this.ciudadTextBox.Size = new System.Drawing.Size(100, 20);
             this.ciudadTextBox.TabIndex = 34;
@@ -676,7 +581,7 @@
             // id_tipo_empresaLabel
             // 
             id_tipo_empresaLabel.AutoSize = true;
-            id_tipo_empresaLabel.Location = new System.Drawing.Point(58, 414);
+            id_tipo_empresaLabel.Location = new System.Drawing.Point(72, 379);
             id_tipo_empresaLabel.Name = "id_tipo_empresaLabel";
             id_tipo_empresaLabel.Size = new System.Drawing.Size(81, 13);
             id_tipo_empresaLabel.TabIndex = 34;
@@ -684,12 +589,11 @@
             // 
             // id_tipo_empresaComboBox
             // 
-            this.id_tipo_empresaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresasBindingSource, "id_tipo_empresa", true));
             this.id_tipo_empresaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.empresasBindingSource, "id_tipo_empresa", true));
             this.id_tipo_empresaComboBox.DataSource = this.tipoempresasBindingSource;
             this.id_tipo_empresaComboBox.DisplayMember = "tipo";
             this.id_tipo_empresaComboBox.FormattingEnabled = true;
-            this.id_tipo_empresaComboBox.Location = new System.Drawing.Point(145, 411);
+            this.id_tipo_empresaComboBox.Location = new System.Drawing.Point(159, 376);
             this.id_tipo_empresaComboBox.Name = "id_tipo_empresaComboBox";
             this.id_tipo_empresaComboBox.Size = new System.Drawing.Size(121, 21);
             this.id_tipo_empresaComboBox.TabIndex = 35;
@@ -704,20 +608,118 @@
             // 
             this.tipo_empresasTableAdapter.ClearBeforeFill = true;
             // 
+            // empresasDataGridView
+            // 
+            this.empresasDataGridView.AllowUserToAddRows = false;
+            this.empresasDataGridView.AllowUserToDeleteRows = false;
+            this.empresasDataGridView.AllowUserToOrderColumns = true;
+            this.empresasDataGridView.AutoGenerateColumns = false;
+            this.empresasDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            this.empresasDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.empresasDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.empresasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.empresasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            this.empresasDataGridView.DataSource = this.empresasBindingSource;
+            this.empresasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.empresasDataGridView.Location = new System.Drawing.Point(20, 0);
+            this.empresasDataGridView.Name = "empresasDataGridView";
+            this.empresasDataGridView.ReadOnly = true;
+            this.empresasDataGridView.Size = new System.Drawing.Size(540, 353);
+            this.empresasDataGridView.TabIndex = 15;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_empresa";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id_empresa";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "codigo";
+            this.dataGridViewTextBoxColumn2.HeaderText = "codigo";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn3.HeaderText = "nombre";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "gerente";
+            this.dataGridViewTextBoxColumn4.HeaderText = "gerente";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "propietario";
+            this.dataGridViewTextBoxColumn5.HeaderText = "propietario";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "telefono";
+            this.dataGridViewTextBoxColumn6.HeaderText = "telefono";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "direccion";
+            this.dataGridViewTextBoxColumn7.HeaderText = "direccion";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "ciudad";
+            this.dataGridViewTextBoxColumn8.HeaderText = "ciudad";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "id_tipo_empresa";
+            this.dataGridViewTextBoxColumn9.HeaderText = "id_tipo_empresa";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
             // UCEmpresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.empresasBindingNavigator);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Name = "UCEmpresas";
-            this.Size = new System.Drawing.Size(3276, 752);
+            this.Size = new System.Drawing.Size(880, 502);
             this.Load += new System.EventHandler(this.UCEmpresas_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -727,10 +729,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.empresasBindingNavigator)).EndInit();
             this.empresasBindingNavigator.ResumeLayout(false);
             this.empresasBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.empresasDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoempresasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empresasDataGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -756,9 +757,7 @@
         private DBTransporteTableAdapters.EmpresasTableAdapter empresasTableAdapter;
         private DBTransporteTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator empresasBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -767,9 +766,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton empresasBindingNavigatorSaveItem;
         private System.Windows.Forms.ComboBox id_tipo_empresaComboBox;
-        private System.Windows.Forms.BindingSource tipoempresasBindingSource;
         private System.Windows.Forms.TextBox ciudadTextBox;
         private System.Windows.Forms.TextBox direccionTextBox;
         private System.Windows.Forms.TextBox telefonoTextBox;
@@ -777,6 +774,8 @@
         private System.Windows.Forms.TextBox gerenteTextBox;
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.TextBox codigoTextBox;
+        private System.Windows.Forms.BindingSource tipoempresasBindingSource;
+        private DBTransporteTableAdapters.Tipo_empresasTableAdapter tipo_empresasTableAdapter;
         private System.Windows.Forms.DataGridView empresasDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -787,6 +786,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private DBTransporteTableAdapters.Tipo_empresasTableAdapter tipo_empresasTableAdapter;
     }
 }
