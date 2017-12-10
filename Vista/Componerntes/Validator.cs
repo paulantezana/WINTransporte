@@ -68,5 +68,8 @@ namespace Vista.Componerntes
                 throw ex;
             }
         }
+        private static void isMoney(){
+            // este bloque se creo para la validacion de las monedas
+        }
     }
 }
