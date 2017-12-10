@@ -29,51 +29,53 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCReportes));
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRutas = new System.Windows.Forms.Button();
+            this.btnEmpresa = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnEmpresas = new System.Windows.Forms.Button();
+            this.btnChoferes = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btnRutas
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(204)))), ((int)(((byte)(206)))));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(16, 175);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 35);
-            this.button2.TabIndex = 21;
-            this.button2.Text = " Rutas";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnRutas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRutas.FlatAppearance.BorderSize = 0;
+            this.btnRutas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnRutas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnRutas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRutas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRutas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(204)))), ((int)(((byte)(206)))));
+            this.btnRutas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRutas.Location = new System.Drawing.Point(16, 175);
+            this.btnRutas.Name = "btnRutas";
+            this.btnRutas.Size = new System.Drawing.Size(148, 35);
+            this.btnRutas.TabIndex = 21;
+            this.btnRutas.Text = " Rutas";
+            this.btnRutas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRutas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRutas.UseVisualStyleBackColor = true;
+            this.btnRutas.Click += new System.EventHandler(this.btnRutas_Click);
             // 
-            // button1
+            // btnEmpresa
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(204)))), ((int)(((byte)(206)))));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(16, 134);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 35);
-            this.button1.TabIndex = 20;
-            this.button1.Text = " Empresas";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEmpresa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmpresa.FlatAppearance.BorderSize = 0;
+            this.btnEmpresa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnEmpresa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(204)))), ((int)(((byte)(206)))));
+            this.btnEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmpresa.Location = new System.Drawing.Point(16, 134);
+            this.btnEmpresa.Name = "btnEmpresa";
+            this.btnEmpresa.Size = new System.Drawing.Size(148, 35);
+            this.btnEmpresa.TabIndex = 20;
+            this.btnEmpresa.Text = " Empresas";
+            this.btnEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmpresa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEmpresa.UseVisualStyleBackColor = true;
+            this.btnEmpresa.Click += new System.EventHandler(this.btnEmpresa_Click);
             // 
             // pictureBox1
             // 
@@ -85,24 +87,25 @@
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
-            // btnEmpresas
+            // btnChoferes
             // 
-            this.btnEmpresas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEmpresas.FlatAppearance.BorderSize = 0;
-            this.btnEmpresas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
-            this.btnEmpresas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
-            this.btnEmpresas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpresas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(204)))), ((int)(((byte)(206)))));
-            this.btnEmpresas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpresas.Location = new System.Drawing.Point(16, 93);
-            this.btnEmpresas.Name = "btnEmpresas";
-            this.btnEmpresas.Size = new System.Drawing.Size(148, 35);
-            this.btnEmpresas.TabIndex = 18;
-            this.btnEmpresas.Text = " Choferes";
-            this.btnEmpresas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpresas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEmpresas.UseVisualStyleBackColor = true;
+            this.btnChoferes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChoferes.FlatAppearance.BorderSize = 0;
+            this.btnChoferes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnChoferes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnChoferes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChoferes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChoferes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(204)))), ((int)(((byte)(206)))));
+            this.btnChoferes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChoferes.Location = new System.Drawing.Point(16, 93);
+            this.btnChoferes.Name = "btnChoferes";
+            this.btnChoferes.Size = new System.Drawing.Size(148, 35);
+            this.btnChoferes.TabIndex = 18;
+            this.btnChoferes.Text = " Choferes";
+            this.btnChoferes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChoferes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnChoferes.UseVisualStyleBackColor = true;
+            this.btnChoferes.Click += new System.EventHandler(this.btnChoferes_Click);
             // 
             // label1
             // 
@@ -120,13 +123,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(46)))), ((int)(((byte)(54)))));
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRutas);
+            this.Controls.Add(this.btnEmpresa);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnEmpresas);
+            this.Controls.Add(this.btnChoferes);
             this.Controls.Add(this.label1);
             this.Name = "UCReportes";
             this.Size = new System.Drawing.Size(180, 571);
+            this.Load += new System.EventHandler(this.UCReportes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,10 +138,10 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRutas;
+        private System.Windows.Forms.Button btnEmpresa;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnEmpresas;
+        private System.Windows.Forms.Button btnChoferes;
         private System.Windows.Forms.Label label1;
     }
 }
