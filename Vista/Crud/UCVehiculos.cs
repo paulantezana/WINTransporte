@@ -16,5 +16,13 @@ namespace Vista.Crud
         {
             InitializeComponent();
         }
+
+        private void vehiculosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.vehiculosBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dBTransporte);
+
+        }
     }
 }

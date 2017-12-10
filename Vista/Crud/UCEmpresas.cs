@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vista.Componerntes;
 
 namespace Vista.Crud
 {
@@ -19,17 +20,7 @@ namespace Vista.Crud
 
         private void empresasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.empresasBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dBTransporte);
 
-        }
-
-        private void empresasBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.empresasBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dBTransporte);
 
         }
 
@@ -37,6 +28,7 @@ namespace Vista.Crud
         {
             tipo_empresasTableAdapter.Fill(dBTransporte.tipo_empresas);
             empresasTableAdapter.Fill(dBTransporte.empresas);
+            estado(false);
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -47,15 +39,6 @@ namespace Vista.Crud
 
         private void estado(bool state)
         {
-            codigoTextBox.Enabled = state;
-            nombreTextBox.Enabled = state;
-            propietarioTextBox.Enabled = state;
-            gerenteTextBox.Enabled = state;
-            telefonoTextBox.Enabled = state;
-            direccionTextBox.Enabled = state;
-            ciudadTextBox.Enabled = state;
-            id_tipo_empresaComboBox.Enabled = state;
-
             btnGuardar.Enabled = state;
             btnCancelar.Enabled = state;
 
@@ -87,13 +70,55 @@ namespace Vista.Crud
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            /*if (tipoTextBox.Text == "")
+            if (codigoTextBox.Text == "")
             {
-                errorProvider1.SetError(tipoTextBox, "El campo tipo esta vacía");
-                tipoTextBox.Focus();
+                errorProvider1.SetError(codigoTextBox, "El campo codigo esta vacía");
+                codigoTextBox.Focus();
                 return;
             }
-            errorProvider1.Clear();*/
+            errorProvider1.Clear();
+            if (nombreTextBox.Text == "")
+            {
+                errorProvider1.SetError(nombreTextBox, "El campo nombre esta vacía");
+                nombreTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+            if (gerenteTextBox.Text == "")
+            {
+                errorProvider1.SetError(gerenteTextBox, "El campo gerente esta vacía");
+                gerenteTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+            if (propietarioTextBox.Text == "")
+            {
+                errorProvider1.SetError(propietarioTextBox, "El campo propietario esta vacía");
+                propietarioTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+            if (telefonoTextBox.Text == "")
+            {
+                errorProvider1.SetError(telefonoTextBox, "El campo telefono esta vacía");
+                telefonoTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+            if (direccionTextBox.Text == "")
+            {
+                errorProvider1.SetError(direccionTextBox, "El campo direccion esta vacía");
+                direccionTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+            if (ciudadTextBox.Text == "")
+            {
+                errorProvider1.SetError(ciudadTextBox, "El campo ciudad esta vacía");
+                ciudadTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
 
             this.Validate();
             this.empresasBindingSource.EndEdit();
@@ -101,12 +126,9 @@ namespace Vista.Crud
             estado(false);
         }
 
-        private void empresasBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
+        private void telefonoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.Validate();
-            this.empresasBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dBTransporte);
-
+            Validator.isNumber(e);
         }
     }
 }
