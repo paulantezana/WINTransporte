@@ -16,5 +16,13 @@ namespace Vista.Crud
         {
             InitializeComponent();
         }
+
+        private void usuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.usuariosBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dBTransporte);
+
+        }
     }
 }
