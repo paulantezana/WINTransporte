@@ -82,11 +82,12 @@
             // licenciaLabel
             // 
             licenciaLabel.AutoSize = true;
-            licenciaLabel.Location = new System.Drawing.Point(125, 221);
+            licenciaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            licenciaLabel.Location = new System.Drawing.Point(24, 89);
             licenciaLabel.Name = "licenciaLabel";
-            licenciaLabel.Size = new System.Drawing.Size(46, 13);
+            licenciaLabel.Size = new System.Drawing.Size(61, 16);
             licenciaLabel.TabIndex = 27;
-            licenciaLabel.Text = "licencia:";
+            licenciaLabel.Text = "Licencia:";
             // 
             // panel5
             // 
@@ -108,9 +109,10 @@
             // licenciaTextBox
             // 
             this.licenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.licenciasBindingSource, "licencia", true));
-            this.licenciaTextBox.Location = new System.Drawing.Point(177, 218);
+            this.licenciaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.licenciaTextBox.Location = new System.Drawing.Point(27, 105);
             this.licenciaTextBox.Name = "licenciaTextBox";
-            this.licenciaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.licenciaTextBox.Size = new System.Drawing.Size(100, 22);
             this.licenciaTextBox.TabIndex = 28;
             // 
             // licenciasBindingSource

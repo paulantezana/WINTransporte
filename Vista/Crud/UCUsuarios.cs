@@ -99,5 +99,70 @@ namespace Vista.Crud
             usuariosTableAdapter.Fill(dBTransporte.usuarios);
             estado(false);
         }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void fotoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fotoTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emailLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emailTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roolLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nombreLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nombreTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usuarioLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usuarioTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roolComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void claveLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void claveTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
