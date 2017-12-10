@@ -9,6 +9,7 @@ namespace Vista.Componerntes
 {
     public class Validator
     {
+        //este codigo permite la entrada de solo numeros
         public static void isNumber(KeyPressEventArgs e)
         {
             try
