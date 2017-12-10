@@ -102,56 +102,68 @@
             // usuarioLabel
             // 
             usuarioLabel.AutoSize = true;
-            usuarioLabel.Location = new System.Drawing.Point(55, 88);
+            usuarioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            usuarioLabel.Location = new System.Drawing.Point(24, 85);
             usuarioLabel.Name = "usuarioLabel";
-            usuarioLabel.Size = new System.Drawing.Size(44, 13);
+            usuarioLabel.Size = new System.Drawing.Size(58, 16);
             usuarioLabel.TabIndex = 27;
-            usuarioLabel.Text = "usuario:";
+            usuarioLabel.Text = "Usuario:";
+            usuarioLabel.Click += new System.EventHandler(this.usuarioLabel_Click);
             // 
             // claveLabel
             // 
             claveLabel.AutoSize = true;
-            claveLabel.Location = new System.Drawing.Point(43, 136);
+            claveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            claveLabel.Location = new System.Drawing.Point(24, 133);
             claveLabel.Name = "claveLabel";
-            claveLabel.Size = new System.Drawing.Size(36, 13);
+            claveLabel.Size = new System.Drawing.Size(46, 16);
             claveLabel.TabIndex = 28;
-            claveLabel.Text = "clave:";
+            claveLabel.Text = "Clave:";
+            claveLabel.Click += new System.EventHandler(this.claveLabel_Click);
             // 
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(67, 198);
+            nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreLabel.Location = new System.Drawing.Point(24, 183);
             nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(45, 13);
+            nombreLabel.Size = new System.Drawing.Size(60, 16);
             nombreLabel.TabIndex = 29;
-            nombreLabel.Text = "nombre:";
+            nombreLabel.Text = "Nombre:";
+            nombreLabel.Click += new System.EventHandler(this.nombreLabel_Click);
             // 
             // emailLabel
             // 
             emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(54, 238);
+            emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            emailLabel.Location = new System.Drawing.Point(24, 235);
             emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(34, 13);
+            emailLabel.Size = new System.Drawing.Size(48, 16);
             emailLabel.TabIndex = 30;
-            emailLabel.Text = "email:";
+            emailLabel.Text = "e-mail:";
+            emailLabel.Click += new System.EventHandler(this.emailLabel_Click);
             // 
             // fotoLabel
             // 
             fotoLabel.AutoSize = true;
-            fotoLabel.Location = new System.Drawing.Point(101, 295);
+            fotoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fotoLabel.Location = new System.Drawing.Point(24, 283);
             fotoLabel.Name = "fotoLabel";
-            fotoLabel.Size = new System.Drawing.Size(28, 13);
+            fotoLabel.Size = new System.Drawing.Size(38, 16);
             fotoLabel.TabIndex = 31;
-            fotoLabel.Text = "foto:";
+            fotoLabel.Text = "Foto:";
+            fotoLabel.Click += new System.EventHandler(this.fotoLabel_Click);
             // 
             // roolLabel
             // 
             roolLabel.AutoSize = true;
-            roolLabel.Location = new System.Drawing.Point(98, 346);
+            roolLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            roolLabel.Location = new System.Drawing.Point(24, 331);
             roolLabel.Name = "roolLabel";
-            roolLabel.Size = new System.Drawing.Size(27, 13);
+            roolLabel.Size = new System.Drawing.Size(40, 16);
             roolLabel.TabIndex = 32;
-            roolLabel.Text = "rool:";
+            roolLabel.Text = "Rool:";
+            roolLabel.Click += new System.EventHandler(this.roolLabel_Click);
             // 
             // panel5
             // 
@@ -175,15 +187,18 @@
             this.panel5.Controls.Add(this.btnCancelar);
             this.panel5.Controls.Add(this.btnGuardar);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel5.Location = new System.Drawing.Point(580, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(300, 456);
             this.panel5.TabIndex = 11;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // roolComboBox
             // 
             this.roolComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "rool", true));
             this.roolComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.roolComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roolComboBox.FormattingEnabled = true;
             this.roolComboBox.Items.AddRange(new object[] {
             "Admin",
@@ -192,10 +207,11 @@
             "Soporte",
             "Supervisor",
             "Usuario"});
-            this.roolComboBox.Location = new System.Drawing.Point(131, 343);
+            this.roolComboBox.Location = new System.Drawing.Point(27, 347);
             this.roolComboBox.Name = "roolComboBox";
-            this.roolComboBox.Size = new System.Drawing.Size(121, 21);
+            this.roolComboBox.Size = new System.Drawing.Size(129, 24);
             this.roolComboBox.TabIndex = 33;
+            this.roolComboBox.SelectedIndexChanged += new System.EventHandler(this.roolComboBox_SelectedIndexChanged);
             // 
             // usuariosBindingSource
             // 
@@ -210,43 +226,53 @@
             // fotoTextBox
             // 
             this.fotoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "foto", true));
-            this.fotoTextBox.Location = new System.Drawing.Point(135, 292);
+            this.fotoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fotoTextBox.Location = new System.Drawing.Point(27, 299);
             this.fotoTextBox.Name = "fotoTextBox";
-            this.fotoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.fotoTextBox.Size = new System.Drawing.Size(247, 22);
             this.fotoTextBox.TabIndex = 32;
+            this.fotoTextBox.TextChanged += new System.EventHandler(this.fotoTextBox_TextChanged);
             // 
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(94, 235);
+            this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTextBox.Location = new System.Drawing.Point(27, 251);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(100, 20);
+            this.emailTextBox.Size = new System.Drawing.Size(247, 22);
             this.emailTextBox.TabIndex = 31;
+            this.emailTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
             // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(118, 195);
+            this.nombreTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombreTextBox.Location = new System.Drawing.Point(27, 199);
             this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nombreTextBox.Size = new System.Drawing.Size(247, 22);
             this.nombreTextBox.TabIndex = 30;
+            this.nombreTextBox.TextChanged += new System.EventHandler(this.nombreTextBox_TextChanged);
             // 
             // claveTextBox
             // 
             this.claveTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "clave", true));
-            this.claveTextBox.Location = new System.Drawing.Point(85, 133);
+            this.claveTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.claveTextBox.Location = new System.Drawing.Point(27, 149);
             this.claveTextBox.Name = "claveTextBox";
             this.claveTextBox.PasswordChar = '•';
-            this.claveTextBox.Size = new System.Drawing.Size(100, 20);
+            this.claveTextBox.Size = new System.Drawing.Size(247, 22);
             this.claveTextBox.TabIndex = 29;
+            this.claveTextBox.TextChanged += new System.EventHandler(this.claveTextBox_TextChanged);
             // 
             // usuarioTextBox
             // 
             this.usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "usuario", true));
-            this.usuarioTextBox.Location = new System.Drawing.Point(105, 85);
+            this.usuarioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuarioTextBox.Location = new System.Drawing.Point(27, 101);
             this.usuarioTextBox.Name = "usuarioTextBox";
-            this.usuarioTextBox.Size = new System.Drawing.Size(100, 20);
+            this.usuarioTextBox.Size = new System.Drawing.Size(247, 22);
             this.usuarioTextBox.TabIndex = 28;
+            this.usuarioTextBox.TextChanged += new System.EventHandler(this.usuarioTextBox_TextChanged);
             // 
             // btnNuevo
             // 

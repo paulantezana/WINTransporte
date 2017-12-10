@@ -90,29 +90,32 @@
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(63, 116);
+            nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreLabel.Location = new System.Drawing.Point(24, 87);
             nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(45, 13);
+            nombreLabel.Size = new System.Drawing.Size(60, 16);
             nombreLabel.TabIndex = 27;
-            nombreLabel.Text = "nombre:";
+            nombreLabel.Text = "Nombre:";
             // 
             // montoLabel
             // 
             montoLabel.AutoSize = true;
-            montoLabel.Location = new System.Drawing.Point(94, 175);
+            montoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            montoLabel.Location = new System.Drawing.Point(24, 135);
             montoLabel.Name = "montoLabel";
-            montoLabel.Size = new System.Drawing.Size(39, 13);
+            montoLabel.Size = new System.Drawing.Size(48, 16);
             montoLabel.TabIndex = 28;
-            montoLabel.Text = "monto:";
+            montoLabel.Text = "Monto:";
             // 
             // tipoLabel
             // 
             tipoLabel.AutoSize = true;
-            tipoLabel.Location = new System.Drawing.Point(97, 236);
+            tipoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tipoLabel.Location = new System.Drawing.Point(24, 183);
             tipoLabel.Name = "tipoLabel";
-            tipoLabel.Size = new System.Drawing.Size(27, 13);
+            tipoLabel.Size = new System.Drawing.Size(116, 16);
             tipoLabel.TabIndex = 29;
-            tipoLabel.Text = "tipo:";
+            tipoLabel.Text = "Tipo de Papeleta:";
             // 
             // panel5
             // 
@@ -139,13 +142,14 @@
             // 
             this.tipoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.papeletasBindingSource, "tipo", true));
             this.tipoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tipoComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tipoComboBox.FormattingEnabled = true;
             this.tipoComboBox.Items.AddRange(new object[] {
             "tipo-1",
             "tipo-2"});
-            this.tipoComboBox.Location = new System.Drawing.Point(130, 233);
+            this.tipoComboBox.Location = new System.Drawing.Point(27, 199);
             this.tipoComboBox.Name = "tipoComboBox";
-            this.tipoComboBox.Size = new System.Drawing.Size(121, 21);
+            this.tipoComboBox.Size = new System.Drawing.Size(131, 24);
             this.tipoComboBox.TabIndex = 30;
             // 
             // papeletasBindingSource
@@ -161,18 +165,20 @@
             // montoTextBox
             // 
             this.montoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.papeletasBindingSource, "monto", true));
-            this.montoTextBox.Location = new System.Drawing.Point(139, 172);
+            this.montoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.montoTextBox.Location = new System.Drawing.Point(27, 151);
             this.montoTextBox.Name = "montoTextBox";
-            this.montoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.montoTextBox.Size = new System.Drawing.Size(247, 22);
             this.montoTextBox.TabIndex = 29;
             this.montoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.montoTextBox_KeyPress);
             // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.papeletasBindingSource, "nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(114, 113);
+            this.nombreTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombreTextBox.Location = new System.Drawing.Point(27, 103);
             this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nombreTextBox.Size = new System.Drawing.Size(247, 22);
             this.nombreTextBox.TabIndex = 28;
             // 
             // btnNuevo

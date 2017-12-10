@@ -132,5 +132,10 @@ namespace Vista.Crud
         {
             Validator.isNumber(e);
         }
+
+        private void dniTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
