@@ -9,6 +9,7 @@ namespace Vista.Componerntes
 {
     public class Validator
     {
+        //este codigo permite la entrada de solo numeros
         public static void isNumber(KeyPressEventArgs e)
         {
             try
@@ -39,6 +40,8 @@ namespace Vista.Componerntes
                 throw ex;
             }
         }
+        
+        // validacion de textos para los campos de tipo texto
         public static void isString(KeyPressEventArgs e)
         {
             try
@@ -64,6 +67,9 @@ namespace Vista.Componerntes
             {
                 throw ex;
             }
+        }
+        private static void isMoney(){
+            // este bloque se creo para la validacion de las monedas
         }
     }
 }
