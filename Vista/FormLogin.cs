@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,7 +40,14 @@ namespace Vista
             }
             errorProvider1.Clear();
 
-            FormHome formHome = new FormHome();
+            UsuarioController usuarioController = new UsuarioController();
+            if (!usuarioController.loginUsuario(textUsuario.Text, textPassword.Text))
+            {
+                MessageBox.Show("El nombre de usuario o contraseña incorrecta", "Login");
+                return;
+            }
+
+            FormHome formHome = new FormHome(UsuarioController.usuario);
             formHome.Show();
             this.Hide();
         }

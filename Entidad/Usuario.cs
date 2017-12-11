@@ -14,7 +14,6 @@ namespace Entidad
         public string clave { get; set; }
         public string foto { get; set; }
         public string email { get; set; }
-        public int idPerfil { get; set; }
         public string rool { get; set; }
         public string descripcion { get; set; }
     }

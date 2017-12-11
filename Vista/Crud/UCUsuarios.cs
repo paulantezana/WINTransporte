@@ -25,6 +25,14 @@ namespace Vista.Crud
 
         private void estado(bool state)
         {
+            usuarioTextBox.Enabled = state;
+            claveTextBox.Enabled = state;
+            confirmarTextBox.Enabled = state;
+            nombreTextBox.Enabled = state;
+            emailTextBox.Enabled = state;
+            fotoTextBox.Enabled = state;
+            roolComboBox.Enabled = state;
+
             btnGuardar.Enabled = state;
             btnCancelar.Enabled = state;
 
@@ -72,6 +80,16 @@ namespace Vista.Crud
                 return;
             }
             errorProvider1.Clear();
+
+            if (confirmarTextBox.Text != claveTextBox.Text)
+            {
+                errorProvider1.SetError(confirmarTextBox, "Las contraseñas no coinciden");
+                confirmarTextBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+
+
             if (nombreTextBox.Text == "")
             {
                 errorProvider1.SetError(nombreTextBox, "El campo nombre esta vacía");
@@ -88,9 +106,17 @@ namespace Vista.Crud
             }
             errorProvider1.Clear();
 
-            this.Validate();
-            this.usuariosBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dBTransporte);
+            try
+            {
+                this.Validate();
+                this.usuariosBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.dBTransporte);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message,"Error usuario",  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             estado(false);
         }
 
@@ -98,71 +124,6 @@ namespace Vista.Crud
         {
             usuariosTableAdapter.Fill(dBTransporte.usuarios);
             estado(false);
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void fotoLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fotoTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void emailLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void emailTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void roolLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nombreLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nombreTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usuarioLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usuarioTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void roolComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void claveLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void claveTextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

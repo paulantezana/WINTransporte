@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidad;
 using Vista.Navegacion;
 
 namespace Vista
@@ -22,10 +23,18 @@ namespace Vista
         private UCMovimientos uCMovimientos;
 
         private UCReportes uCReportes;
+        private Usuario usuario;
 
         public FormHome()
         {
             InitializeComponent();
+        }
+
+        public FormHome(Usuario usuario)
+        {
+            InitializeComponent();
+            this.usuario = usuario;
+            lblUserName.Text = usuario.usuario;
         }
 
         private void panelHeader_Paint(object sender, PaintEventArgs e)
