@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vista.Componerntes;
+using Controlador;
+using Entidad;
 
 namespace Vista.Crud
 {
@@ -111,6 +113,7 @@ namespace Vista.Crud
         {
             rutasTableAdapter.Fill(dBTransporte.rutas);
             estado(false);
+            permiso();
         }
 
         private void frecuenciaTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -130,6 +133,49 @@ namespace Vista.Crud
 
         private void cerradaCheckBox_CheckedChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void permiso()
+        {
+            Usuario usuario = UsuarioController.usuario;
+            btnNuevo.Visible = false;
+            btnModificar.Visible = false;
+            btnEliminar.Visible = false;
+            btnGuardar.Visible = false;
+            btnCancelar.Visible = false;
+            rutasDataGridView.Visible = false;
+
+            switch (usuario.rool)
+            {
+                case "Usuario":
+                    rutasDataGridView.Visible = true;
+                    estado(true);
+                    break;
+                case "Gerente":
+                    rutasDataGridView.Visible = true;
+                    estado(true);
+                    break;
+                case "Admin":
+                    btnNuevo.Visible = true;
+                    btnModificar.Visible = true;
+                    btnEliminar.Visible = true;
+                    btnGuardar.Visible = true;
+                    btnCancelar.Visible = true;
+                    rutasDataGridView.Visible = true;
+                    estado(true);
+                    break;
+                case "Empresa":
+                    rutasDataGridView.Visible = true;
+                    estado(true);
+                    break;
+                case "Secretaria":
+                    rutasDataGridView.Visible = true;
+                    estado(true);
+                    break;
+                default:
+                    break;
+            }
 
         }
     }

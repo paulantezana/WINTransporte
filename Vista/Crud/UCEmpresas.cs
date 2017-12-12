@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vista.Componerntes;
+using Controlador;
+using Entidad;
 
 namespace Vista.Crud
 {
@@ -29,6 +31,7 @@ namespace Vista.Crud
             tipo_empresasTableAdapter.Fill(dBTransporte.tipo_empresas);
             empresasTableAdapter.Fill(dBTransporte.empresas);
             estado(false);
+            permiso();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -129,6 +132,48 @@ namespace Vista.Crud
         private void telefonoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validator.isNumber(e);
+        }
+
+        private void permiso()
+        {
+            Usuario usuario = UsuarioController.usuario;
+            btnNuevo.Visible = false;
+            btnModificar.Visible = false;
+            btnEliminar.Visible = false;
+            btnGuardar.Visible = false;
+            btnCancelar.Visible = false;
+            empresasDataGridView.Visible = false;
+
+            switch (usuario.rool)
+            {
+                case "Usuario":
+                    empresasDataGridView.Visible = true;
+                    estado(false);
+                    break;
+                case "Gerente":
+                    empresasDataGridView.Visible = true;
+                    estado(false);
+                    break;
+                case "Admin":
+                    btnNuevo.Visible = true;
+                    btnModificar.Visible = true;
+                    btnEliminar.Visible = true;
+                    btnGuardar.Visible = true;
+                    btnCancelar.Visible = true;
+                    empresasDataGridView.Visible = true;
+                    break;
+                case "Empresa":
+                    empresasDataGridView.Visible = true;
+                    estado(false);
+                    break;
+                case "Secretaria":
+                    empresasDataGridView.Visible = true;
+                    estado(false);
+                    break;
+                default:
+                    break;
+            }
+
         }
     }
 }

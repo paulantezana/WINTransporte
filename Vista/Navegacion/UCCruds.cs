@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vista.Crud;
+using Controlador;
+using Entidad;
 
 namespace Vista.Navegacion
 {
@@ -38,7 +40,7 @@ namespace Vista.Navegacion
 
         private void UCCruds_Load(object sender, EventArgs e)
         {
-
+            permiso();
         }
 
         private void btnEmpresas_Click(object sender, EventArgs e)
@@ -198,6 +200,43 @@ namespace Vista.Navegacion
         {
             togglePanels("usuarios");
             btnUsuarios.BackColor = Color.FromArgb(52, 60, 69);
+        }
+        private void permiso()
+        {
+            Usuario usuario = UsuarioController.usuario;
+            btnUsuarios.Visible = false;
+            btnTipoEmpresa.Visible = false;
+            btnTipoVehiculo.Visible = false;
+            btnLicencias.Visible = false;
+            btnPapeletas.Visible = false;
+            /*btnEmpresas.Visible = false;
+            */
+
+            switch (usuario.rool)
+            {
+                case "Usuario":
+                    break;
+                case "Gerente":
+                    btnTipoEmpresa.Visible = true;
+                    btnTipoVehiculo.Visible = true;
+                    btnLicencias.Visible = true;
+                    btnPapeletas.Visible = true;
+                    break;
+                case "Admin":
+                    btnUsuarios.Visible = true;
+                    btnTipoEmpresa.Visible = true;
+                    btnTipoVehiculo.Visible = true;
+                    btnLicencias.Visible = true;
+                    btnPapeletas.Visible = true;
+                    break;
+                case "Empresa":
+                    break;
+                case "Secretaria":
+                    break;
+                default:
+                    break;
+            }
+
         }
     }
 }

@@ -49,6 +49,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.lblUserName = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.lblRool = new System.Windows.Forms.Label();
             this.panelAside.SuspendLayout();
             this.panelAsideLeft.SuspendLayout();
             this.panelAsideFooter.SuspendLayout();
@@ -220,6 +221,7 @@
             this.btnChangeUser.Size = new System.Drawing.Size(30, 30);
             this.btnChangeUser.TabIndex = 2;
             this.btnChangeUser.UseVisualStyleBackColor = true;
+            this.btnChangeUser.Click += new System.EventHandler(this.btnChangeUser_Click);
             // 
             // btnSettings
             // 
@@ -249,6 +251,7 @@
             // panelHeader
             // 
             this.panelHeader.BackColor = System.Drawing.Color.White;
+            this.panelHeader.Controls.Add(this.lblRool);
             this.panelHeader.Controls.Add(this.button4);
             this.panelHeader.Controls.Add(this.button3);
             this.panelHeader.Controls.Add(this.pictureBox1);
@@ -320,7 +323,7 @@
             this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(48)))), ((int)(((byte)(55)))));
             this.lblUserName.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblUserName.Location = new System.Drawing.Point(448, 14);
+            this.lblUserName.Location = new System.Drawing.Point(448, 8);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(114, 18);
             this.lblUserName.TabIndex = 17;
@@ -335,6 +338,21 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(603, 549);
             this.panelMain.TabIndex = 3;
+            // 
+            // lblRool
+            // 
+            this.lblRool.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRool.AutoSize = true;
+            this.lblRool.BackColor = System.Drawing.Color.Transparent;
+            this.lblRool.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRool.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(48)))), ((int)(((byte)(55)))));
+            this.lblRool.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblRool.Location = new System.Drawing.Point(448, 24);
+            this.lblRool.Name = "lblRool";
+            this.lblRool.Size = new System.Drawing.Size(29, 13);
+            this.lblRool.TabIndex = 21;
+            this.lblRool.Text = "Rool";
+            this.lblRool.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FormHome
             // 
@@ -382,5 +400,6 @@
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnChangeUser;
         private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Label lblRool;
     }
 }

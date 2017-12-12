@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vista.Componerntes;
+using Entidad;
+using Controlador;
 
 namespace Vista.Crud
 {
@@ -82,11 +84,54 @@ namespace Vista.Crud
         {
             papeletasTableAdapter.Fill(dBTransporte.papeletas);
             estado(false);
+            permiso();
         }
 
         private void montoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validator.isNumber(e);
+        }
+        private void permiso()
+        {
+            Usuario usuario = UsuarioController.usuario;
+            btnNuevo.Visible = false;
+            btnModificar.Visible = false;
+            btnEliminar.Visible = false;
+            btnGuardar.Visible = false;
+            btnCancelar.Visible = false;
+            papeletasDataGridView.Visible = false;
+
+            switch (usuario.rool)
+            {
+                case "Usuario":
+                    papeletasDataGridView.Visible = true;
+                    estado(false);
+                    break;
+                case "Gerente":
+                    papeletasDataGridView.Visible = true;
+                    estado(false);
+                    break;
+                case "Admin":
+                    btnNuevo.Visible = true;
+                    btnModificar.Visible = true;
+                    btnEliminar.Visible = true;
+                    btnGuardar.Visible = true;
+                    btnCancelar.Visible = true;
+                    papeletasDataGridView.Visible = true;
+                    estado(false);
+                    break;
+                case "Empresa":
+                    papeletasDataGridView.Visible = true;
+                    estado(false);
+                    break;
+                case "Secretaria":
+                    papeletasDataGridView.Visible = true;
+                    estado(false);
+                    break;
+                default:
+                    break;
+            }
+
         }
     }
 }

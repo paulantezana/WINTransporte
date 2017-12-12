@@ -57,6 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Componerntes\Validator.cs" />
+    <Compile Include="Configuracion\UCPerfil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Configuracion\UCPerfil.Designer.cs">
+      <DependentUpon>UCPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Crud\UCChoferes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     <Compile Include="Reportes\UCRRutas.Designer.cs">
       <DependentUpon>UCRRutas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Configuracion\UCPerfil.resx">
+      <DependentUpon>UCPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Crud\UCChoferes.resx">
       <DependentUpon>UCChoferes.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,9 +286,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Configuracion\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Controlador\Controlador.csproj">
       <Project>{49c2e927-b5a9-4e43-b121-45ea69ecf606}</Project>
@@ -288,6 +295,10 @@
     <ProjectReference Include="..\Entidad\Entidad.csproj">
       <Project>{74b8f551-c21d-4d1c-b54f-1090759bab6e}</Project>
       <Name>Entidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{bb06a0f1-7ccc-4efd-8950-e8eb0e09d866}</Project>
+      <Name>Modelo</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidad;
+using Controlador;
 
 namespace Vista.Crud
 {
@@ -76,6 +78,47 @@ namespace Vista.Crud
         {
             tipo_empresasTableAdapter.Fill(dBTransporte.tipo_empresas);
             estado(false);
+            permiso();
+        }
+
+
+        private void permiso()
+        {
+            Usuario usuario = UsuarioController.usuario;
+            btnNuevo.Visible = false;
+            btnModificar.Visible = false;
+            btnEliminar.Visible = false;
+            btnGuardar.Visible = false;
+            btnCancelar.Visible = false;
+            tipo_empresasDataGridView.Visible = false;
+
+            switch (usuario.rool)
+            {
+                case "Usuario":
+                    tipo_empresasDataGridView.Visible = true;
+                    estado(false);
+                    break;
+                case "Gerente":
+                    tipo_empresasDataGridView.Visible = true;
+                    estado(false);
+                    break;
+                case "Admin":
+                    btnNuevo.Visible = true;
+                    btnModificar.Visible = true;
+                    btnEliminar.Visible = true;
+                    btnGuardar.Visible = true;
+                    btnCancelar.Visible = true;
+                    tipo_empresasDataGridView.Visible = true;
+                    estado(false);
+                    break;
+                case "Empresa":
+                    break;
+                case "Secretaria":
+                    break;
+                default:
+                    break;
+            }
+
         }
     }
 }

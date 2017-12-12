@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vista.Componerntes;
+using Controlador;
+using Entidad;
 
 namespace Vista.Crud
 {
@@ -126,6 +128,7 @@ namespace Vista.Crud
             licenciasTableAdapter.Fill(dBTransporte.licencias);
             empresasTableAdapter.Fill(dBTransporte.empresas);
             estado(false);
+            permiso();
         }
 
         private void telefonoTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -135,6 +138,58 @@ namespace Vista.Crud
 
         private void dniTextBox_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void campos(bool estado)
+        {
+            dniTextBox.Visible = estado;
+            nombresTextBox.Visible = estado;
+            apellidosTextBox.Visible = estado;
+            telefonoTextBox.Visible = estado;
+            emailTextBox.Visible = estado;
+            direccionTextBox.Visible = estado;
+            id_licenciaComboBox.Visible = estado;
+            id_empresaComboBox.Visible = estado;
+        }
+
+        private void permiso()
+        {
+            Usuario usuario = UsuarioController.usuario;
+            btnNuevo.Visible = false;
+            btnModificar.Visible = false;
+            btnEliminar.Visible = false;
+            btnGuardar.Visible = false;
+            btnCancelar.Visible = false;
+            choferesDataGridView.Visible = false;
+            campos(false);
+
+            switch (usuario.rool)
+            {
+                case "Usuario":
+                    choferesDataGridView.Visible = true;
+                    break;
+                case "Gerente":
+                    choferesDataGridView.Visible = true;
+                    break;
+                case "Admin":
+                    btnNuevo.Visible = true;
+                    btnModificar.Visible = true;
+                    btnEliminar.Visible = true;
+                    btnGuardar.Visible = true;
+                    btnCancelar.Visible = true;
+                    choferesDataGridView.Visible = true;
+                    campos(true);
+                    break;
+                case "Empresa":
+                    choferesDataGridView.Visible = true;
+                    break;
+                case "Secretaria":
+                    choferesDataGridView.Visible = true;
+                    break;
+                default:
+                    break;
+            }
 
         }
     }

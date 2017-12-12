@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Vista.Crud
 {
@@ -124,6 +125,38 @@ namespace Vista.Crud
         {
             usuariosTableAdapter.Fill(dBTransporte.usuarios);
             estado(false);
+            loadImage();
         }
+
+        private void btnCamera_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            fotoTextBox.Text = openFileDialog1.FileName;
+            loadImage();
+        }
+        private void loadImage()
+        {
+            if (fotoTextBox.Text == string.Empty)
+            {
+                pbxPerfil.Image = null;
+            }
+            else
+            {
+                if (File.Exists(fotoTextBox.Text))
+                {
+                    pbxPerfil.Load(fotoTextBox.Text);
+                }
+                else
+                {
+                    pbxPerfil.Image = null;
+                }
+            }
+        }
+
+        private void usuariosDataGridView_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            loadImage();
+        }
+
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidad;
+using Controlador;
 
 namespace Vista.Crud
 {
@@ -74,6 +76,49 @@ namespace Vista.Crud
         {
             tipo_vehiculosTableAdapter.Fill(dBTransporte.tipo_vehiculos);
             estado(false);
+            permiso();
+        }
+
+        private void permiso()
+        {
+            Usuario usuario = UsuarioController.usuario;
+            btnNuevo.Visible = false;
+            btnModificar.Visible = false;
+            btnEliminar.Visible = false;
+            btnGuardar.Visible = false;
+            btnCancelar.Visible = false;
+            tipo_vehiculosDataGridView.Visible = false;
+
+            switch (usuario.rool)
+            {
+                case "Usuario":
+                    tipo_vehiculosDataGridView.Visible = true;
+                    estado(false);
+                    break;
+                case "Gerente":
+                    tipo_vehiculosDataGridView.Visible = true;
+                    estado(false);
+                    break;
+                case "Admin":
+                    btnNuevo.Visible = true;
+                    btnModificar.Visible = true;
+                    btnEliminar.Visible = true;
+                    btnGuardar.Visible = true;
+                    btnCancelar.Visible = true;
+                    tipo_vehiculosDataGridView.Visible = true;
+                    break;
+                case "Empresa":
+                    tipo_vehiculosDataGridView.Visible = true;
+                    estado(false);
+                    break;
+                case "Secretaria":
+                    tipo_vehiculosDataGridView.Visible = true;
+                    estado(false);
+                    break;
+                default:
+                    break;
+            }
+
         }
     }
 }

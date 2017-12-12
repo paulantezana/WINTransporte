@@ -43,11 +43,11 @@ namespace Vista
             UsuarioController usuarioController = new UsuarioController();
             if (!usuarioController.loginUsuario(textUsuario.Text, textPassword.Text))
             {
-                MessageBox.Show("El nombre de usuario o contraseña incorrecta", "Login");
+                MessageBox.Show("El nombre de usuario o contraseña incorrecta", "Login",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
 
-            FormHome formHome = new FormHome(UsuarioController.usuario);
+            FormHome formHome = new FormHome(UsuarioController.usuario,this);
             formHome.Show();
             this.Hide();
         }

@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBTransporte.cs">
+      <DependentUpon>DBTransporte.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DBTransporte.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

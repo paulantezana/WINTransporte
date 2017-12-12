@@ -23,7 +23,9 @@ namespace Vista
         private UCMovimientos uCMovimientos;
 
         private UCReportes uCReportes;
+
         private Usuario usuario;
+        private FormLogin formLogin;
 
         public FormHome()
         {
@@ -35,6 +37,12 @@ namespace Vista
             InitializeComponent();
             this.usuario = usuario;
             lblUserName.Text = usuario.usuario;
+            lblRool.Text = usuario.rool;
+        }
+
+        public FormHome(Usuario usuario, FormLogin formLogin) : this(usuario)
+        {
+            this.formLogin = formLogin;
         }
 
         private void panelHeader_Paint(object sender, PaintEventArgs e)
@@ -152,5 +160,10 @@ namespace Vista
             btnChat.BackColor = Color.FromArgb(29, 35, 42);
         }
 
+        private void btnChangeUser_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.formLogin.Show();
+        }
     }
 }
