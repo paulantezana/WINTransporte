@@ -24,7 +24,7 @@ namespace Vista.Crud
             this.Validate();
             this.vehiculosBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dBTransporte);
-            permiso();
+           // permiso();
 
         }
         private void permiso()
@@ -37,7 +37,7 @@ namespace Vista.Crud
             btnCancelar.Visible = false;
             vehiculosDataGridView.Visible = false;
 
-            switch (usuario.rool)
+            /*switch (usuario.rool)
             {
                 case "Usuario":
                     vehiculosDataGridView.Visible = true;
@@ -61,8 +61,14 @@ namespace Vista.Crud
                     break;
                 default:
                     break;
-            }
+            }*/
 
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            FormImprimirVehiculo formImprimir = new FormImprimirVehiculo();
+            formImprimir.ShowDialog();
         }
     }
 }

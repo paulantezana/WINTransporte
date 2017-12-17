@@ -75,7 +75,7 @@ namespace Vista.Crud
         {
             licenciasTableAdapter.Fill(dBTransporte.licencias);
             estado(false);
-            permiso();
+            // permiso();
         }
 
         private void permiso()
@@ -88,7 +88,7 @@ namespace Vista.Crud
             btnCancelar.Visible = false;
             licenciasDataGridView.Visible = false;
 
-            switch (usuario.rool)
+           /* switch (usuario.rool)
             {
                 case "Usuario":
                     licenciasDataGridView.Visible = true;
@@ -117,8 +117,14 @@ namespace Vista.Crud
                     break;
                 default:
                     break;
-            }
+            }*/
 
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            FormImprimirLicencias formImprimir = new FormImprimirLicencias();
+            formImprimir.ShowDialog();
         }
     }
 }

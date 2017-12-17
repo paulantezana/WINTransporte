@@ -133,9 +133,9 @@
             this.panel5.Controls.Add(this.btnCancelar);
             this.panel5.Controls.Add(this.btnGuardar);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(569, 0);
+            this.panel5.Location = new System.Drawing.Point(529, 50);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(300, 485);
+            this.panel5.Size = new System.Drawing.Size(300, 405);
             this.panel5.TabIndex = 11;
             // 
             // tipoComboBox
@@ -233,7 +233,7 @@
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(213)))), ((int)(((byte)(217)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.btnCancelar.Location = new System.Drawing.Point(98, 434);
+            this.btnCancelar.Location = new System.Drawing.Point(98, 354);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(85, 30);
             this.btnCancelar.TabIndex = 25;
@@ -251,7 +251,7 @@
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(114)))), ((int)(((byte)(220)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(189, 434);
+            this.btnGuardar.Location = new System.Drawing.Point(189, 354);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(85, 30);
             this.btnGuardar.TabIndex = 22;
@@ -265,21 +265,22 @@
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Location = new System.Drawing.Point(0, 50);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(569, 485);
+            this.panel4.Size = new System.Drawing.Size(529, 405);
             this.panel4.TabIndex = 12;
             // 
             // panel3
             // 
             this.panel3.AutoScroll = true;
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.papeletasDataGridView);
             this.panel3.Controls.Add(this.papeletasBindingNavigator);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 74);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.panel3.Size = new System.Drawing.Size(569, 361);
+            this.panel3.Size = new System.Drawing.Size(529, 281);
             this.panel3.TabIndex = 6;
             // 
             // papeletasDataGridView
@@ -301,7 +302,7 @@
             this.papeletasDataGridView.Location = new System.Drawing.Point(20, 0);
             this.papeletasDataGridView.Name = "papeletasDataGridView";
             this.papeletasDataGridView.ReadOnly = true;
-            this.papeletasDataGridView.Size = new System.Drawing.Size(529, 336);
+            this.papeletasDataGridView.Size = new System.Drawing.Size(489, 256);
             this.papeletasDataGridView.TabIndex = 14;
             // 
             // dataGridViewTextBoxColumn1
@@ -335,6 +336,7 @@
             // papeletasBindingNavigator
             // 
             this.papeletasBindingNavigator.AddNewItem = null;
+            this.papeletasBindingNavigator.BackColor = System.Drawing.Color.White;
             this.papeletasBindingNavigator.BindingSource = this.papeletasBindingSource;
             this.papeletasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.papeletasBindingNavigator.DeleteItem = null;
@@ -349,14 +351,14 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.papeletasBindingNavigator.Location = new System.Drawing.Point(20, 336);
+            this.papeletasBindingNavigator.Location = new System.Drawing.Point(20, 256);
             this.papeletasBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.papeletasBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.papeletasBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.papeletasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.papeletasBindingNavigator.Name = "papeletasBindingNavigator";
             this.papeletasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.papeletasBindingNavigator.Size = new System.Drawing.Size(529, 25);
+            this.papeletasBindingNavigator.Size = new System.Drawing.Size(489, 25);
             this.papeletasBindingNavigator.TabIndex = 13;
             this.papeletasBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -429,6 +431,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnImportar);
             this.panel1.Controls.Add(this.btnImprimir);
             this.panel1.Controls.Add(this.label2);
@@ -436,7 +439,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(569, 74);
+            this.panel1.Size = new System.Drawing.Size(529, 74);
             this.panel1.TabIndex = 5;
             // 
             // btnImportar
@@ -449,7 +452,7 @@
             this.btnImportar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.btnImportar.Image = ((System.Drawing.Image)(resources.GetObject("btnImportar.Image")));
             this.btnImportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImportar.Location = new System.Drawing.Point(312, 25);
+            this.btnImportar.Location = new System.Drawing.Point(272, 25);
             this.btnImportar.Name = "btnImportar";
             this.btnImportar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnImportar.Size = new System.Drawing.Size(109, 35);
@@ -467,13 +470,14 @@
             this.btnImprimir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(440, 25);
+            this.btnImprimir.Location = new System.Drawing.Point(400, 25);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnImprimir.Size = new System.Drawing.Size(109, 35);
             this.btnImprimir.TabIndex = 28;
             this.btnImprimir.Text = "   Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // label2
             // 
@@ -501,10 +505,10 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.textBuscar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 435);
+            this.panel2.Location = new System.Drawing.Point(0, 355);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.panel2.Size = new System.Drawing.Size(569, 50);
+            this.panel2.Size = new System.Drawing.Size(529, 50);
             this.panel2.TabIndex = 1;
             // 
             // textBuscar
@@ -516,7 +520,7 @@
             this.textBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBuscar.Location = new System.Drawing.Point(20, 12);
             this.textBuscar.Name = "textBuscar";
-            this.textBuscar.Size = new System.Drawing.Size(529, 26);
+            this.textBuscar.Size = new System.Drawing.Size(489, 26);
             this.textBuscar.TabIndex = 0;
             // 
             // papeletasTableAdapter
@@ -532,6 +536,8 @@
             this.tableAdapterManager.EmpresasTableAdapter = null;
             this.tableAdapterManager.LicenciasTableAdapter = null;
             this.tableAdapterManager.PapeletasTableAdapter = this.papeletasTableAdapter;
+            this.tableAdapterManager.RolesTableAdapter = null;
+            this.tableAdapterManager.RolTableAdapter = null;
             this.tableAdapterManager.RutasTableAdapter = null;
             this.tableAdapterManager.SancionesTableAdapter = null;
             this.tableAdapterManager.Tipo_empresasTableAdapter = null;
@@ -551,6 +557,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Name = "UCPapeletas";
+            this.Padding = new System.Windows.Forms.Padding(0, 50, 40, 30);
             this.Size = new System.Drawing.Size(869, 485);
             this.Load += new System.EventHandler(this.UCPapeletas_Load);
             this.panel5.ResumeLayout(false);

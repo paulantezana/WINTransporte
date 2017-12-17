@@ -113,7 +113,7 @@ namespace Vista.Crud
         {
             rutasTableAdapter.Fill(dBTransporte.rutas);
             estado(false);
-            permiso();
+            //permiso();
         }
 
         private void frecuenciaTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -146,7 +146,7 @@ namespace Vista.Crud
             btnCancelar.Visible = false;
             rutasDataGridView.Visible = false;
 
-            switch (usuario.rool)
+            /*switch (usuario.rool)
             {
                 case "Usuario":
                     rutasDataGridView.Visible = true;
@@ -175,8 +175,14 @@ namespace Vista.Crud
                     break;
                 default:
                     break;
-            }
+            }*/
 
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            FormImprimirRutas formImprimir = new FormImprimirRutas();
+            formImprimir.ShowDialog();
         }
     }
 }

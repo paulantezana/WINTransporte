@@ -76,7 +76,7 @@ namespace Vista.Crud
         {
             tipo_vehiculosTableAdapter.Fill(dBTransporte.tipo_vehiculos);
             estado(false);
-            permiso();
+            //permiso();
         }
 
         private void permiso()
@@ -89,7 +89,7 @@ namespace Vista.Crud
             btnCancelar.Visible = false;
             tipo_vehiculosDataGridView.Visible = false;
 
-            switch (usuario.rool)
+            /*switch (usuario.rool)
             {
                 case "Usuario":
                     tipo_vehiculosDataGridView.Visible = true;
@@ -117,8 +117,14 @@ namespace Vista.Crud
                     break;
                 default:
                     break;
-            }
+            }*/
 
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            FormImprimirTipoVehi formImprimir = new FormImprimirTipoVehi();
+            formImprimir.ShowDialog();
         }
     }
 }

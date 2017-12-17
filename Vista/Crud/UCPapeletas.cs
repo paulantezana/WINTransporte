@@ -84,7 +84,7 @@ namespace Vista.Crud
         {
             papeletasTableAdapter.Fill(dBTransporte.papeletas);
             estado(false);
-            permiso();
+           // permiso();
         }
 
         private void montoTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -101,7 +101,7 @@ namespace Vista.Crud
             btnCancelar.Visible = false;
             papeletasDataGridView.Visible = false;
 
-            switch (usuario.rool)
+            /*switch (usuario.rool)
             {
                 case "Usuario":
                     papeletasDataGridView.Visible = true;
@@ -130,8 +130,14 @@ namespace Vista.Crud
                     break;
                 default:
                     break;
-            }
+            }*/
 
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            FormImprimirPapeletas formImprimir = new FormImprimirPapeletas();
+            formImprimir.ShowDialog();
         }
     }
 }

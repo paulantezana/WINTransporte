@@ -89,6 +89,7 @@
             this.tableAdapterManager = new Vista.DBTransporteTableAdapters.TableAdapterManager();
             this.tipo_empresasTableAdapter = new Vista.DBTransporteTableAdapters.Tipo_empresasTableAdapter();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel6 = new System.Windows.Forms.Panel();
             codigoLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             gerenteLabel = new System.Windows.Forms.Label();
@@ -109,6 +110,7 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // codigoLabel
@@ -217,9 +219,9 @@
             this.panel5.Controls.Add(this.btnCancelar);
             this.panel5.Controls.Add(this.btnGuardar);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(580, 0);
+            this.panel5.Location = new System.Drawing.Point(540, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(300, 591);
+            this.panel5.Size = new System.Drawing.Size(300, 548);
             this.panel5.TabIndex = 12;
             // 
             // id_tipo_empresaComboBox
@@ -367,7 +369,7 @@
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(213)))), ((int)(((byte)(217)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.btnCancelar.Location = new System.Drawing.Point(98, 540);
+            this.btnCancelar.Location = new System.Drawing.Point(98, 497);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(85, 30);
             this.btnCancelar.TabIndex = 25;
@@ -385,7 +387,7 @@
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(114)))), ((int)(((byte)(220)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(189, 540);
+            this.btnGuardar.Location = new System.Drawing.Point(189, 497);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(85, 30);
             this.btnGuardar.TabIndex = 22;
@@ -401,7 +403,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(580, 591);
+            this.panel4.Size = new System.Drawing.Size(540, 548);
             this.panel4.TabIndex = 13;
             // 
             // panel3
@@ -413,7 +415,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 74);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.panel3.Size = new System.Drawing.Size(580, 467);
+            this.panel3.Size = new System.Drawing.Size(540, 424);
             this.panel3.TabIndex = 6;
             // 
             // empresasDataGridView
@@ -448,7 +450,7 @@
             this.empresasDataGridView.Location = new System.Drawing.Point(20, 0);
             this.empresasDataGridView.Name = "empresasDataGridView";
             this.empresasDataGridView.ReadOnly = true;
-            this.empresasDataGridView.Size = new System.Drawing.Size(540, 442);
+            this.empresasDataGridView.Size = new System.Drawing.Size(500, 399);
             this.empresasDataGridView.TabIndex = 15;
             // 
             // dataGridViewTextBoxColumn1
@@ -517,6 +519,7 @@
             // empresasBindingNavigator
             // 
             this.empresasBindingNavigator.AddNewItem = null;
+            this.empresasBindingNavigator.BackColor = System.Drawing.Color.White;
             this.empresasBindingNavigator.BindingSource = this.empresasBindingSource;
             this.empresasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.empresasBindingNavigator.DeleteItem = null;
@@ -531,14 +534,14 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.empresasBindingNavigator.Location = new System.Drawing.Point(20, 442);
+            this.empresasBindingNavigator.Location = new System.Drawing.Point(20, 399);
             this.empresasBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.empresasBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.empresasBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.empresasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.empresasBindingNavigator.Name = "empresasBindingNavigator";
             this.empresasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.empresasBindingNavigator.Size = new System.Drawing.Size(540, 25);
+            this.empresasBindingNavigator.Size = new System.Drawing.Size(500, 25);
             this.empresasBindingNavigator.TabIndex = 14;
             this.empresasBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -618,7 +621,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(580, 74);
+            this.panel1.Size = new System.Drawing.Size(540, 74);
             this.panel1.TabIndex = 5;
             // 
             // btnImportar
@@ -631,7 +634,7 @@
             this.btnImportar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.btnImportar.Image = ((System.Drawing.Image)(resources.GetObject("btnImportar.Image")));
             this.btnImportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImportar.Location = new System.Drawing.Point(323, 25);
+            this.btnImportar.Location = new System.Drawing.Point(283, 25);
             this.btnImportar.Name = "btnImportar";
             this.btnImportar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnImportar.Size = new System.Drawing.Size(109, 35);
@@ -649,13 +652,14 @@
             this.btnImprimir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(451, 25);
+            this.btnImprimir.Location = new System.Drawing.Point(411, 25);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnImprimir.Size = new System.Drawing.Size(109, 35);
             this.btnImprimir.TabIndex = 28;
             this.btnImprimir.Text = "   Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // label2
             // 
@@ -683,10 +687,10 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.textBuscar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 541);
+            this.panel2.Location = new System.Drawing.Point(0, 498);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.panel2.Size = new System.Drawing.Size(580, 50);
+            this.panel2.Size = new System.Drawing.Size(540, 50);
             this.panel2.TabIndex = 1;
             // 
             // textBuscar
@@ -698,7 +702,7 @@
             this.textBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBuscar.Location = new System.Drawing.Point(20, 12);
             this.textBuscar.Name = "textBuscar";
-            this.textBuscar.Size = new System.Drawing.Size(540, 26);
+            this.textBuscar.Size = new System.Drawing.Size(500, 26);
             this.textBuscar.TabIndex = 0;
             // 
             // empresasTableAdapter
@@ -714,6 +718,8 @@
             this.tableAdapterManager.EmpresasTableAdapter = this.empresasTableAdapter;
             this.tableAdapterManager.LicenciasTableAdapter = null;
             this.tableAdapterManager.PapeletasTableAdapter = null;
+            this.tableAdapterManager.RolesTableAdapter = null;
+            this.tableAdapterManager.RolTableAdapter = null;
             this.tableAdapterManager.RutasTableAdapter = null;
             this.tableAdapterManager.SancionesTableAdapter = null;
             this.tableAdapterManager.Tipo_empresasTableAdapter = this.tipo_empresasTableAdapter;
@@ -730,14 +736,25 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.panel4);
+            this.panel6.Controls.Add(this.panel5);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(0, 50);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(840, 548);
+            this.panel6.TabIndex = 14;
+            // 
             // UCEmpresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel6);
             this.Name = "UCEmpresas";
-            this.Size = new System.Drawing.Size(880, 591);
+            this.Padding = new System.Windows.Forms.Padding(0, 50, 40, 30);
+            this.Size = new System.Drawing.Size(880, 628);
             this.Load += new System.EventHandler(this.UCEmpresas_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -756,6 +773,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -812,5 +830,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panel6;
     }
 }

@@ -32,27 +32,24 @@
             this.panelAside = new System.Windows.Forms.Panel();
             this.panelAsideMain = new System.Windows.Forms.Panel();
             this.panelAsideLeft = new System.Windows.Forms.Panel();
-            this.btnChat = new System.Windows.Forms.Button();
-            this.btnConsulta = new System.Windows.Forms.Button();
+            this.btnConfig = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnMovimiento = new System.Windows.Forms.Button();
             this.btnCrud = new System.Windows.Forms.Button();
             this.btnTogleAside = new System.Windows.Forms.Button();
-            this.panelAsideFooter = new System.Windows.Forms.Panel();
             this.btnChangeUser = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.panelHeader = new System.Windows.Forms.Panel();
+            this.lblRool = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.lblUserName = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.lblRool = new System.Windows.Forms.Label();
             this.panelAside.SuspendLayout();
             this.panelAsideLeft.SuspendLayout();
-            this.panelAsideFooter.SuspendLayout();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +59,6 @@
             this.panelAside.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
             this.panelAside.Controls.Add(this.panelAsideMain);
             this.panelAside.Controls.Add(this.panelAsideLeft);
-            this.panelAside.Controls.Add(this.panelAsideFooter);
             this.panelAside.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAside.Location = new System.Drawing.Point(0, 0);
             this.panelAside.Name = "panelAside";
@@ -71,17 +67,17 @@
             // 
             // panelAsideMain
             // 
+            this.panelAsideMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(222)))), ((int)(((byte)(240)))));
             this.panelAsideMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAsideMain.Location = new System.Drawing.Point(50, 0);
             this.panelAsideMain.Name = "panelAsideMain";
-            this.panelAsideMain.Size = new System.Drawing.Size(180, 564);
+            this.panelAsideMain.Size = new System.Drawing.Size(180, 594);
             this.panelAsideMain.TabIndex = 6;
             // 
             // panelAsideLeft
             // 
-            this.panelAsideLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(42)))));
-            this.panelAsideLeft.Controls.Add(this.btnChat);
-            this.panelAsideLeft.Controls.Add(this.btnConsulta);
+            this.panelAsideLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(68)))), ((int)(((byte)(160)))));
+            this.panelAsideLeft.Controls.Add(this.btnConfig);
             this.panelAsideLeft.Controls.Add(this.btnReporte);
             this.panelAsideLeft.Controls.Add(this.btnMovimiento);
             this.panelAsideLeft.Controls.Add(this.btnCrud);
@@ -89,51 +85,33 @@
             this.panelAsideLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAsideLeft.Location = new System.Drawing.Point(0, 0);
             this.panelAsideLeft.Name = "panelAsideLeft";
-            this.panelAsideLeft.Size = new System.Drawing.Size(50, 564);
+            this.panelAsideLeft.Size = new System.Drawing.Size(50, 594);
             this.panelAsideLeft.TabIndex = 5;
             // 
-            // btnChat
+            // btnConfig
             // 
-            this.btnChat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChat.FlatAppearance.BorderSize = 0;
-            this.btnChat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.btnChat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.btnChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChat.ForeColor = System.Drawing.Color.White;
-            this.btnChat.Image = ((System.Drawing.Image)(resources.GetObject("btnChat.Image")));
-            this.btnChat.Location = new System.Drawing.Point(0, 318);
-            this.btnChat.Margin = new System.Windows.Forms.Padding(0);
-            this.btnChat.Name = "btnChat";
-            this.btnChat.Size = new System.Drawing.Size(50, 60);
-            this.btnChat.TabIndex = 6;
-            this.btnChat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnChat.UseVisualStyleBackColor = true;
-            this.btnChat.Click += new System.EventHandler(this.btnChat_Click);
-            // 
-            // btnConsulta
-            // 
-            this.btnConsulta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsulta.FlatAppearance.BorderSize = 0;
-            this.btnConsulta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.btnConsulta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsulta.ForeColor = System.Drawing.Color.White;
-            this.btnConsulta.Image = ((System.Drawing.Image)(resources.GetObject("btnConsulta.Image")));
-            this.btnConsulta.Location = new System.Drawing.Point(0, 258);
-            this.btnConsulta.Margin = new System.Windows.Forms.Padding(0);
-            this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Size = new System.Drawing.Size(50, 60);
-            this.btnConsulta.TabIndex = 4;
-            this.btnConsulta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnConsulta.UseVisualStyleBackColor = true;
-            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            this.btnConfig.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfig.FlatAppearance.BorderSize = 0;
+            this.btnConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(103)))), ((int)(((byte)(191)))));
+            this.btnConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(103)))), ((int)(((byte)(191)))));
+            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfig.ForeColor = System.Drawing.Color.White;
+            this.btnConfig.Image = ((System.Drawing.Image)(resources.GetObject("btnConfig.Image")));
+            this.btnConfig.Location = new System.Drawing.Point(0, 258);
+            this.btnConfig.Margin = new System.Windows.Forms.Padding(0);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(50, 60);
+            this.btnConfig.TabIndex = 6;
+            this.btnConfig.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnConfig.UseVisualStyleBackColor = true;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
             // 
             // btnReporte
             // 
             this.btnReporte.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReporte.FlatAppearance.BorderSize = 0;
-            this.btnReporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.btnReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.btnReporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(103)))), ((int)(((byte)(191)))));
+            this.btnReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(103)))), ((int)(((byte)(191)))));
             this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReporte.ForeColor = System.Drawing.Color.White;
             this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
@@ -150,8 +128,8 @@
             // 
             this.btnMovimiento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMovimiento.FlatAppearance.BorderSize = 0;
-            this.btnMovimiento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.btnMovimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.btnMovimiento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(103)))), ((int)(((byte)(191)))));
+            this.btnMovimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(103)))), ((int)(((byte)(191)))));
             this.btnMovimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMovimiento.ForeColor = System.Drawing.Color.White;
             this.btnMovimiento.Image = ((System.Drawing.Image)(resources.GetObject("btnMovimiento.Image")));
@@ -168,8 +146,8 @@
             // 
             this.btnCrud.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCrud.FlatAppearance.BorderSize = 0;
-            this.btnCrud.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.btnCrud.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.btnCrud.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(103)))), ((int)(((byte)(191)))));
+            this.btnCrud.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(103)))), ((int)(((byte)(191)))));
             this.btnCrud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrud.ForeColor = System.Drawing.Color.White;
             this.btnCrud.Image = ((System.Drawing.Image)(resources.GetObject("btnCrud.Image")));
@@ -184,31 +162,19 @@
             // 
             // btnTogleAside
             // 
+            this.btnTogleAside.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(195)))), ((int)(((byte)(247)))));
             this.btnTogleAside.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTogleAside.FlatAppearance.BorderSize = 0;
-            this.btnTogleAside.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.btnTogleAside.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.btnTogleAside.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(195)))), ((int)(((byte)(247)))));
+            this.btnTogleAside.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(195)))), ((int)(((byte)(247)))));
             this.btnTogleAside.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTogleAside.ForeColor = System.Drawing.Color.White;
-            this.btnTogleAside.Image = ((System.Drawing.Image)(resources.GetObject("btnTogleAside.Image")));
             this.btnTogleAside.Location = new System.Drawing.Point(0, 0);
             this.btnTogleAside.Name = "btnTogleAside";
             this.btnTogleAside.Size = new System.Drawing.Size(50, 60);
             this.btnTogleAside.TabIndex = 0;
             this.btnTogleAside.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnTogleAside.UseVisualStyleBackColor = true;
-            // 
-            // panelAsideFooter
-            // 
-            this.panelAsideFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(52)))), ((int)(((byte)(60)))));
-            this.panelAsideFooter.Controls.Add(this.btnChangeUser);
-            this.panelAsideFooter.Controls.Add(this.btnSettings);
-            this.panelAsideFooter.Controls.Add(this.btnHelp);
-            this.panelAsideFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelAsideFooter.Location = new System.Drawing.Point(0, 564);
-            this.panelAsideFooter.Name = "panelAsideFooter";
-            this.panelAsideFooter.Size = new System.Drawing.Size(230, 30);
-            this.panelAsideFooter.TabIndex = 4;
+            this.btnTogleAside.UseVisualStyleBackColor = false;
             // 
             // btnChangeUser
             // 
@@ -216,7 +182,7 @@
             this.btnChangeUser.FlatAppearance.BorderSize = 0;
             this.btnChangeUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangeUser.Image = ((System.Drawing.Image)(resources.GetObject("btnChangeUser.Image")));
-            this.btnChangeUser.Location = new System.Drawing.Point(57, 0);
+            this.btnChangeUser.Location = new System.Drawing.Point(77, 9);
             this.btnChangeUser.Name = "btnChangeUser";
             this.btnChangeUser.Size = new System.Drawing.Size(30, 30);
             this.btnChangeUser.TabIndex = 2;
@@ -229,7 +195,7 @@
             this.btnSettings.FlatAppearance.BorderSize = 0;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.Location = new System.Drawing.Point(28, 0);
+            this.btnSettings.Location = new System.Drawing.Point(48, 9);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(30, 30);
             this.btnSettings.TabIndex = 1;
@@ -241,7 +207,7 @@
             this.btnHelp.FlatAppearance.BorderSize = 0;
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
-            this.btnHelp.Location = new System.Drawing.Point(0, 0);
+            this.btnHelp.Location = new System.Drawing.Point(20, 9);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(30, 30);
             this.btnHelp.TabIndex = 0;
@@ -251,7 +217,10 @@
             // panelHeader
             // 
             this.panelHeader.BackColor = System.Drawing.Color.White;
+            this.panelHeader.Controls.Add(this.btnChangeUser);
             this.panelHeader.Controls.Add(this.lblRool);
+            this.panelHeader.Controls.Add(this.btnSettings);
+            this.panelHeader.Controls.Add(this.btnHelp);
             this.panelHeader.Controls.Add(this.button4);
             this.panelHeader.Controls.Add(this.button3);
             this.panelHeader.Controls.Add(this.pictureBox1);
@@ -263,6 +232,21 @@
             this.panelHeader.Size = new System.Drawing.Size(603, 45);
             this.panelHeader.TabIndex = 2;
             this.panelHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHeader_Paint);
+            // 
+            // lblRool
+            // 
+            this.lblRool.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRool.AutoSize = true;
+            this.lblRool.BackColor = System.Drawing.Color.Transparent;
+            this.lblRool.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRool.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(48)))), ((int)(((byte)(55)))));
+            this.lblRool.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblRool.Location = new System.Drawing.Point(448, 24);
+            this.lblRool.Name = "lblRool";
+            this.lblRool.Size = new System.Drawing.Size(29, 13);
+            this.lblRool.TabIndex = 21;
+            this.lblRool.Text = "Rool";
+            this.lblRool.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // button4
             // 
@@ -332,27 +316,12 @@
             // 
             // panelMain
             // 
-            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(222)))), ((int)(((byte)(240)))));
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(230, 45);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(603, 549);
             this.panelMain.TabIndex = 3;
-            // 
-            // lblRool
-            // 
-            this.lblRool.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRool.AutoSize = true;
-            this.lblRool.BackColor = System.Drawing.Color.Transparent;
-            this.lblRool.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRool.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(48)))), ((int)(((byte)(55)))));
-            this.lblRool.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblRool.Location = new System.Drawing.Point(448, 24);
-            this.lblRool.Name = "lblRool";
-            this.lblRool.Size = new System.Drawing.Size(29, 13);
-            this.lblRool.TabIndex = 21;
-            this.lblRool.Text = "Rool";
-            this.lblRool.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FormHome
             // 
@@ -370,7 +339,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormHome_FormClosing);
             this.panelAside.ResumeLayout(false);
             this.panelAsideLeft.ResumeLayout(false);
-            this.panelAsideFooter.ResumeLayout(false);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -388,11 +356,9 @@
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Panel panelMain;
-        private System.Windows.Forms.Panel panelAsideFooter;
         private System.Windows.Forms.Panel panelAsideMain;
         private System.Windows.Forms.Panel panelAsideLeft;
-        private System.Windows.Forms.Button btnChat;
-        private System.Windows.Forms.Button btnConsulta;
+        private System.Windows.Forms.Button btnConfig;
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Button btnMovimiento;
         private System.Windows.Forms.Button btnCrud;

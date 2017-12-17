@@ -57,11 +57,95 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Componerntes\Validator.cs" />
+    <Compile Include="Configuracion\UCGeneral.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Configuracion\UCGeneral.Designer.cs">
+      <DependentUpon>UCGeneral.cs</DependentUpon>
+    </Compile>
     <Compile Include="Configuracion\UCPerfil.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Configuracion\UCPerfil.Designer.cs">
       <DependentUpon>UCPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\UCRoles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Configuracion\UCRoles.Designer.cs">
+      <DependentUpon>UCRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\UCUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Configuracion\UCUsuarios.Designer.cs">
+      <DependentUpon>UCUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\CRChoferes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRChoferes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crud\CREmpresas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CREmpresas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crud\CRLicencias.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRLicencias.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crud\FormImprimirChoferes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crud\FormImprimirChoferes.Designer.cs">
+      <DependentUpon>FormImprimirChoferes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\FormImprimirEmpresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crud\FormImprimirEmpresas.Designer.cs">
+      <DependentUpon>FormImprimirEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\FormImprimirLicencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crud\FormImprimirLicencias.Designer.cs">
+      <DependentUpon>FormImprimirLicencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\FormImprimirPapeletas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crud\FormImprimirPapeletas.Designer.cs">
+      <DependentUpon>FormImprimirPapeletas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\FormImprimirRutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crud\FormImprimirRutas.Designer.cs">
+      <DependentUpon>FormImprimirRutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\FormImprimirTipoEmpre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crud\FormImprimirTipoEmpre.Designer.cs">
+      <DependentUpon>FormImprimirTipoEmpre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\FormImprimirTipoVehi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crud\FormImprimirTipoVehi.Designer.cs">
+      <DependentUpon>FormImprimirTipoVehi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\FormImprimirVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crud\FormImprimirVehiculo.Designer.cs">
+      <DependentUpon>FormImprimirVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Crud\UCChoferes.cs">
       <SubType>UserControl</SubType>
@@ -105,12 +189,6 @@
     <Compile Include="Crud\UCTipoVehiculo.Designer.cs">
       <DependentUpon>UCTipoVehiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Crud\UCUsuarios.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Crud\UCUsuarios.Designer.cs">
-      <DependentUpon>UCUsuarios.cs</DependentUpon>
-    </Compile>
     <Compile Include="Crud\UCVehiculos.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,17 +218,11 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Navegacion\UCChat.cs">
+    <Compile Include="Navegacion\UCConfig.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Navegacion\UCChat.Designer.cs">
-      <DependentUpon>UCChat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Navegacion\UCConsultas.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Navegacion\UCConsultas.Designer.cs">
-      <DependentUpon>UCConsultas.cs</DependentUpon>
+    <Compile Include="Navegacion\UCConfig.Designer.cs">
+      <DependentUpon>UCConfig.cs</DependentUpon>
     </Compile>
     <Compile Include="Navegacion\UCCruds.cs">
       <SubType>UserControl</SubType>
@@ -190,8 +262,53 @@
     <Compile Include="Reportes\UCRRutas.Designer.cs">
       <DependentUpon>UCRRutas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Configuracion\UCGeneral.resx">
+      <DependentUpon>UCGeneral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Configuracion\UCPerfil.resx">
       <DependentUpon>UCPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\UCRoles.resx">
+      <DependentUpon>UCRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\UCUsuarios.resx">
+      <DependentUpon>UCUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\CRChoferes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRChoferes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\CREmpresas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CREmpresas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\CRLicencias.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRLicencias.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\FormImprimirChoferes.resx">
+      <DependentUpon>FormImprimirChoferes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\FormImprimirEmpresas.resx">
+      <DependentUpon>FormImprimirEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\FormImprimirLicencias.resx">
+      <DependentUpon>FormImprimirLicencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\FormImprimirPapeletas.resx">
+      <DependentUpon>FormImprimirPapeletas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\FormImprimirRutas.resx">
+      <DependentUpon>FormImprimirRutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\FormImprimirTipoEmpre.resx">
+      <DependentUpon>FormImprimirTipoEmpre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\FormImprimirTipoVehi.resx">
+      <DependentUpon>FormImprimirTipoVehi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\FormImprimirVehiculo.resx">
+      <DependentUpon>FormImprimirVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Crud\UCChoferes.resx">
       <DependentUpon>UCChoferes.cs</DependentUpon>
@@ -214,9 +331,6 @@
     <EmbeddedResource Include="Crud\UCTipoVehiculo.resx">
       <DependentUpon>UCTipoVehiculo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Crud\UCUsuarios.resx">
-      <DependentUpon>UCUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Crud\UCVehiculos.resx">
       <DependentUpon>UCVehiculos.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,11 +343,8 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Navegacion\UCChat.resx">
-      <DependentUpon>UCChat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Navegacion\UCConsultas.resx">
-      <DependentUpon>UCConsultas.cs</DependentUpon>
+    <EmbeddedResource Include="Navegacion\UCConfig.resx">
+      <DependentUpon>UCConfig.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Navegacion\UCCruds.resx">
       <DependentUpon>UCCruds.cs</DependentUpon>

@@ -8,21 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vista.Navegacion
+namespace Vista.Configuracion
 {
-    public partial class UCConsultas : UserControl
+    public partial class UCGeneral : UserControl
     {
-        private FormHome formHome;
-
-        public UCConsultas()
+        public UCGeneral()
         {
             InitializeComponent();
-        }
-
-        public UCConsultas(FormHome formHome)
-        {
-            InitializeComponent();
-            this.formHome = formHome;
         }
     }
 }

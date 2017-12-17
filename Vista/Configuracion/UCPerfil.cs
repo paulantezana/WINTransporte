@@ -86,7 +86,7 @@ namespace Vista.Configuracion
             }
             errorProvider1.Clear();
             errorProvider1.Clear();
-            usuarioModel.updateUsuario(textUsuario.Text,textNombre.Text, textEmail.Text, textFoto.Text, usuario.rool, usuario.idUsuario);
+           // usuarioModel.updateUsuario(textUsuario.Text,textNombre.Text, textEmail.Text, textFoto.Text, usuario.rool, usuario.idUsuario);
             MessageBox.Show("El usuario se actualizo exitosamente. \n para ver los cambios reinicie la aplicacion", "Perfil", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

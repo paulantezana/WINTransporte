@@ -25,12 +25,12 @@ namespace Modelo
             user.clave = usuariosRow.clave;
             user.foto = usuariosRow.foto;
             user.email = usuariosRow.email;
-            user.rool = usuariosRow.rool;
+            user.idRol = usuariosRow.ID_Rol;
             return user;
         }
-        public void updateUsuario(string usuario, string nombre, string email, string foto, string rool, int id_usuario)
+        public void updateUsuario(string usuario, string clave, string nombre, string email, string foto, int id_usuario)
         {
-            adapter.UpdateUsuario(usuario, nombre, email, foto, rool, id_usuario);
+            adapter.UpdateUsuario(usuario,clave, nombre, email, foto, id_usuario);
         }
         public void cambiarClave(string clave, int id_usuario)
         {

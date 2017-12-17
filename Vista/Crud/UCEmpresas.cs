@@ -31,7 +31,7 @@ namespace Vista.Crud
             tipo_empresasTableAdapter.Fill(dBTransporte.tipo_empresas);
             empresasTableAdapter.Fill(dBTransporte.empresas);
             estado(false);
-            permiso();
+            //permiso();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -144,7 +144,7 @@ namespace Vista.Crud
             btnCancelar.Visible = false;
             empresasDataGridView.Visible = false;
 
-            switch (usuario.rool)
+            /*switch (usuario.rool)
             {
                 case "Usuario":
                     empresasDataGridView.Visible = true;
@@ -172,8 +172,14 @@ namespace Vista.Crud
                     break;
                 default:
                     break;
-            }
+            }*/
 
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            FormImprimirEmpresas formImprimir = new FormImprimirEmpresas();
+            formImprimir.ShowDialog();
         }
     }
 }

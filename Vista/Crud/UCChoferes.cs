@@ -128,7 +128,7 @@ namespace Vista.Crud
             licenciasTableAdapter.Fill(dBTransporte.licencias);
             empresasTableAdapter.Fill(dBTransporte.empresas);
             estado(false);
-            permiso();
+            // permiso();
         }
 
         private void telefonoTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -164,7 +164,7 @@ namespace Vista.Crud
             choferesDataGridView.Visible = false;
             campos(false);
 
-            switch (usuario.rool)
+            /*switch (usuario.rool)
             {
                 case "Usuario":
                     choferesDataGridView.Visible = true;
@@ -189,8 +189,14 @@ namespace Vista.Crud
                     break;
                 default:
                     break;
-            }
+            }*/
 
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            FormImprimirChoferes formImprimir = new FormImprimirChoferes();
+            formImprimir.ShowDialog();
         }
     }
 }

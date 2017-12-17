@@ -14,9 +14,7 @@ namespace Vista
 {
     public partial class FormHome : Form
     {
-        private UCChat uCChat;
-
-        private UCConsultas uCConsultas;
+        private UCConfig uCConfig;
 
         private UCCruds uCCruds;
 
@@ -25,6 +23,7 @@ namespace Vista
         private UCReportes uCReportes;
 
         private Usuario usuario;
+
         private FormLogin formLogin;
 
         public FormHome()
@@ -37,7 +36,7 @@ namespace Vista
             InitializeComponent();
             this.usuario = usuario;
             lblUserName.Text = usuario.usuario;
-            lblRool.Text = usuario.rool;
+            /*lblRool.Text = usuario.rool;*/
         }
 
         public FormHome(Usuario usuario, FormLogin formLogin) : this(usuario)
@@ -69,31 +68,25 @@ namespace Vista
         private void btnCrud_Click(object sender, EventArgs e)
         {
             togglePanels("cruds");
-            btnCrud.BackColor = Color.FromArgb(40, 47, 55);
+            btnCrud.BackColor = Color.FromArgb(212, 222, 240);
         }
 
         private void btnMovimiento_Click(object sender, EventArgs e)
         {
             togglePanels("movimientos");
-            btnMovimiento.BackColor = Color.FromArgb(40, 47, 55);
+            btnMovimiento.BackColor = Color.FromArgb(212, 222, 240);
         }
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
             togglePanels("reportes");
-            btnReporte.BackColor = Color.FromArgb(40, 47, 55);
+            btnReporte.BackColor = Color.FromArgb(212, 222, 240);
         }
 
-        private void btnConsulta_Click(object sender, EventArgs e)
+        private void btnConfig_Click(object sender, EventArgs e)
         {
-            togglePanels("consultas");
-            btnConsulta.BackColor = Color.FromArgb(40, 47, 55);
-        }
-
-        private void btnChat_Click(object sender, EventArgs e)
-        {
-            togglePanels("chats");
-            btnChat.BackColor = Color.FromArgb(40, 47, 55);
+            togglePanels("config");
+            btnConfig.BackColor = Color.FromArgb(212, 222, 240);
         }
 
         private void togglePanels(String userControlPanel)
@@ -102,23 +95,14 @@ namespace Vista
             this.panelAsideMain.Controls.Clear();
             switch (userControlPanel)
             {
-                case "chats":
-                    this.uCChat = new Vista.Navegacion.UCChat(this);
-                    this.panelAsideMain.Controls.Add(this.uCChat);
-                    this.uCChat.Dock = System.Windows.Forms.DockStyle.Fill;
-                    this.uCChat.Location = new System.Drawing.Point(0, 0);
-                    this.uCChat.Name = "uCChat";
-                    this.uCChat.Size = new System.Drawing.Size(724, 485);
-                    this.uCChat.TabIndex = 1;
-                    break;
-                case "consultas":
-                    this.uCConsultas = new Vista.Navegacion.UCConsultas(this);
-                    this.panelAsideMain.Controls.Add(this.uCConsultas);
-                    this.uCConsultas.Dock = System.Windows.Forms.DockStyle.Fill;
-                    this.uCConsultas.Location = new System.Drawing.Point(0, 0);
-                    this.uCConsultas.Name = "uCConsultas";
-                    this.uCConsultas.Size = new System.Drawing.Size(724, 485);
-                    this.uCConsultas.TabIndex = 1;
+                case "config":
+                    this.uCConfig = new Vista.Navegacion.UCConfig(this);
+                    this.panelAsideMain.Controls.Add(this.uCConfig);
+                    this.uCConfig.Dock = System.Windows.Forms.DockStyle.Fill;
+                    this.uCConfig.Location = new System.Drawing.Point(0, 0);
+                    this.uCConfig.Name = "uCConfig";
+                    this.uCConfig.Size = new System.Drawing.Size(724, 485);
+                    this.uCConfig.TabIndex = 1;
                     break;
                 case "cruds":
                     this.uCCruds = new Vista.Navegacion.UCCruds(this);
@@ -153,11 +137,10 @@ namespace Vista
         }
         private void colorBtn()
         {
-            btnCrud.BackColor = Color.FromArgb(29, 35, 42);
-            btnMovimiento.BackColor = Color.FromArgb(29, 35, 42);
-            btnConsulta.BackColor = Color.FromArgb(29, 35, 42);
-            btnReporte.BackColor = Color.FromArgb(29, 35, 42);
-            btnChat.BackColor = Color.FromArgb(29, 35, 42);
+            btnCrud.BackColor = Color.FromArgb(15, 68, 160);
+            btnMovimiento.BackColor = Color.FromArgb(15, 68, 160);
+            btnReporte.BackColor = Color.FromArgb(15, 68, 160);
+            btnConfig.BackColor = Color.FromArgb(15, 68, 160);
         }
 
         private void btnChangeUser_Click(object sender, EventArgs e)

@@ -24,7 +24,6 @@ namespace Vista.Navegacion
         private UCRutas uCRutas;
         private UCTipoEmpresa uCTipoEmpresa;
         private UCTipoVehiculo uCTipoVehiculo;
-        private UCUsuarios uCUsuarios;
         private UCVehiculos uCVehiculos;
 
         public UCCruds()
@@ -40,13 +39,13 @@ namespace Vista.Navegacion
 
         private void UCCruds_Load(object sender, EventArgs e)
         {
-            permiso();
+            
         }
 
         private void btnEmpresas_Click(object sender, EventArgs e)
         {
             togglePanels("empresas");
-            btnEmpresas.BackColor = Color.FromArgb(52, 60, 69);
+            btnEmpresas.BackColor = Color.White;
         }
 
         private void togglePanels(string userControlPanel)
@@ -118,15 +117,6 @@ namespace Vista.Navegacion
                     this.uCTipoVehiculo.Size = new System.Drawing.Size(724, 485);
                     this.uCTipoVehiculo.TabIndex = 1;
                     break;
-                case "usuarios":
-                    this.uCUsuarios = new Vista.Crud.UCUsuarios();
-                    this.formHome.panelMain.Controls.Add(this.uCUsuarios);
-                    this.uCUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
-                    this.uCUsuarios.Location = new System.Drawing.Point(0, 0);
-                    this.uCUsuarios.Name = "uCUsuarios";
-                    this.uCUsuarios.Size = new System.Drawing.Size(724, 485);
-                    this.uCUsuarios.TabIndex = 1;
-                    break;
                 case "vehiculos":
                     this.uCVehiculos = new Vista.Crud.UCVehiculos();
                     this.formHome.panelMain.Controls.Add(this.uCVehiculos);
@@ -143,100 +133,56 @@ namespace Vista.Navegacion
 
         private void colorBtn()
         {
-            btnEmpresas.BackColor = Color.FromArgb(39, 46, 54);
-            btnRutas.BackColor = Color.FromArgb(39, 46, 54);
-            btnVehiuclos.BackColor = Color.FromArgb(39, 46, 54);
-            btnChoferes.BackColor = Color.FromArgb(39, 46, 54);
-            btnPapeletas.BackColor = Color.FromArgb(39, 46, 54);
-            btnLicencias.BackColor = Color.FromArgb(39, 46, 54);
-            btnTipoEmpresa.BackColor = Color.FromArgb(39, 46, 54);
-            btnTipoVehiculo.BackColor = Color.FromArgb(39, 46, 54);
-            btnUsuarios.BackColor = Color.FromArgb(39, 46, 54);
+            btnEmpresas.BackColor = Color.FromArgb(242, 246, 252);
+            btnRutas.BackColor = Color.FromArgb(242, 246, 252);
+            btnVehiuclos.BackColor = Color.FromArgb(242, 246, 252);
+            btnChoferes.BackColor = Color.FromArgb(242, 246, 252);
+            btnPapeletas.BackColor = Color.FromArgb(242, 246, 252);
+            btnLicencias.BackColor = Color.FromArgb(242, 246, 252);
+            btnTipoEmpresa.BackColor = Color.FromArgb(242, 246, 252);
+            btnTipoVehiculo.BackColor = Color.FromArgb(242, 246, 252);
         }
 
         private void btnRutas_Click(object sender, EventArgs e)
         {
             togglePanels("rutas");
-            btnRutas.BackColor = Color.FromArgb(52, 60, 69);
+            btnRutas.BackColor = Color.White;
         }
 
         private void btnVehiuclos_Click(object sender, EventArgs e)
         {
             togglePanels("vehiculos");
-            btnVehiuclos.BackColor = Color.FromArgb(52, 60, 69);
+            btnVehiuclos.BackColor = Color.White;
         }
 
         private void btnChoferes_Click(object sender, EventArgs e)
         {
             togglePanels("choferes");
-            btnChoferes.BackColor = Color.FromArgb(52, 60, 69);
+            btnChoferes.BackColor = Color.White;
         }
 
         private void btnPapeletas_Click(object sender, EventArgs e)
         {
             togglePanels("papeletas");
-            btnPapeletas.BackColor = Color.FromArgb(52, 60, 69);
+            btnPapeletas.BackColor = Color.White;
         }
 
         private void btnLicencias_Click(object sender, EventArgs e)
         {
             togglePanels("licencias");
-            btnLicencias.BackColor = Color.FromArgb(52, 60, 69);
+            btnLicencias.BackColor = Color.White;
         }
 
         private void btnTipoEmpresa_Click(object sender, EventArgs e)
         {
             togglePanels("tipoempresa");
-            btnTipoEmpresa.BackColor = Color.FromArgb(52, 60, 69);
+            btnTipoEmpresa.BackColor = Color.White;
         }
 
         private void btnTipoVehiculo_Click(object sender, EventArgs e)
         {
             togglePanels("tipovehiculo");
-            btnTipoVehiculo.BackColor = Color.FromArgb(52, 60, 69);
-        }
-
-        private void btnUsuarios_Click(object sender, EventArgs e)
-        {
-            togglePanels("usuarios");
-            btnUsuarios.BackColor = Color.FromArgb(52, 60, 69);
-        }
-        private void permiso()
-        {
-            Usuario usuario = UsuarioController.usuario;
-            btnUsuarios.Visible = false;
-            btnTipoEmpresa.Visible = false;
-            btnTipoVehiculo.Visible = false;
-            btnLicencias.Visible = false;
-            btnPapeletas.Visible = false;
-            /*btnEmpresas.Visible = false;
-            */
-
-            switch (usuario.rool)
-            {
-                case "Usuario":
-                    break;
-                case "Gerente":
-                    btnTipoEmpresa.Visible = true;
-                    btnTipoVehiculo.Visible = true;
-                    btnLicencias.Visible = true;
-                    btnPapeletas.Visible = true;
-                    break;
-                case "Admin":
-                    btnUsuarios.Visible = true;
-                    btnTipoEmpresa.Visible = true;
-                    btnTipoVehiculo.Visible = true;
-                    btnLicencias.Visible = true;
-                    btnPapeletas.Visible = true;
-                    break;
-                case "Empresa":
-                    break;
-                case "Secretaria":
-                    break;
-                default:
-                    break;
-            }
-
+            btnTipoVehiculo.BackColor = Color.White;
         }
     }
 }
