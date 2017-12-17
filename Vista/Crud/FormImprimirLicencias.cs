@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vista.DBTransporteTableAdapters;
 
 namespace Vista.Crud
 {
@@ -15,6 +16,17 @@ namespace Vista.Crud
         public FormImprimirLicencias()
         {
             InitializeComponent();
+        }
+
+        private void FormImprimirLicencias_Load(object sender, EventArgs e)
+        {
+            CRLicencias cRLicencias = new CRLicencias();
+            DBTransporte dBTransporte = new DBTransporte();
+            LicenciasTableAdapter adapter = new LicenciasTableAdapter();
+
+            adapter.Fill(dBTransporte.licencias);
+            cRLicencias.SetDataSource(dBTransporte);
+            crystalReportViewer1.ReportSource = cRLicencias;
         }
     }
 }

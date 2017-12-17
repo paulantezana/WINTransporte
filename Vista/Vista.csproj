@@ -56,7 +56,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Componerntes\Validator.cs" />
+    <Compile Include="Componentes\DrawShape.cs" />
+    <Compile Include="Componentes\ExternalFiles.cs" />
+    <Compile Include="Componentes\Validator.cs" />
+    <Compile Include="Componentes\VirtualData.cs" />
     <Compile Include="Configuracion\UCGeneral.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,6 +101,42 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CRLicencias.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crud\CRPapeletas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRPapeletas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crud\CRRutas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRRutas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crud\FormImportarChoferes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crud\FormImportarChoferes.Designer.cs">
+      <DependentUpon>FormImportarChoferes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\FormImportarEmpresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crud\FormImportarEmpresas.Designer.cs">
+      <DependentUpon>FormImportarEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\FormImportarLicencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crud\FormImportarLicencias.Designer.cs">
+      <DependentUpon>FormImportarLicencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crud\FormImportarPapeletas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crud\FormImportarPapeletas.Designer.cs">
+      <DependentUpon>FormImportarPapeletas.cs</DependentUpon>
     </Compile>
     <Compile Include="Crud\FormImprimirChoferes.cs">
       <SubType>Form</SubType>
@@ -285,6 +324,26 @@
     <EmbeddedResource Include="Crud\CRLicencias.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CRLicencias.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\CRPapeletas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRPapeletas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\CRRutas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRRutas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\FormImportarChoferes.resx">
+      <DependentUpon>FormImportarChoferes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\FormImportarEmpresas.resx">
+      <DependentUpon>FormImportarEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\FormImportarLicencias.resx">
+      <DependentUpon>FormImportarLicencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crud\FormImportarPapeletas.resx">
+      <DependentUpon>FormImportarPapeletas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Crud\FormImprimirChoferes.resx">
       <DependentUpon>FormImprimirChoferes.cs</DependentUpon>

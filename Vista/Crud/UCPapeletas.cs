@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Vista.Componerntes;
+using Vista.Componentes;
 using Entidad;
 using Controlador;
 
@@ -138,6 +138,12 @@ namespace Vista.Crud
         {
             FormImprimirPapeletas formImprimir = new FormImprimirPapeletas();
             formImprimir.ShowDialog();
+        }
+
+        private void btnImportar_Click(object sender, EventArgs e)
+        {
+            FormImportarPapeletas formImportar = new FormImportarPapeletas();
+            formImportar.ShowDialog();
         }
     }
 }

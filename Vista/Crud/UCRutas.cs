@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Vista.Componerntes;
+using Vista.Componentes;
 using Controlador;
 using Entidad;
 

@@ -53,6 +53,7 @@
             this.Name = "FormImprimirChoferes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Impirmir Choferes";
+            this.Load += new System.EventHandler(this.FormImprimirChoferes_Load);
             this.ResumeLayout(false);
 
         }

@@ -641,6 +641,7 @@
             this.btnImportar.TabIndex = 30;
             this.btnImportar.Text = "   Importar";
             this.btnImportar.UseVisualStyleBackColor = false;
+            this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
             // 
             // btnImprimir
             // 
@@ -704,6 +705,7 @@
             this.textBuscar.Name = "textBuscar";
             this.textBuscar.Size = new System.Drawing.Size(500, 26);
             this.textBuscar.TabIndex = 0;
+            this.textBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBuscar_KeyPress);
             // 
             // empresasTableAdapter
             // 

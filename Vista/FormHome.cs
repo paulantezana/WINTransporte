@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidad;
 using Vista.Navegacion;
+using Vista.Componentes;
 
 namespace Vista
 {
@@ -147,6 +148,12 @@ namespace Vista
         {
             this.Hide();
             this.formLogin.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            DrawShape drawShape = new DrawShape();
+            drawShape.bottomLine(panel1);
         }
     }
 }

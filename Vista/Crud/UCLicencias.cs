@@ -126,5 +126,11 @@ namespace Vista.Crud
             FormImprimirLicencias formImprimir = new FormImprimirLicencias();
             formImprimir.ShowDialog();
         }
+
+        private void btnImportar_Click(object sender, EventArgs e)
+        {
+            FormImportarLicencias formImportar = new FormImportarLicencias();
+            formImportar.ShowDialog();
+        }
     }
 }

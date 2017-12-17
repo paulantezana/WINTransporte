@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Vista.Componerntes;
+using Vista.Componentes;
 using Controlador;
 using Entidad;
 
@@ -29,9 +29,15 @@ namespace Vista.Crud
         private void UCEmpresas_Load(object sender, EventArgs e)
         {
             tipo_empresasTableAdapter.Fill(dBTransporte.tipo_empresas);
-            empresasTableAdapter.Fill(dBTransporte.empresas);
+            cargarEmpresas();
             estado(false);
             //permiso();
+        }
+
+        private void cargarEmpresas()
+        {
+            empresasTableAdapter.Fill(dBTransporte.empresas);
+            //this.empresasTableAdapter.EmpresaBuscar(this.dBTransporte.empresas, textBuscar.Text);
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -123,6 +129,14 @@ namespace Vista.Crud
             }
             errorProvider1.Clear();
 
+            if (id_tipo_empresaComboBox.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(id_tipo_empresaComboBox, "No ha elegido nungun tipo de empresa");
+                id_tipo_empresaComboBox.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+
             this.Validate();
             this.empresasBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dBTransporte);
@@ -180,6 +194,17 @@ namespace Vista.Crud
         {
             FormImprimirEmpresas formImprimir = new FormImprimirEmpresas();
             formImprimir.ShowDialog();
+        }
+
+        private void btnImportar_Click(object sender, EventArgs e)
+        {
+            FormImportarEmpresas formImportar = new FormImportarEmpresas();
+            formImportar.ShowDialog();
+            cargarEmpresas();
+        }
+        private void textBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            cargarEmpresas();
         }
     }
 }

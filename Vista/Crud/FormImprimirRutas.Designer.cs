@@ -53,6 +53,7 @@
             this.Name = "FormImprimirRutas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormImprimirRutas";
+            this.Load += new System.EventHandler(this.FormImprimirRutas_Load);
             this.ResumeLayout(false);
 
         }

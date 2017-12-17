@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vista.DBTransporteTableAdapters;
 
 namespace Vista.Crud
 {
@@ -15,6 +16,17 @@ namespace Vista.Crud
         public FormImprimirChoferes()
         {
             InitializeComponent();
+        }
+
+        private void FormImprimirChoferes_Load(object sender, EventArgs e)
+        {
+            CRChoferes cRChoferes = new CRChoferes();
+            DBTransporte dBTransporte = new DBTransporte();
+            ChoferesTableAdapter adapter = new ChoferesTableAdapter();
+
+            adapter.Fill(dBTransporte.choferes);
+            cRChoferes.SetDataSource(dBTransporte);
+            crystalReportViewer1.ReportSource = cRChoferes;
         }
     }
 }

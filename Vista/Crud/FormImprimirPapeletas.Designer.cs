@@ -53,6 +53,7 @@
             this.Name = "FormImprimirPapeletas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormImprimirPapeletas";
+            this.Load += new System.EventHandler(this.FormImprimirPapeletas_Load);
             this.ResumeLayout(false);
 
         }

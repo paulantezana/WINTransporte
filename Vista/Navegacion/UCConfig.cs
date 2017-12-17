@@ -36,7 +36,7 @@ namespace Vista.Navegacion
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            togglePanels("Perfil");
+            togglePanels("perfil");
             btnPerfil.BackColor = Color.White;
         }
 

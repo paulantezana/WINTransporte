@@ -13202,12 +13202,19 @@ SELECT id_empresa, codigo, nombre, gerente, propietario, telefono, direccion, ci
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id_empresa, codigo, nombre, gerente, propietario, telefono, direccion, ciu" +
                 "dad, id_tipo_empresa FROM dbo.empresas";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT id_empresa, codigo, nombre, gerente, propietario, telefono, direccion, ciu" +
+                "dad, id_tipo_empresa FROM dbo.empresas\r\nWHERE codigo = @buscar OR  nombre = @bus" +
+                "car";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@buscar", global::System.Data.SqlDbType.VarChar, 32, global::System.Data.ParameterDirection.Input, 0, 0, "codigo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13232,6 +13239,25 @@ SELECT id_empresa, codigo, nombre, gerente, propietario, telefono, direccion, ci
             DBTransporte.empresasDataTable dataTable = new DBTransporte.empresasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int EmpresaBuscar(DBTransporte.empresasDataTable dataTable, string buscar) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((buscar == null)) {
+                throw new global::System.ArgumentNullException("buscar");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(buscar));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -53,6 +53,7 @@
             this.Name = "FormImprimirEmpresas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Imprimir Empresas";
+            this.Load += new System.EventHandler(this.FormImprimirEmpresas_Load);
             this.ResumeLayout(false);
 
         }

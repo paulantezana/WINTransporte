@@ -36,7 +36,7 @@
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnMovimiento = new System.Windows.Forms.Button();
             this.btnCrud = new System.Windows.Forms.Button();
-            this.btnTogleAside = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnChangeUser = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
@@ -59,6 +59,7 @@
             this.panelAside.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
             this.panelAside.Controls.Add(this.panelAsideMain);
             this.panelAside.Controls.Add(this.panelAsideLeft);
+            this.panelAside.Controls.Add(this.panel1);
             this.panelAside.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAside.Location = new System.Drawing.Point(0, 0);
             this.panelAside.Name = "panelAside";
@@ -69,10 +70,10 @@
             // 
             this.panelAsideMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(222)))), ((int)(((byte)(240)))));
             this.panelAsideMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAsideMain.Location = new System.Drawing.Point(50, 0);
+            this.panelAsideMain.Location = new System.Drawing.Point(50, 45);
             this.panelAsideMain.Name = "panelAsideMain";
-            this.panelAsideMain.Size = new System.Drawing.Size(180, 594);
-            this.panelAsideMain.TabIndex = 6;
+            this.panelAsideMain.Size = new System.Drawing.Size(180, 549);
+            this.panelAsideMain.TabIndex = 9;
             // 
             // panelAsideLeft
             // 
@@ -81,12 +82,11 @@
             this.panelAsideLeft.Controls.Add(this.btnReporte);
             this.panelAsideLeft.Controls.Add(this.btnMovimiento);
             this.panelAsideLeft.Controls.Add(this.btnCrud);
-            this.panelAsideLeft.Controls.Add(this.btnTogleAside);
             this.panelAsideLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelAsideLeft.Location = new System.Drawing.Point(0, 0);
+            this.panelAsideLeft.Location = new System.Drawing.Point(0, 45);
             this.panelAsideLeft.Name = "panelAsideLeft";
-            this.panelAsideLeft.Size = new System.Drawing.Size(50, 594);
-            this.panelAsideLeft.TabIndex = 5;
+            this.panelAsideLeft.Size = new System.Drawing.Size(50, 549);
+            this.panelAsideLeft.TabIndex = 8;
             // 
             // btnConfig
             // 
@@ -160,21 +160,15 @@
             this.btnCrud.UseVisualStyleBackColor = true;
             this.btnCrud.Click += new System.EventHandler(this.btnCrud_Click);
             // 
-            // btnTogleAside
+            // panel1
             // 
-            this.btnTogleAside.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(195)))), ((int)(((byte)(247)))));
-            this.btnTogleAside.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTogleAside.FlatAppearance.BorderSize = 0;
-            this.btnTogleAside.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(195)))), ((int)(((byte)(247)))));
-            this.btnTogleAside.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(195)))), ((int)(((byte)(247)))));
-            this.btnTogleAside.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTogleAside.ForeColor = System.Drawing.Color.White;
-            this.btnTogleAside.Location = new System.Drawing.Point(0, 0);
-            this.btnTogleAside.Name = "btnTogleAside";
-            this.btnTogleAside.Size = new System.Drawing.Size(50, 60);
-            this.btnTogleAside.TabIndex = 0;
-            this.btnTogleAside.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnTogleAside.UseVisualStyleBackColor = false;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(230, 45);
+            this.panel1.TabIndex = 7;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnChangeUser
             // 
@@ -182,7 +176,7 @@
             this.btnChangeUser.FlatAppearance.BorderSize = 0;
             this.btnChangeUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangeUser.Image = ((System.Drawing.Image)(resources.GetObject("btnChangeUser.Image")));
-            this.btnChangeUser.Location = new System.Drawing.Point(77, 9);
+            this.btnChangeUser.Location = new System.Drawing.Point(93, 12);
             this.btnChangeUser.Name = "btnChangeUser";
             this.btnChangeUser.Size = new System.Drawing.Size(30, 30);
             this.btnChangeUser.TabIndex = 2;
@@ -195,7 +189,7 @@
             this.btnSettings.FlatAppearance.BorderSize = 0;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.Location = new System.Drawing.Point(48, 9);
+            this.btnSettings.Location = new System.Drawing.Point(64, 12);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(30, 30);
             this.btnSettings.TabIndex = 1;
@@ -207,7 +201,7 @@
             this.btnHelp.FlatAppearance.BorderSize = 0;
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
-            this.btnHelp.Location = new System.Drawing.Point(20, 9);
+            this.btnHelp.Location = new System.Drawing.Point(36, 12);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(30, 30);
             this.btnHelp.TabIndex = 0;
@@ -219,10 +213,10 @@
             this.panelHeader.BackColor = System.Drawing.Color.White;
             this.panelHeader.Controls.Add(this.btnChangeUser);
             this.panelHeader.Controls.Add(this.lblRool);
-            this.panelHeader.Controls.Add(this.btnSettings);
-            this.panelHeader.Controls.Add(this.btnHelp);
             this.panelHeader.Controls.Add(this.button4);
             this.panelHeader.Controls.Add(this.button3);
+            this.panelHeader.Controls.Add(this.btnSettings);
+            this.panelHeader.Controls.Add(this.btnHelp);
             this.panelHeader.Controls.Add(this.pictureBox1);
             this.panelHeader.Controls.Add(this.button2);
             this.panelHeader.Controls.Add(this.lblUserName);
@@ -356,16 +350,16 @@
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Button btnHelp;
+        private System.Windows.Forms.Button btnChangeUser;
+        private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Label lblRool;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelAsideMain;
         private System.Windows.Forms.Panel panelAsideLeft;
         private System.Windows.Forms.Button btnConfig;
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Button btnMovimiento;
         private System.Windows.Forms.Button btnCrud;
-        private System.Windows.Forms.Button btnTogleAside;
-        private System.Windows.Forms.Button btnHelp;
-        private System.Windows.Forms.Button btnChangeUser;
-        private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.Label lblRool;
     }
 }
