@@ -40,7 +40,7 @@ namespace Vista.Navegacion
         private void btnChoferes_Click(object sender, EventArgs e)
         {
             togglePanels("choferes");
-            btnChoferes.BackColor = Color.FromArgb(52, 60, 69);
+            btnChoferes.BackColor = Color.White;
         }
         private void togglePanels(string userControlPanel)
         {
@@ -82,21 +82,21 @@ namespace Vista.Navegacion
 
         private void colorBtn()
         {
-            btnEmpresa.BackColor = Color.FromArgb(39, 46, 54);
-            btnChoferes.BackColor = Color.FromArgb(39, 46, 54);
-            btnRutas.BackColor = Color.FromArgb(39, 46, 54);
+            btnEmpresa.BackColor = Color.FromArgb(242, 246, 252);
+            btnChoferes.BackColor = Color.FromArgb(242, 246, 252);
+            btnRutas.BackColor = Color.FromArgb(242, 246, 252);
         }
 
         private void btnEmpresa_Click(object sender, EventArgs e)
         {
             togglePanels("empresas");
-            btnEmpresa.BackColor = Color.FromArgb(52, 60, 69);
+            btnEmpresa.BackColor = Color.White;
         }
 
         private void btnRutas_Click(object sender, EventArgs e)
         {
             togglePanels("rutas");
-            btnRutas.BackColor = Color.FromArgb(52, 60, 69);
+            btnRutas.BackColor = Color.White;
         }
     }
 }
