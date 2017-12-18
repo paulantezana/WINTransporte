@@ -15,6 +15,9 @@ namespace Vista.Navegacion
 {
     public partial class UCCruds : UserControl
     {
+        UsuarioController usuarioController = new UsuarioController();
+        Usuario usuario = UsuarioController.usuario;
+
         private FormHome formHome;
 
         private UCChoferes uCChoferes;
@@ -39,7 +42,47 @@ namespace Vista.Navegacion
 
         private void UCCruds_Load(object sender, EventArgs e)
         {
-            
+            permiso();
+        }
+
+        private void permiso()
+        {
+            btnChoferes.Visible = false;
+            btnEmpresas.Visible = false;
+            btnRutas.Visible = false;
+            btnLicencias.Visible = false;
+            btnVehiuclos.Visible = false;
+            btnTipoEmpresa.Visible = false;
+            btnTipoVehiculo.Visible = false;
+            if (usuarioController.puedeEliminar(usuario.idRool, "choferes") || usuarioController.puedeEditar(usuario.idRool, "choferes") || usuarioController.puedeConsultar(usuario.idRool, "choferes"))
+            {
+                btnChoferes.Visible = true;
+            }
+            if (usuarioController.puedeEliminar(usuario.idRool, "empresas") || usuarioController.puedeEditar(usuario.idRool, "empresas") || usuarioController.puedeConsultar(usuario.idRool, "empresas"))
+            {
+                btnEmpresas.Visible = true;
+            }
+            if (usuarioController.puedeEliminar(usuario.idRool, "rutas") || usuarioController.puedeEditar(usuario.idRool, "rutas") || usuarioController.puedeConsultar(usuario.idRool, "rutas"))
+            {
+                btnRutas.Visible = true;
+            }
+            if (usuarioController.puedeEliminar(usuario.idRool, "licencias") || usuarioController.puedeEditar(usuario.idRool, "licencias") || usuarioController.puedeConsultar(usuario.idRool, "empresas"))
+            {
+                btnLicencias.Visible = true;
+            }
+            if (usuarioController.puedeEliminar(usuario.idRool, "vehiculos") || usuarioController.puedeEditar(usuario.idRool, "licencias") || usuarioController.puedeConsultar(usuario.idRool, "empresas"))
+            {
+                btnVehiuclos.Visible = true;
+            }
+            if (usuarioController.puedeEliminar(usuario.idRool, "tipoempresas") || usuarioController.puedeEditar(usuario.idRool, "licencias") || usuarioController.puedeConsultar(usuario.idRool, "empresas"))
+            {
+                btnTipoEmpresa.Visible = true;
+            }
+            if (usuarioController.puedeEliminar(usuario.idRool, "tipovehiculos") || usuarioController.puedeEditar(usuario.idRool, "licencias") || usuarioController.puedeConsultar(usuario.idRool, "empresas"))
+            {
+                btnTipoVehiculo.Visible = true;
+            }
+
         }
 
         private void btnEmpresas_Click(object sender, EventArgs e)

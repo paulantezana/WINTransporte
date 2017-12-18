@@ -15,6 +15,9 @@ namespace Vista.Crud
 {
     public partial class UCTipoVehiculo : UserControl
     {
+        UsuarioController usuarioController = new UsuarioController();
+        Usuario usuario = UsuarioController.usuario;
+
         public UCTipoVehiculo()
         {
             InitializeComponent();
@@ -77,7 +80,7 @@ namespace Vista.Crud
         {
             tipo_vehiculosTableAdapter.Fill(dBTransporte.tipo_vehiculos);
             estado(false);
-            //permiso();
+            permiso();
         }
 
         private void permiso()
@@ -89,37 +92,24 @@ namespace Vista.Crud
             btnGuardar.Visible = false;
             btnCancelar.Visible = false;
             tipo_vehiculosDataGridView.Visible = false;
+            panelControls.Visible = false;
 
-            /*switch (usuario.rool)
+            if (usuarioController.puedeEliminar(usuario.idRool, "tipovehiculos"))
             {
-                case "Usuario":
-                    tipo_vehiculosDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                case "Gerente":
-                    tipo_vehiculosDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                case "Admin":
-                    btnNuevo.Visible = true;
-                    btnModificar.Visible = true;
-                    btnEliminar.Visible = true;
-                    btnGuardar.Visible = true;
-                    btnCancelar.Visible = true;
-                    tipo_vehiculosDataGridView.Visible = true;
-                    break;
-                case "Empresa":
-                    tipo_vehiculosDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                case "Secretaria":
-                    tipo_vehiculosDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                default:
-                    break;
-            }*/
-
+                btnEliminar.Visible = true;
+            }
+            if (usuarioController.puedeEditar(usuario.idRool, "tipovehiculos"))
+            {
+                btnModificar.Visible = true;
+                btnNuevo.Visible = true;
+                btnGuardar.Visible = true;
+                btnCancelar.Visible = true;
+                panelControls.Visible = true;
+            }
+            if (usuarioController.puedeConsultar(usuario.idRool, "tipovehiculos"))
+            {
+                tipo_vehiculosDataGridView.Visible = true;
+            }
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)

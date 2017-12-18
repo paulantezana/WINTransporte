@@ -15,6 +15,9 @@ namespace Vista.Crud
 {
     public partial class UCChoferes : UserControl
     {
+        UsuarioController usuarioController = new UsuarioController();
+        Usuario usuario = UsuarioController.usuario;
+
         public UCChoferes()
         {
             InitializeComponent();
@@ -128,7 +131,7 @@ namespace Vista.Crud
             licenciasTableAdapter.Fill(dBTransporte.licencias);
             empresasTableAdapter.Fill(dBTransporte.empresas);
             estado(false);
-            // permiso();
+            permiso();
         }
 
         private void telefonoTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -162,35 +165,24 @@ namespace Vista.Crud
             btnGuardar.Visible = false;
             btnCancelar.Visible = false;
             choferesDataGridView.Visible = false;
-            campos(false);
+            panelControls.Visible = false;
 
-            /*switch (usuario.rool)
+            if (usuarioController.puedeEliminar(usuario.idRool, "empresa"))
             {
-                case "Usuario":
-                    choferesDataGridView.Visible = true;
-                    break;
-                case "Gerente":
-                    choferesDataGridView.Visible = true;
-                    break;
-                case "Admin":
-                    btnNuevo.Visible = true;
-                    btnModificar.Visible = true;
-                    btnEliminar.Visible = true;
-                    btnGuardar.Visible = true;
-                    btnCancelar.Visible = true;
-                    choferesDataGridView.Visible = true;
-                    campos(true);
-                    break;
-                case "Empresa":
-                    choferesDataGridView.Visible = true;
-                    break;
-                case "Secretaria":
-                    choferesDataGridView.Visible = true;
-                    break;
-                default:
-                    break;
-            }*/
-
+                btnEliminar.Visible = true;
+            }
+            if (usuarioController.puedeEditar(usuario.idRool, "empresa"))
+            {
+                btnModificar.Visible = true;
+                btnNuevo.Visible = true;
+                btnGuardar.Visible = true;
+                btnCancelar.Visible = true;
+                panelControls.Visible = true;
+            }
+            if (usuarioController.puedeConsultar(usuario.idRool, "empresa"))
+            {
+                choferesDataGridView.Visible = true;
+            }
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)

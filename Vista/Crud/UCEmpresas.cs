@@ -15,6 +15,9 @@ namespace Vista.Crud
 {
     public partial class UCEmpresas : UserControl
     {
+        UsuarioController usuarioController = new UsuarioController();
+        Usuario usuario = UsuarioController.usuario;
+
         public UCEmpresas()
         {
             InitializeComponent();
@@ -31,7 +34,7 @@ namespace Vista.Crud
             tipo_empresasTableAdapter.Fill(dBTransporte.tipo_empresas);
             cargarEmpresas();
             estado(false);
-            //permiso();
+            permiso();
         }
 
         private void cargarEmpresas()
@@ -157,37 +160,24 @@ namespace Vista.Crud
             btnGuardar.Visible = false;
             btnCancelar.Visible = false;
             empresasDataGridView.Visible = false;
+            panelControls.Visible = false;
 
-            /*switch (usuario.rool)
+            if(usuarioController.puedeEliminar(usuario.idRool, "empresas"))
             {
-                case "Usuario":
-                    empresasDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                case "Gerente":
-                    empresasDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                case "Admin":
-                    btnNuevo.Visible = true;
-                    btnModificar.Visible = true;
-                    btnEliminar.Visible = true;
-                    btnGuardar.Visible = true;
-                    btnCancelar.Visible = true;
-                    empresasDataGridView.Visible = true;
-                    break;
-                case "Empresa":
-                    empresasDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                case "Secretaria":
-                    empresasDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                default:
-                    break;
-            }*/
-
+                btnEliminar.Visible = true;
+            }
+            if (usuarioController.puedeEditar(usuario.idRool, "empresas"))
+            {
+                btnModificar.Visible = true;
+                btnNuevo.Visible = true;
+                btnGuardar.Visible = true;
+                btnCancelar.Visible = true;
+                panelControls.Visible = true;
+            }
+            if (usuarioController.puedeConsultar(usuario.idRool, "empresas"))
+            {
+                empresasDataGridView.Visible = true;
+            }
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)

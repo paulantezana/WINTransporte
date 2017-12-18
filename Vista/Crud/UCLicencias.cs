@@ -15,6 +15,9 @@ namespace Vista.Crud
 {
     public partial class UCLicencias : UserControl
     {
+        UsuarioController usuarioController = new UsuarioController();
+        Usuario usuario = UsuarioController.usuario;
+
         public UCLicencias()
         {
             InitializeComponent();
@@ -76,7 +79,7 @@ namespace Vista.Crud
         {
             licenciasTableAdapter.Fill(dBTransporte.licencias);
             estado(false);
-            // permiso();
+            permiso();
         }
 
         private void permiso()
@@ -88,38 +91,24 @@ namespace Vista.Crud
             btnGuardar.Visible = false;
             btnCancelar.Visible = false;
             licenciasDataGridView.Visible = false;
+            panelControls.Visible = false;
 
-           /* switch (usuario.rool)
+            if (usuarioController.puedeEliminar(usuario.idRool, "licencias"))
             {
-                case "Usuario":
-                    licenciasDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                case "Gerente":
-                    licenciasDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                case "Admin":
-                    btnNuevo.Visible = true;
-                    btnModificar.Visible = true;
-                    btnEliminar.Visible = true;
-                    btnGuardar.Visible = true;
-                    btnCancelar.Visible = true;
-                    licenciasDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                case "Empresa":
-                    licenciasDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                case "Secretaria":
-                    licenciasDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                default:
-                    break;
-            }*/
-
+                btnEliminar.Visible = true;
+            }
+            if (usuarioController.puedeEditar(usuario.idRool, "licencias"))
+            {
+                btnModificar.Visible = true;
+                btnNuevo.Visible = true;
+                btnGuardar.Visible = true;
+                btnCancelar.Visible = true;
+                panelControls.Visible = true;
+            }
+            if (usuarioController.puedeConsultar(usuario.idRool, "licencias"))
+            {
+                licenciasDataGridView.Visible = true;
+            }
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)

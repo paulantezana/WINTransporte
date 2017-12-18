@@ -92,6 +92,7 @@
             this.empresasTableAdapter = new Vista.DBTransporteTableAdapters.EmpresasTableAdapter();
             this.licenciasTableAdapter = new Vista.DBTransporteTableAdapters.LicenciasTableAdapter();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panelControls = new System.Windows.Forms.Panel();
             dniLabel = new System.Windows.Forms.Label();
             nombresLabel = new System.Windows.Forms.Label();
             apellidosLabel = new System.Windows.Forms.Label();
@@ -113,13 +114,14 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panelControls.SuspendLayout();
             this.SuspendLayout();
             // 
             // dniLabel
             // 
             dniLabel.AutoSize = true;
             dniLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dniLabel.Location = new System.Drawing.Point(41, 93);
+            dniLabel.Location = new System.Drawing.Point(3, 0);
             dniLabel.Name = "dniLabel";
             dniLabel.Size = new System.Drawing.Size(31, 16);
             dniLabel.TabIndex = 27;
@@ -129,7 +131,7 @@
             // 
             nombresLabel.AutoSize = true;
             nombresLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombresLabel.Location = new System.Drawing.Point(39, 147);
+            nombresLabel.Location = new System.Drawing.Point(1, 54);
             nombresLabel.Name = "nombresLabel";
             nombresLabel.Size = new System.Drawing.Size(67, 16);
             nombresLabel.TabIndex = 28;
@@ -139,7 +141,7 @@
             // 
             apellidosLabel.AutoSize = true;
             apellidosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            apellidosLabel.Location = new System.Drawing.Point(41, 203);
+            apellidosLabel.Location = new System.Drawing.Point(3, 110);
             apellidosLabel.Name = "apellidosLabel";
             apellidosLabel.Size = new System.Drawing.Size(68, 16);
             apellidosLabel.TabIndex = 29;
@@ -149,7 +151,7 @@
             // 
             telefonoLabel.AutoSize = true;
             telefonoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telefonoLabel.Location = new System.Drawing.Point(41, 262);
+            telefonoLabel.Location = new System.Drawing.Point(3, 169);
             telefonoLabel.Name = "telefonoLabel";
             telefonoLabel.Size = new System.Drawing.Size(65, 16);
             telefonoLabel.TabIndex = 30;
@@ -159,7 +161,7 @@
             // 
             emailLabel.AutoSize = true;
             emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            emailLabel.Location = new System.Drawing.Point(41, 313);
+            emailLabel.Location = new System.Drawing.Point(3, 220);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(48, 16);
             emailLabel.TabIndex = 31;
@@ -169,7 +171,7 @@
             // 
             direccionLabel.AutoSize = true;
             direccionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            direccionLabel.Location = new System.Drawing.Point(41, 361);
+            direccionLabel.Location = new System.Drawing.Point(3, 268);
             direccionLabel.Name = "direccionLabel";
             direccionLabel.Size = new System.Drawing.Size(68, 16);
             direccionLabel.TabIndex = 32;
@@ -179,7 +181,7 @@
             // 
             id_licenciaLabel.AutoSize = true;
             id_licenciaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_licenciaLabel.Location = new System.Drawing.Point(41, 408);
+            id_licenciaLabel.Location = new System.Drawing.Point(3, 315);
             id_licenciaLabel.Name = "id_licenciaLabel";
             id_licenciaLabel.Size = new System.Drawing.Size(61, 16);
             id_licenciaLabel.TabIndex = 33;
@@ -189,7 +191,7 @@
             // 
             id_empresaLabel.AutoSize = true;
             id_empresaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_empresaLabel.Location = new System.Drawing.Point(40, 458);
+            id_empresaLabel.Location = new System.Drawing.Point(2, 365);
             id_empresaLabel.Name = "id_empresaLabel";
             id_empresaLabel.Size = new System.Drawing.Size(66, 16);
             id_empresaLabel.TabIndex = 34;
@@ -199,32 +201,17 @@
             // 
             this.panel5.AutoScroll = true;
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(id_empresaLabel);
-            this.panel5.Controls.Add(this.id_empresaComboBox);
-            this.panel5.Controls.Add(id_licenciaLabel);
-            this.panel5.Controls.Add(this.id_licenciaComboBox);
-            this.panel5.Controls.Add(direccionLabel);
-            this.panel5.Controls.Add(this.direccionTextBox);
-            this.panel5.Controls.Add(emailLabel);
-            this.panel5.Controls.Add(this.emailTextBox);
-            this.panel5.Controls.Add(telefonoLabel);
-            this.panel5.Controls.Add(this.telefonoTextBox);
-            this.panel5.Controls.Add(apellidosLabel);
-            this.panel5.Controls.Add(this.apellidosTextBox);
-            this.panel5.Controls.Add(nombresLabel);
-            this.panel5.Controls.Add(this.nombresTextBox);
-            this.panel5.Controls.Add(dniLabel);
-            this.panel5.Controls.Add(this.dniTextBox);
+            this.panel5.Controls.Add(this.panelControls);
             this.panel5.Controls.Add(this.btnNuevo);
             this.panel5.Controls.Add(this.btnModificar);
             this.panel5.Controls.Add(this.btnEliminar);
             this.panel5.Controls.Add(this.btnCancelar);
             this.panel5.Controls.Add(this.btnGuardar);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(515, 30);
+            this.panel5.Location = new System.Drawing.Point(528, 30);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            this.panel5.Size = new System.Drawing.Size(313, 579);
+            this.panel5.Size = new System.Drawing.Size(300, 579);
             this.panel5.TabIndex = 11;
             // 
             // id_empresaComboBox
@@ -235,7 +222,7 @@
             this.id_empresaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.id_empresaComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.id_empresaComboBox.FormattingEnabled = true;
-            this.id_empresaComboBox.Location = new System.Drawing.Point(42, 474);
+            this.id_empresaComboBox.Location = new System.Drawing.Point(4, 381);
             this.id_empresaComboBox.Name = "id_empresaComboBox";
             this.id_empresaComboBox.Size = new System.Drawing.Size(121, 24);
             this.id_empresaComboBox.TabIndex = 35;
@@ -264,7 +251,7 @@
             this.id_licenciaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.id_licenciaComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.id_licenciaComboBox.FormattingEnabled = true;
-            this.id_licenciaComboBox.Location = new System.Drawing.Point(42, 424);
+            this.id_licenciaComboBox.Location = new System.Drawing.Point(4, 331);
             this.id_licenciaComboBox.Name = "id_licenciaComboBox";
             this.id_licenciaComboBox.Size = new System.Drawing.Size(121, 24);
             this.id_licenciaComboBox.TabIndex = 34;
@@ -279,7 +266,7 @@
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "direccion", true));
             this.direccionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.direccionTextBox.Location = new System.Drawing.Point(43, 377);
+            this.direccionTextBox.Location = new System.Drawing.Point(5, 284);
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(245, 22);
             this.direccionTextBox.TabIndex = 33;
@@ -288,7 +275,7 @@
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "email", true));
             this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTextBox.Location = new System.Drawing.Point(43, 329);
+            this.emailTextBox.Location = new System.Drawing.Point(5, 236);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(245, 22);
             this.emailTextBox.TabIndex = 32;
@@ -297,7 +284,7 @@
             // 
             this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "telefono", true));
             this.telefonoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.telefonoTextBox.Location = new System.Drawing.Point(43, 278);
+            this.telefonoTextBox.Location = new System.Drawing.Point(5, 185);
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(121, 22);
             this.telefonoTextBox.TabIndex = 31;
@@ -307,7 +294,7 @@
             // 
             this.apellidosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "apellidos", true));
             this.apellidosTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apellidosTextBox.Location = new System.Drawing.Point(43, 219);
+            this.apellidosTextBox.Location = new System.Drawing.Point(5, 126);
             this.apellidosTextBox.Name = "apellidosTextBox";
             this.apellidosTextBox.Size = new System.Drawing.Size(245, 22);
             this.apellidosTextBox.TabIndex = 30;
@@ -316,7 +303,7 @@
             // 
             this.nombresTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "nombres", true));
             this.nombresTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombresTextBox.Location = new System.Drawing.Point(43, 163);
+            this.nombresTextBox.Location = new System.Drawing.Point(5, 70);
             this.nombresTextBox.Name = "nombresTextBox";
             this.nombresTextBox.Size = new System.Drawing.Size(245, 22);
             this.nombresTextBox.TabIndex = 29;
@@ -325,7 +312,7 @@
             // 
             this.dniTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.choferesBindingSource, "dni", true));
             this.dniTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dniTextBox.Location = new System.Drawing.Point(43, 109);
+            this.dniTextBox.Location = new System.Drawing.Point(5, 16);
             this.dniTextBox.Name = "dniTextBox";
             this.dniTextBox.Size = new System.Drawing.Size(121, 22);
             this.dniTextBox.TabIndex = 28;
@@ -338,7 +325,7 @@
             this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(213)))), ((int)(((byte)(217)))));
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.btnNuevo.Location = new System.Drawing.Point(40, 25);
+            this.btnNuevo.Location = new System.Drawing.Point(27, 25);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(70, 30);
             this.btnNuevo.TabIndex = 27;
@@ -353,7 +340,7 @@
             this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(213)))), ((int)(((byte)(217)))));
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.btnModificar.Location = new System.Drawing.Point(127, 25);
+            this.btnModificar.Location = new System.Drawing.Point(114, 25);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(70, 30);
             this.btnModificar.TabIndex = 24;
@@ -368,7 +355,7 @@
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(213)))), ((int)(((byte)(217)))));
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.btnEliminar.Location = new System.Drawing.Point(217, 25);
+            this.btnEliminar.Location = new System.Drawing.Point(204, 25);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(70, 30);
             this.btnEliminar.TabIndex = 26;
@@ -383,7 +370,7 @@
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(213)))), ((int)(((byte)(217)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.btnCancelar.Location = new System.Drawing.Point(111, 528);
+            this.btnCancelar.Location = new System.Drawing.Point(98, 528);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(85, 30);
             this.btnCancelar.TabIndex = 25;
@@ -401,7 +388,7 @@
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(114)))), ((int)(((byte)(220)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(202, 528);
+            this.btnGuardar.Location = new System.Drawing.Point(189, 528);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(85, 30);
             this.btnGuardar.TabIndex = 22;
@@ -417,7 +404,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 30);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(515, 579);
+            this.panel4.Size = new System.Drawing.Size(528, 579);
             this.panel4.TabIndex = 12;
             // 
             // panel3
@@ -430,7 +417,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 74);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.panel3.Size = new System.Drawing.Size(515, 455);
+            this.panel3.Size = new System.Drawing.Size(528, 455);
             this.panel3.TabIndex = 6;
             // 
             // choferesDataGridView
@@ -472,7 +459,7 @@
             this.choferesDataGridView.ReadOnly = true;
             this.choferesDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.choferesDataGridView.RowTemplate.Height = 27;
-            this.choferesDataGridView.Size = new System.Drawing.Size(475, 430);
+            this.choferesDataGridView.Size = new System.Drawing.Size(488, 430);
             this.choferesDataGridView.TabIndex = 14;
             // 
             // dataGridViewTextBoxColumn1
@@ -563,7 +550,7 @@
             this.choferesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.choferesBindingNavigator.Name = "choferesBindingNavigator";
             this.choferesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.choferesBindingNavigator.Size = new System.Drawing.Size(475, 25);
+            this.choferesBindingNavigator.Size = new System.Drawing.Size(488, 25);
             this.choferesBindingNavigator.TabIndex = 13;
             this.choferesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -644,7 +631,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(515, 74);
+            this.panel1.Size = new System.Drawing.Size(528, 74);
             this.panel1.TabIndex = 5;
             // 
             // btnImportar
@@ -657,7 +644,7 @@
             this.btnImportar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.btnImportar.Image = ((System.Drawing.Image)(resources.GetObject("btnImportar.Image")));
             this.btnImportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImportar.Location = new System.Drawing.Point(258, 25);
+            this.btnImportar.Location = new System.Drawing.Point(271, 25);
             this.btnImportar.Name = "btnImportar";
             this.btnImportar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnImportar.Size = new System.Drawing.Size(109, 35);
@@ -676,7 +663,7 @@
             this.btnImprimir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(386, 25);
+            this.btnImprimir.Location = new System.Drawing.Point(399, 25);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnImprimir.Size = new System.Drawing.Size(109, 35);
@@ -714,7 +701,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 529);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.panel2.Size = new System.Drawing.Size(515, 50);
+            this.panel2.Size = new System.Drawing.Size(528, 50);
             this.panel2.TabIndex = 1;
             // 
             // textBuscar
@@ -726,7 +713,7 @@
             this.textBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBuscar.Location = new System.Drawing.Point(20, 12);
             this.textBuscar.Name = "textBuscar";
-            this.textBuscar.Size = new System.Drawing.Size(475, 26);
+            this.textBuscar.Size = new System.Drawing.Size(488, 26);
             this.textBuscar.TabIndex = 0;
             // 
             // choferesTableAdapter
@@ -764,6 +751,29 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // panelControls
+            // 
+            this.panelControls.Controls.Add(dniLabel);
+            this.panelControls.Controls.Add(id_empresaLabel);
+            this.panelControls.Controls.Add(this.dniTextBox);
+            this.panelControls.Controls.Add(this.id_empresaComboBox);
+            this.panelControls.Controls.Add(this.nombresTextBox);
+            this.panelControls.Controls.Add(id_licenciaLabel);
+            this.panelControls.Controls.Add(nombresLabel);
+            this.panelControls.Controls.Add(this.id_licenciaComboBox);
+            this.panelControls.Controls.Add(this.apellidosTextBox);
+            this.panelControls.Controls.Add(direccionLabel);
+            this.panelControls.Controls.Add(apellidosLabel);
+            this.panelControls.Controls.Add(this.direccionTextBox);
+            this.panelControls.Controls.Add(this.telefonoTextBox);
+            this.panelControls.Controls.Add(emailLabel);
+            this.panelControls.Controls.Add(telefonoLabel);
+            this.panelControls.Controls.Add(this.emailTextBox);
+            this.panelControls.Location = new System.Drawing.Point(24, 74);
+            this.panelControls.Name = "panelControls";
+            this.panelControls.Size = new System.Drawing.Size(256, 430);
+            this.panelControls.TabIndex = 37;
+            // 
             // UCChoferes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -775,7 +785,6 @@
             this.Size = new System.Drawing.Size(868, 639);
             this.Load += new System.EventHandler(this.UCChoferes_Load);
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.choferesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBTransporte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empresasBindingSource)).EndInit();
@@ -792,6 +801,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panelControls.ResumeLayout(false);
+            this.panelControls.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -850,5 +861,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panelControls;
     }
 }

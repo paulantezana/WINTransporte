@@ -15,6 +15,9 @@ namespace Vista.Crud
 {
     public partial class UCVehiculos : UserControl
     {
+        UsuarioController usuarioController = new UsuarioController();
+        Usuario usuario = UsuarioController.usuario;
+
         public UCVehiculos()
         {
             InitializeComponent();
@@ -22,11 +25,18 @@ namespace Vista.Crud
 
         private void vehiculosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.vehiculosBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dBTransporte);
-           // permiso();
+            try
+            {
+                this.Validate();
+                this.vehiculosBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.dBTransporte);
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Sancionar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
         private void permiso()
         {
@@ -37,33 +47,24 @@ namespace Vista.Crud
             btnGuardar.Visible = false;
             btnCancelar.Visible = false;
             vehiculosDataGridView.Visible = false;
+            panelControls.Visible = false;
 
-            /*switch (usuario.rool)
+            if (usuarioController.puedeEliminar(usuario.idRool, "vehiculos"))
             {
-                case "Usuario":
-                    vehiculosDataGridView.Visible = true;
-                    break;
-                case "Gerente":
-                    vehiculosDataGridView.Visible = true;
-                    break;
-                case "Admin":
-                    btnNuevo.Visible = true;
-                    btnModificar.Visible = true;
-                    btnEliminar.Visible = true;
-                    btnGuardar.Visible = true;
-                    btnCancelar.Visible = true;
-                    vehiculosDataGridView.Visible = true;
-                    break;
-                case "Empresa":
-                    vehiculosDataGridView.Visible = true;
-                    break;
-                case "Secretaria":
-                    vehiculosDataGridView.Visible = true;
-                    break;
-                default:
-                    break;
-            }*/
-
+                btnEliminar.Visible = true;
+            }
+            if (usuarioController.puedeEditar(usuario.idRool, "vehiculos"))
+            {
+                btnModificar.Visible = true;
+                btnNuevo.Visible = true;
+                btnGuardar.Visible = true;
+                btnCancelar.Visible = true;
+                panelControls.Visible = true;
+            }
+            if (usuarioController.puedeConsultar(usuario.idRool, "vehiculos"))
+            {
+                vehiculosDataGridView.Visible = true;
+            }
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -76,6 +77,27 @@ namespace Vista.Crud
         {
             DrawShape drawShape = new DrawShape();
             drawShape.leftLine(panel5);
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Validate();
+                this.vehiculosBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.dBTransporte);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Sancionar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+        }
+
+        private void UCVehiculos_Load(object sender, EventArgs e)
+        {
+            permiso();
         }
     }
 }

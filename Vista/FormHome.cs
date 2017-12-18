@@ -31,6 +31,8 @@ namespace Vista
 
         private FormLogin formLogin;
 
+        private UCHome uCHome;
+
         public FormHome()
         {
             InitializeComponent();
@@ -146,6 +148,15 @@ namespace Vista
                     this.uCPerfil.Size = new System.Drawing.Size(724, 485);
                     this.uCPerfil.TabIndex = 1;
                     break;
+                case "home":
+                    this.uCHome = new Vista.UCHome();
+                    this.panelMain.Controls.Add(this.uCHome);
+                    this.uCHome.Dock = System.Windows.Forms.DockStyle.Fill;
+                    this.uCHome.Location = new System.Drawing.Point(0, 0);
+                    this.uCHome.Name = "uCHome";
+                    this.uCHome.Size = new System.Drawing.Size(724, 485);
+                    this.uCHome.TabIndex = 1;
+                    break;
                 default:
                     break;
             }
@@ -188,6 +199,11 @@ namespace Vista
         private void FormHome_Load(object sender, EventArgs e)
         {
             lblUserName.Text = usuario.usuario;
+            // Aside por defecto
+            togglePanels("cruds");
+            btnCrud.BackColor = Color.FromArgb(212, 222, 240);
+            // Cargar el panel principal
+            togglePanels("home");
             loadImage();
         }
         private void loadImage()

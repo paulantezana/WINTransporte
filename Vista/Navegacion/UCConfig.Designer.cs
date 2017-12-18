@@ -47,7 +47,7 @@
             this.btnGeneral.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGeneral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnGeneral.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGeneral.Location = new System.Drawing.Point(0, 182);
+            this.btnGeneral.Location = new System.Drawing.Point(0, 91);
             this.btnGeneral.Name = "btnGeneral";
             this.btnGeneral.Size = new System.Drawing.Size(160, 45);
             this.btnGeneral.TabIndex = 26;
@@ -68,7 +68,7 @@
             this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuario.Location = new System.Drawing.Point(0, 137);
+            this.btnUsuario.Location = new System.Drawing.Point(0, 136);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(160, 45);
             this.btnUsuario.TabIndex = 25;
@@ -89,7 +89,7 @@
             this.btnRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnRoles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRoles.Location = new System.Drawing.Point(0, 92);
+            this.btnRoles.Location = new System.Drawing.Point(0, 181);
             this.btnRoles.Name = "btnRoles";
             this.btnRoles.Size = new System.Drawing.Size(160, 45);
             this.btnRoles.TabIndex = 24;
@@ -142,6 +142,7 @@
             this.Name = "UCConfig";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 0, 30);
             this.Size = new System.Drawing.Size(180, 563);
+            this.Load += new System.EventHandler(this.UCConfig_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

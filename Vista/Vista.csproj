@@ -257,6 +257,24 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Movimiento\UCAutorizar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Movimiento\UCAutorizar.Designer.cs">
+      <DependentUpon>UCAutorizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movimiento\UCRegularizarSancion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Movimiento\UCRegularizarSancion.Designer.cs">
+      <DependentUpon>UCRegularizarSancion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movimiento\UCSancionar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Movimiento\UCSancionar.Designer.cs">
+      <DependentUpon>UCSancionar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Navegacion\UCConfig.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -300,6 +318,12 @@
     </Compile>
     <Compile Include="Reportes\UCRRutas.Designer.cs">
       <DependentUpon>UCRRutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCHome.Designer.cs">
+      <DependentUpon>UCHome.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Configuracion\UCGeneral.resx">
       <DependentUpon>UCGeneral.cs</DependentUpon>
@@ -402,6 +426,15 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Movimiento\UCAutorizar.resx">
+      <DependentUpon>UCAutorizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimiento\UCRegularizarSancion.resx">
+      <DependentUpon>UCRegularizarSancion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimiento\UCSancionar.resx">
+      <DependentUpon>UCSancionar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Navegacion\UCConfig.resx">
       <DependentUpon>UCConfig.cs</DependentUpon>
     </EmbeddedResource>
@@ -432,6 +465,9 @@
     <EmbeddedResource Include="Reportes\UCRRutas.resx">
       <DependentUpon>UCRRutas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCHome.resx">
+      <DependentUpon>UCHome.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DBTransporte.xsc">
       <DependentUpon>DBTransporte.xsd</DependentUpon>
     </None>
@@ -456,7 +492,25 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Controlador\Controlador.csproj">
       <Project>{49c2e927-b5a9-4e43-b121-45ea69ecf606}</Project>

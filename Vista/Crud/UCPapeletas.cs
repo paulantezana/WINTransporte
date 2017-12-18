@@ -15,6 +15,9 @@ namespace Vista.Crud
 {
     public partial class UCPapeletas : UserControl
     {
+        UsuarioController usuarioController = new UsuarioController();
+        Usuario usuario = UsuarioController.usuario;
+
         public UCPapeletas()
         {
             InitializeComponent();
@@ -84,7 +87,7 @@ namespace Vista.Crud
         {
             papeletasTableAdapter.Fill(dBTransporte.papeletas);
             estado(false);
-           // permiso();
+            permiso();
         }
 
         private void montoTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -100,38 +103,24 @@ namespace Vista.Crud
             btnGuardar.Visible = false;
             btnCancelar.Visible = false;
             papeletasDataGridView.Visible = false;
+            panelControls.Visible = false;
 
-            /*switch (usuario.rool)
+            if (usuarioController.puedeEliminar(usuario.idRool, "papeletas"))
             {
-                case "Usuario":
-                    papeletasDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                case "Gerente":
-                    papeletasDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                case "Admin":
-                    btnNuevo.Visible = true;
-                    btnModificar.Visible = true;
-                    btnEliminar.Visible = true;
-                    btnGuardar.Visible = true;
-                    btnCancelar.Visible = true;
-                    papeletasDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                case "Empresa":
-                    papeletasDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                case "Secretaria":
-                    papeletasDataGridView.Visible = true;
-                    estado(false);
-                    break;
-                default:
-                    break;
-            }*/
-
+                btnEliminar.Visible = true;
+            }
+            if (usuarioController.puedeEditar(usuario.idRool, "papeletas"))
+            {
+                btnModificar.Visible = true;
+                btnNuevo.Visible = true;
+                btnGuardar.Visible = true;
+                btnCancelar.Visible = true;
+                panelControls.Visible = true;
+            }
+            if (usuarioController.puedeConsultar(usuario.idRool, "papeletas"))
+            {
+                papeletasDataGridView.Visible = true;
+            }
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)

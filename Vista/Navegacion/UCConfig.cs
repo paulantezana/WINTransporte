@@ -8,11 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vista.Configuracion;
+using Entidad;
+using Controlador;
 
 namespace Vista.Navegacion
 {
     public partial class UCConfig : UserControl
     {
+        UsuarioController usuarioController = new UsuarioController();
+        Usuario usuario = UsuarioController.usuario;
+
         private FormHome formHome;
 
         private UCGeneral uCGeneral;
@@ -110,6 +115,24 @@ namespace Vista.Navegacion
         {
             togglePanels("general");
             btnGeneral.BackColor = Color.White;
+        }
+
+        private void UCConfig_Load(object sender, EventArgs e)
+        {
+            permiso();
+        }
+        private void permiso()
+        {
+            btnUsuario.Visible = false;
+            btnRoles.Visible = false;
+            if (usuarioController.puedeEliminar(usuario.idRool, "usuarios") || usuarioController.puedeEditar(usuario.idRool, "usuarios") || usuarioController.puedeConsultar(usuario.idRool, "usuarios"))
+            {
+                btnUsuario.Visible = true;
+            }
+            if (usuarioController.puedeEliminar(usuario.idRool, "roles") || usuarioController.puedeEditar(usuario.idRool, "roles") || usuarioController.puedeConsultar(usuario.idRool, "roles"))
+            {
+                btnRoles.Visible = true;
+            }
         }
     }
 }

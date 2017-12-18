@@ -31,19 +31,19 @@ namespace Controlador
         }
 
         // Permisos de los roles
-        public void puedeConsultar(int ID_Rol, string Applicacion)
+        public bool puedeConsultar(int ID_Rol, string Applicacion)
         {
-            userModel.puedeConsultar(ID_Rol, Applicacion);
+            return userModel.puedeConsultar(ID_Rol, Applicacion);
         }
 
-        public void puedeEditar(int ID_Rol, string Applicacion)
+        public bool puedeEditar(int ID_Rol, string Applicacion)
         {
-            userModel.puedeEditar(ID_Rol, Applicacion);
+            return userModel.puedeEditar(ID_Rol, Applicacion);
         }
 
-        public void puedeEliminar(int ID_Rol, string Applicacion)
+        public bool puedeEliminar(int ID_Rol, string Applicacion)
         {
-            userModel.puedeEliminar(ID_Rol, Applicacion);
+            return userModel.puedeEliminar(ID_Rol, Applicacion);
         }
     }
 }

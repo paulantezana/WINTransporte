@@ -15,6 +15,9 @@ namespace Vista.Crud
 {
     public partial class UCRutas : UserControl
     {
+        UsuarioController usuarioController = new UsuarioController();
+        Usuario usuario = UsuarioController.usuario;
+
         public UCRutas()
         {
             InitializeComponent();
@@ -113,7 +116,7 @@ namespace Vista.Crud
         {
             rutasTableAdapter.Fill(dBTransporte.rutas);
             estado(false);
-            //permiso();
+            permiso();
         }
 
         private void frecuenciaTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -145,38 +148,24 @@ namespace Vista.Crud
             btnGuardar.Visible = false;
             btnCancelar.Visible = false;
             rutasDataGridView.Visible = false;
+            panelControls.Visible = false;
 
-            /*switch (usuario.rool)
+            if (usuarioController.puedeEliminar(usuario.idRool, "rutas"))
             {
-                case "Usuario":
-                    rutasDataGridView.Visible = true;
-                    estado(true);
-                    break;
-                case "Gerente":
-                    rutasDataGridView.Visible = true;
-                    estado(true);
-                    break;
-                case "Admin":
-                    btnNuevo.Visible = true;
-                    btnModificar.Visible = true;
-                    btnEliminar.Visible = true;
-                    btnGuardar.Visible = true;
-                    btnCancelar.Visible = true;
-                    rutasDataGridView.Visible = true;
-                    estado(true);
-                    break;
-                case "Empresa":
-                    rutasDataGridView.Visible = true;
-                    estado(true);
-                    break;
-                case "Secretaria":
-                    rutasDataGridView.Visible = true;
-                    estado(true);
-                    break;
-                default:
-                    break;
-            }*/
-
+                btnEliminar.Visible = true;
+            }
+            if (usuarioController.puedeEditar(usuario.idRool, "rutas"))
+            {
+                btnModificar.Visible = true;
+                btnNuevo.Visible = true;
+                btnGuardar.Visible = true;
+                btnCancelar.Visible = true;
+                panelControls.Visible = true;
+            }
+            if (usuarioController.puedeConsultar(usuario.idRool, "rutas"))
+            {
+                rutasDataGridView.Visible = true;
+            }
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)

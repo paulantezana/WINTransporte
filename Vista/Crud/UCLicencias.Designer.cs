@@ -67,6 +67,7 @@
             this.licenciasTableAdapter = new Vista.DBTransporteTableAdapters.LicenciasTableAdapter();
             this.tableAdapterManager = new Vista.DBTransporteTableAdapters.TableAdapterManager();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panelControls = new System.Windows.Forms.Panel();
             licenciaLabel = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.licenciasBindingSource)).BeginInit();
@@ -79,13 +80,14 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panelControls.SuspendLayout();
             this.SuspendLayout();
             // 
             // licenciaLabel
             // 
             licenciaLabel.AutoSize = true;
             licenciaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            licenciaLabel.Location = new System.Drawing.Point(25, 89);
+            licenciaLabel.Location = new System.Drawing.Point(4, 10);
             licenciaLabel.Name = "licenciaLabel";
             licenciaLabel.Size = new System.Drawing.Size(61, 16);
             licenciaLabel.TabIndex = 27;
@@ -95,8 +97,7 @@
             // 
             this.panel5.AutoScroll = true;
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(licenciaLabel);
-            this.panel5.Controls.Add(this.licenciaTextBox);
+            this.panel5.Controls.Add(this.panelControls);
             this.panel5.Controls.Add(this.btnNuevo);
             this.panel5.Controls.Add(this.btnModificar);
             this.panel5.Controls.Add(this.btnEliminar);
@@ -114,7 +115,7 @@
             // 
             this.licenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.licenciasBindingSource, "licencia", true));
             this.licenciaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.licenciaTextBox.Location = new System.Drawing.Point(27, 105);
+            this.licenciaTextBox.Location = new System.Drawing.Point(6, 26);
             this.licenciaTextBox.Name = "licenciaTextBox";
             this.licenciaTextBox.Size = new System.Drawing.Size(100, 22);
             this.licenciaTextBox.TabIndex = 28;
@@ -497,6 +498,15 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // panelControls
+            // 
+            this.panelControls.Controls.Add(licenciaLabel);
+            this.panelControls.Controls.Add(this.licenciaTextBox);
+            this.panelControls.Location = new System.Drawing.Point(20, 74);
+            this.panelControls.Name = "panelControls";
+            this.panelControls.Size = new System.Drawing.Size(254, 99);
+            this.panelControls.TabIndex = 37;
+            // 
             // UCLicencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -508,7 +518,6 @@
             this.Size = new System.Drawing.Size(853, 491);
             this.Load += new System.EventHandler(this.UCLicencias_Load);
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.licenciasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBTransporte)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -523,6 +532,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panelControls.ResumeLayout(false);
+            this.panelControls.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -563,5 +574,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panelControls;
     }
 }

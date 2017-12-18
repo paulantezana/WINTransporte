@@ -73,6 +73,7 @@
             this.papeletasTableAdapter = new Vista.DBTransporteTableAdapters.PapeletasTableAdapter();
             this.tableAdapterManager = new Vista.DBTransporteTableAdapters.TableAdapterManager();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panelControls = new System.Windows.Forms.Panel();
             nombreLabel = new System.Windows.Forms.Label();
             montoLabel = new System.Windows.Forms.Label();
             tipoLabel = new System.Windows.Forms.Label();
@@ -87,13 +88,14 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panelControls.SuspendLayout();
             this.SuspendLayout();
             // 
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
             nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombreLabel.Location = new System.Drawing.Point(25, 87);
+            nombreLabel.Location = new System.Drawing.Point(3, 13);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(60, 16);
             nombreLabel.TabIndex = 27;
@@ -103,7 +105,7 @@
             // 
             montoLabel.AutoSize = true;
             montoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            montoLabel.Location = new System.Drawing.Point(25, 135);
+            montoLabel.Location = new System.Drawing.Point(3, 61);
             montoLabel.Name = "montoLabel";
             montoLabel.Size = new System.Drawing.Size(48, 16);
             montoLabel.TabIndex = 28;
@@ -113,7 +115,7 @@
             // 
             tipoLabel.AutoSize = true;
             tipoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tipoLabel.Location = new System.Drawing.Point(25, 183);
+            tipoLabel.Location = new System.Drawing.Point(3, 109);
             tipoLabel.Name = "tipoLabel";
             tipoLabel.Size = new System.Drawing.Size(116, 16);
             tipoLabel.TabIndex = 29;
@@ -123,12 +125,7 @@
             // 
             this.panel5.AutoScroll = true;
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(tipoLabel);
-            this.panel5.Controls.Add(this.tipoComboBox);
-            this.panel5.Controls.Add(montoLabel);
-            this.panel5.Controls.Add(this.montoTextBox);
-            this.panel5.Controls.Add(nombreLabel);
-            this.panel5.Controls.Add(this.nombreTextBox);
+            this.panel5.Controls.Add(this.panelControls);
             this.panel5.Controls.Add(this.btnNuevo);
             this.panel5.Controls.Add(this.btnModificar);
             this.panel5.Controls.Add(this.btnEliminar);
@@ -151,7 +148,7 @@
             this.tipoComboBox.Items.AddRange(new object[] {
             "tipo-1",
             "tipo-2"});
-            this.tipoComboBox.Location = new System.Drawing.Point(27, 199);
+            this.tipoComboBox.Location = new System.Drawing.Point(5, 125);
             this.tipoComboBox.Name = "tipoComboBox";
             this.tipoComboBox.Size = new System.Drawing.Size(131, 24);
             this.tipoComboBox.TabIndex = 30;
@@ -170,7 +167,7 @@
             // 
             this.montoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.papeletasBindingSource, "monto", true));
             this.montoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.montoTextBox.Location = new System.Drawing.Point(27, 151);
+            this.montoTextBox.Location = new System.Drawing.Point(5, 77);
             this.montoTextBox.Name = "montoTextBox";
             this.montoTextBox.Size = new System.Drawing.Size(247, 22);
             this.montoTextBox.TabIndex = 29;
@@ -180,7 +177,7 @@
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.papeletasBindingSource, "nombre", true));
             this.nombreTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreTextBox.Location = new System.Drawing.Point(27, 103);
+            this.nombreTextBox.Location = new System.Drawing.Point(5, 29);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(247, 22);
             this.nombreTextBox.TabIndex = 28;
@@ -569,6 +566,19 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // panelControls
+            // 
+            this.panelControls.Controls.Add(nombreLabel);
+            this.panelControls.Controls.Add(tipoLabel);
+            this.panelControls.Controls.Add(this.nombreTextBox);
+            this.panelControls.Controls.Add(this.tipoComboBox);
+            this.panelControls.Controls.Add(this.montoTextBox);
+            this.panelControls.Controls.Add(montoLabel);
+            this.panelControls.Location = new System.Drawing.Point(27, 74);
+            this.panelControls.Name = "panelControls";
+            this.panelControls.Size = new System.Drawing.Size(257, 178);
+            this.panelControls.TabIndex = 37;
+            // 
             // UCPapeletas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -580,7 +590,6 @@
             this.Size = new System.Drawing.Size(869, 485);
             this.Load += new System.EventHandler(this.UCPapeletas_Load);
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.papeletasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBTransporte)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -595,6 +604,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panelControls.ResumeLayout(false);
+            this.panelControls.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -639,5 +650,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panelControls;
     }
 }

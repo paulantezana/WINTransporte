@@ -12,6 +12,8 @@ namespace Modelo
     {
         UsuariosTableAdapter adapter = new UsuariosTableAdapter();
 
+        RolesTableAdapter rolesTableAdapter = new RolesTableAdapter();
+
         public  Usuario login(string usuario, string clave)
         {
             DBTransporte.usuariosDataTable usuariosDataTable = adapter.LoginUsuario(usuario, clave);
@@ -36,19 +38,40 @@ namespace Modelo
         }
 
         // Permisos de los usuarios por roles en cada applicacion
-        public void puedeConsultar(int ID_Rol, string Applicacion)
+        public bool puedeConsultar(int ID_Rol, string Applicacion)
         {
-            //rolesTableAdapter.PuedeConsultar(ID_Rol, Applicacion);
+            if(rolesTableAdapter.PuedeConsultar(ID_Rol, Applicacion) == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
-        public void puedeEditar(int ID_Rol, string Applicacion)
+        public bool puedeEditar(int ID_Rol, string Applicacion)
         {
-            //rolesTableAdapter.PuedeEditar(ID_Rol, Applicacion);
+            if (rolesTableAdapter.PuedeEditar(ID_Rol, Applicacion) == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
-        public void puedeEliminar(int ID_Rol, string Applicacion)
+        public bool puedeEliminar(int ID_Rol, string Applicacion)
         {
-            //rolesTableAdapter.PuedeEliminar(ID_Rol, Applicacion);
+            if (rolesTableAdapter.PuedeEliminar(ID_Rol, Applicacion) == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         // Finalizando

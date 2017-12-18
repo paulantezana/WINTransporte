@@ -67,6 +67,7 @@
             this.tipo_vehiculosTableAdapter = new Vista.DBTransporteTableAdapters.Tipo_vehiculosTableAdapter();
             this.tableAdapterManager = new Vista.DBTransporteTableAdapters.TableAdapterManager();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panelControls = new System.Windows.Forms.Panel();
             tipoLabel = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipo_vehiculosBindingSource)).BeginInit();
@@ -79,13 +80,14 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panelControls.SuspendLayout();
             this.SuspendLayout();
             // 
             // tipoLabel
             // 
             tipoLabel.AutoSize = true;
             tipoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tipoLabel.Location = new System.Drawing.Point(25, 88);
+            tipoLabel.Location = new System.Drawing.Point(18, 15);
             tipoLabel.Name = "tipoLabel";
             tipoLabel.Size = new System.Drawing.Size(116, 16);
             tipoLabel.TabIndex = 27;
@@ -95,8 +97,7 @@
             // 
             this.panel5.AutoScroll = true;
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(tipoLabel);
-            this.panel5.Controls.Add(this.tipoTextBox);
+            this.panel5.Controls.Add(this.panelControls);
             this.panel5.Controls.Add(this.btnNuevo);
             this.panel5.Controls.Add(this.btnModificar);
             this.panel5.Controls.Add(this.btnEliminar);
@@ -114,7 +115,7 @@
             // 
             this.tipoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tipo_vehiculosBindingSource, "tipo", true));
             this.tipoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipoTextBox.Location = new System.Drawing.Point(27, 104);
+            this.tipoTextBox.Location = new System.Drawing.Point(20, 31);
             this.tipoTextBox.Name = "tipoTextBox";
             this.tipoTextBox.Size = new System.Drawing.Size(247, 22);
             this.tipoTextBox.TabIndex = 28;
@@ -496,6 +497,15 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // panelControls
+            // 
+            this.panelControls.Controls.Add(tipoLabel);
+            this.panelControls.Controls.Add(this.tipoTextBox);
+            this.panelControls.Location = new System.Drawing.Point(6, 66);
+            this.panelControls.Name = "panelControls";
+            this.panelControls.Size = new System.Drawing.Size(282, 100);
+            this.panelControls.TabIndex = 37;
+            // 
             // UCTipoVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -507,7 +517,6 @@
             this.Size = new System.Drawing.Size(863, 505);
             this.Load += new System.EventHandler(this.UCTipoVehiculo_Load);
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipo_vehiculosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBTransporte)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -522,6 +531,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panelControls.ResumeLayout(false);
+            this.panelControls.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -562,5 +573,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panelControls;
     }
 }
