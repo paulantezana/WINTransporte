@@ -90,9 +90,9 @@
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(514, 50);
+            this.panel5.Location = new System.Drawing.Point(514, 30);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(300, 476);
+            this.panel5.Size = new System.Drawing.Size(300, 496);
             this.panel5.TabIndex = 13;
             // 
             // panel8
@@ -104,7 +104,7 @@
             this.panel8.Location = new System.Drawing.Point(0, 60);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(15);
-            this.panel8.Size = new System.Drawing.Size(300, 356);
+            this.panel8.Size = new System.Drawing.Size(300, 376);
             this.panel8.TabIndex = 30;
             // 
             // toolStrip1
@@ -209,7 +209,7 @@
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 416);
+            this.panel7.Location = new System.Drawing.Point(0, 436);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(300, 60);
             this.panel7.TabIndex = 29;
@@ -250,9 +250,9 @@
             this.panel4.Controls.Add(this.panelMainContainer);
             this.panel4.Controls.Add(this.panelHeaderContainer);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 50);
+            this.panel4.Location = new System.Drawing.Point(0, 30);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(514, 476);
+            this.panel4.Size = new System.Drawing.Size(514, 496);
             this.panel4.TabIndex = 14;
             // 
             // panelMainContainer
@@ -264,7 +264,7 @@
             this.panelMainContainer.Location = new System.Drawing.Point(0, 81);
             this.panelMainContainer.Name = "panelMainContainer";
             this.panelMainContainer.Padding = new System.Windows.Forms.Padding(10);
-            this.panelMainContainer.Size = new System.Drawing.Size(514, 395);
+            this.panelMainContainer.Size = new System.Drawing.Size(514, 415);
             this.panelMainContainer.TabIndex = 6;
             // 
             // panelMain
@@ -276,7 +276,7 @@
             this.panelMain.Location = new System.Drawing.Point(10, 10);
             this.panelMain.Name = "panelMain";
             this.panelMain.Padding = new System.Windows.Forms.Padding(15);
-            this.panelMain.Size = new System.Drawing.Size(494, 375);
+            this.panelMain.Size = new System.Drawing.Size(494, 395);
             this.panelMain.TabIndex = 15;
             // 
             // rolesBindingNavigator
@@ -301,7 +301,7 @@
             this.bindingNavigatorDeleteItem,
             this.rolesBindingNavigatorSaveItem,
             this.rolesBindingNavigatorCancelItem});
-            this.rolesBindingNavigator.Location = new System.Drawing.Point(15, 325);
+            this.rolesBindingNavigator.Location = new System.Drawing.Point(15, 345);
             this.rolesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.rolesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.rolesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -465,7 +465,7 @@
             this.rolesDataGridView.Name = "rolesDataGridView";
             this.rolesDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.rolesDataGridView.RowTemplate.Height = 27;
-            this.rolesDataGridView.Size = new System.Drawing.Size(464, 345);
+            this.rolesDataGridView.Size = new System.Drawing.Size(464, 365);
             this.rolesDataGridView.TabIndex = 14;
             // 
             // panelHeaderContainer
@@ -508,7 +508,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Name = "UCGeneral";
-            this.Padding = new System.Windows.Forms.Padding(0, 50, 40, 30);
+            this.Padding = new System.Windows.Forms.Padding(0, 30, 40, 30);
             this.Size = new System.Drawing.Size(854, 556);
             this.panel5.ResumeLayout(false);
             this.panel8.ResumeLayout(false);

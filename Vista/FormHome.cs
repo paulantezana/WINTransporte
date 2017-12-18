@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Entidad;
 using Vista.Navegacion;
 using Vista.Componentes;
+using Vista.Configuracion;
+using System.IO;
 
 namespace Vista
 {
@@ -25,6 +27,8 @@ namespace Vista
 
         private Usuario usuario;
 
+        private UCPerfil uCPerfil;
+
         private FormLogin formLogin;
 
         public FormHome()
@@ -36,7 +40,7 @@ namespace Vista
         {
             InitializeComponent();
             this.usuario = usuario;
-            lblUserName.Text = usuario.usuario;
+            
             /*lblRool.Text = usuario.rool;*/
         }
 
@@ -132,6 +136,16 @@ namespace Vista
                     this.uCReportes.Size = new System.Drawing.Size(724, 485);
                     this.uCReportes.TabIndex = 1;
                     break;
+                case "perfil":
+                    this.panelMain.Controls.Clear();
+                    this.uCPerfil = new Vista.Configuracion.UCPerfil();
+                    this.panelMain.Controls.Add(this.uCPerfil);
+                    this.uCPerfil.Dock = System.Windows.Forms.DockStyle.Fill;
+                    this.uCPerfil.Location = new System.Drawing.Point(0, 0);
+                    this.uCPerfil.Name = "uCPerfil";
+                    this.uCPerfil.Size = new System.Drawing.Size(724, 485);
+                    this.uCPerfil.TabIndex = 1;
+                    break;
                 default:
                     break;
             }
@@ -154,6 +168,45 @@ namespace Vista
         {
             DrawShape drawShape = new DrawShape();
             drawShape.bottomLine(panel1);
+        }
+
+        private void pbcProfile_Click(object sender, EventArgs e)
+        {
+            togglePanels("perfil");
+        }
+
+        private void lblUserName_Click(object sender, EventArgs e)
+        {
+            togglePanels("perfil");
+        }
+
+        private void lblRool_Click(object sender, EventArgs e)
+        {
+            togglePanels("perfil");
+        }
+
+        private void FormHome_Load(object sender, EventArgs e)
+        {
+            lblUserName.Text = usuario.usuario;
+            loadImage();
+        }
+        private void loadImage()
+        {
+            if (usuario.foto == string.Empty)
+            {
+                pbcProfile.Image = null;
+            }
+            else
+            {
+                if (File.Exists(usuario.foto))
+                {
+                    pbcProfile.Load(usuario.foto);
+                }
+                else
+                {
+                    pbcProfile.Image = null;
+                }
+            }
         }
     }
 }

@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label tipoLabel;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCTipoEmpresa));
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -84,7 +86,7 @@
             tipoLabel.AutoSize = true;
             tipoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tipoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(48)))), ((int)(((byte)(55)))));
-            tipoLabel.Location = new System.Drawing.Point(24, 80);
+            tipoLabel.Location = new System.Drawing.Point(25, 80);
             tipoLabel.Name = "tipoLabel";
             tipoLabel.Size = new System.Drawing.Size(119, 16);
             tipoLabel.TabIndex = 27;
@@ -96,9 +98,9 @@
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 50);
+            this.panel4.Location = new System.Drawing.Point(0, 30);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(485, 397);
+            this.panel4.Size = new System.Drawing.Size(485, 417);
             this.panel4.TabIndex = 11;
             // 
             // panel3
@@ -111,7 +113,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 74);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.panel3.Size = new System.Drawing.Size(485, 273);
+            this.panel3.Size = new System.Drawing.Size(485, 293);
             this.panel3.TabIndex = 6;
             // 
             // tipo_empresasDataGridView
@@ -119,19 +121,33 @@
             this.tipo_empresasDataGridView.AllowUserToAddRows = false;
             this.tipo_empresasDataGridView.AllowUserToDeleteRows = false;
             this.tipo_empresasDataGridView.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.tipo_empresasDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.tipo_empresasDataGridView.AutoGenerateColumns = false;
             this.tipo_empresasDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.tipo_empresasDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tipo_empresasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tipo_empresasDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tipo_empresasDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.tipo_empresasDataGridView.ColumnHeadersHeight = 33;
             this.tipo_empresasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.tipo_empresasDataGridView.DataSource = this.tipo_empresasBindingSource;
             this.tipo_empresasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tipo_empresasDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.tipo_empresasDataGridView.Location = new System.Drawing.Point(20, 0);
             this.tipo_empresasDataGridView.Name = "tipo_empresasDataGridView";
             this.tipo_empresasDataGridView.ReadOnly = true;
-            this.tipo_empresasDataGridView.Size = new System.Drawing.Size(445, 248);
+            this.tipo_empresasDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.tipo_empresasDataGridView.RowTemplate.Height = 27;
+            this.tipo_empresasDataGridView.Size = new System.Drawing.Size(445, 268);
             this.tipo_empresasDataGridView.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn1
@@ -176,7 +192,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.tipo_empresasBindingNavigator.Location = new System.Drawing.Point(20, 248);
+            this.tipo_empresasBindingNavigator.Location = new System.Drawing.Point(20, 268);
             this.tipo_empresasBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.tipo_empresasBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.tipo_empresasBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -330,7 +346,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.textBuscar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 347);
+            this.panel2.Location = new System.Drawing.Point(0, 367);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.panel2.Size = new System.Drawing.Size(485, 50);
@@ -358,7 +374,7 @@
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(114)))), ((int)(((byte)(220)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(189, 346);
+            this.btnGuardar.Location = new System.Drawing.Point(189, 366);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(85, 30);
             this.btnGuardar.TabIndex = 22;
@@ -373,7 +389,7 @@
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(213)))), ((int)(((byte)(217)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.btnCancelar.Location = new System.Drawing.Point(98, 346);
+            this.btnCancelar.Location = new System.Drawing.Point(98, 366);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(85, 30);
             this.btnCancelar.TabIndex = 25;
@@ -438,10 +454,12 @@
             this.panel5.Controls.Add(this.btnCancelar);
             this.panel5.Controls.Add(this.btnGuardar);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(485, 50);
+            this.panel5.Location = new System.Drawing.Point(485, 30);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(300, 397);
+            this.panel5.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.panel5.Size = new System.Drawing.Size(300, 417);
             this.panel5.TabIndex = 10;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // tipoTextBox
             // 
@@ -486,7 +504,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Name = "UCTipoEmpresa";
-            this.Padding = new System.Windows.Forms.Padding(0, 50, 40, 30);
+            this.Padding = new System.Windows.Forms.Padding(0, 30, 40, 30);
             this.Size = new System.Drawing.Size(825, 477);
             this.Load += new System.EventHandler(this.UCTipoEmpresa_Load);
             this.panel4.ResumeLayout(false);

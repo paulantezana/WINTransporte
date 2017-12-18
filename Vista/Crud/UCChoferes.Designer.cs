@@ -38,6 +38,7 @@
             System.Windows.Forms.Label id_licenciaLabel;
             System.Windows.Forms.Label id_empresaLabel;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCChoferes));
             this.panel5 = new System.Windows.Forms.Panel();
             this.id_empresaComboBox = new System.Windows.Forms.ComboBox();
@@ -118,7 +119,7 @@
             // 
             dniLabel.AutoSize = true;
             dniLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dniLabel.Location = new System.Drawing.Point(40, 93);
+            dniLabel.Location = new System.Drawing.Point(41, 93);
             dniLabel.Name = "dniLabel";
             dniLabel.Size = new System.Drawing.Size(31, 16);
             dniLabel.TabIndex = 27;
@@ -128,7 +129,7 @@
             // 
             nombresLabel.AutoSize = true;
             nombresLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombresLabel.Location = new System.Drawing.Point(38, 147);
+            nombresLabel.Location = new System.Drawing.Point(39, 147);
             nombresLabel.Name = "nombresLabel";
             nombresLabel.Size = new System.Drawing.Size(67, 16);
             nombresLabel.TabIndex = 28;
@@ -138,7 +139,7 @@
             // 
             apellidosLabel.AutoSize = true;
             apellidosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            apellidosLabel.Location = new System.Drawing.Point(40, 203);
+            apellidosLabel.Location = new System.Drawing.Point(41, 203);
             apellidosLabel.Name = "apellidosLabel";
             apellidosLabel.Size = new System.Drawing.Size(68, 16);
             apellidosLabel.TabIndex = 29;
@@ -148,7 +149,7 @@
             // 
             telefonoLabel.AutoSize = true;
             telefonoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telefonoLabel.Location = new System.Drawing.Point(40, 262);
+            telefonoLabel.Location = new System.Drawing.Point(41, 262);
             telefonoLabel.Name = "telefonoLabel";
             telefonoLabel.Size = new System.Drawing.Size(65, 16);
             telefonoLabel.TabIndex = 30;
@@ -158,7 +159,7 @@
             // 
             emailLabel.AutoSize = true;
             emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            emailLabel.Location = new System.Drawing.Point(40, 313);
+            emailLabel.Location = new System.Drawing.Point(41, 313);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(48, 16);
             emailLabel.TabIndex = 31;
@@ -168,7 +169,7 @@
             // 
             direccionLabel.AutoSize = true;
             direccionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            direccionLabel.Location = new System.Drawing.Point(40, 361);
+            direccionLabel.Location = new System.Drawing.Point(41, 361);
             direccionLabel.Name = "direccionLabel";
             direccionLabel.Size = new System.Drawing.Size(68, 16);
             direccionLabel.TabIndex = 32;
@@ -178,7 +179,7 @@
             // 
             id_licenciaLabel.AutoSize = true;
             id_licenciaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_licenciaLabel.Location = new System.Drawing.Point(40, 408);
+            id_licenciaLabel.Location = new System.Drawing.Point(41, 408);
             id_licenciaLabel.Name = "id_licenciaLabel";
             id_licenciaLabel.Size = new System.Drawing.Size(61, 16);
             id_licenciaLabel.TabIndex = 33;
@@ -188,7 +189,7 @@
             // 
             id_empresaLabel.AutoSize = true;
             id_empresaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_empresaLabel.Location = new System.Drawing.Point(39, 458);
+            id_empresaLabel.Location = new System.Drawing.Point(40, 458);
             id_empresaLabel.Name = "id_empresaLabel";
             id_empresaLabel.Size = new System.Drawing.Size(66, 16);
             id_empresaLabel.TabIndex = 34;
@@ -220,9 +221,10 @@
             this.panel5.Controls.Add(this.btnCancelar);
             this.panel5.Controls.Add(this.btnGuardar);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(515, 50);
+            this.panel5.Location = new System.Drawing.Point(515, 30);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(313, 559);
+            this.panel5.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.panel5.Size = new System.Drawing.Size(313, 579);
             this.panel5.TabIndex = 11;
             // 
             // id_empresaComboBox
@@ -381,7 +383,7 @@
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(213)))), ((int)(((byte)(217)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.btnCancelar.Location = new System.Drawing.Point(111, 508);
+            this.btnCancelar.Location = new System.Drawing.Point(111, 528);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(85, 30);
             this.btnCancelar.TabIndex = 25;
@@ -399,7 +401,7 @@
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(114)))), ((int)(((byte)(220)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(202, 508);
+            this.btnGuardar.Location = new System.Drawing.Point(202, 528);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(85, 30);
             this.btnGuardar.TabIndex = 22;
@@ -413,9 +415,9 @@
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 50);
+            this.panel4.Location = new System.Drawing.Point(0, 30);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(515, 559);
+            this.panel4.Size = new System.Drawing.Size(515, 579);
             this.panel4.TabIndex = 12;
             // 
             // panel3
@@ -428,7 +430,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 74);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.panel3.Size = new System.Drawing.Size(515, 435);
+            this.panel3.Size = new System.Drawing.Size(515, 455);
             this.panel3.TabIndex = 6;
             // 
             // choferesDataGridView
@@ -436,18 +438,22 @@
             this.choferesDataGridView.AllowUserToAddRows = false;
             this.choferesDataGridView.AllowUserToDeleteRows = false;
             this.choferesDataGridView.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.choferesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.choferesDataGridView.AutoGenerateColumns = false;
             this.choferesDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.choferesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.choferesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.choferesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.choferesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.choferesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.choferesDataGridView.ColumnHeadersHeight = 33;
+            this.choferesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.choferesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
@@ -460,10 +466,13 @@
             this.dataGridViewTextBoxColumn9});
             this.choferesDataGridView.DataSource = this.choferesBindingSource;
             this.choferesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.choferesDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.choferesDataGridView.Location = new System.Drawing.Point(20, 0);
             this.choferesDataGridView.Name = "choferesDataGridView";
             this.choferesDataGridView.ReadOnly = true;
-            this.choferesDataGridView.Size = new System.Drawing.Size(475, 410);
+            this.choferesDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.choferesDataGridView.RowTemplate.Height = 27;
+            this.choferesDataGridView.Size = new System.Drawing.Size(475, 430);
             this.choferesDataGridView.TabIndex = 14;
             // 
             // dataGridViewTextBoxColumn1
@@ -547,7 +556,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.choferesBindingNavigator.Location = new System.Drawing.Point(20, 410);
+            this.choferesBindingNavigator.Location = new System.Drawing.Point(20, 430);
             this.choferesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.choferesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.choferesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -702,7 +711,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.textBuscar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 509);
+            this.panel2.Location = new System.Drawing.Point(0, 529);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.panel2.Size = new System.Drawing.Size(515, 50);
@@ -762,7 +771,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Name = "UCChoferes";
-            this.Padding = new System.Windows.Forms.Padding(0, 50, 40, 30);
+            this.Padding = new System.Windows.Forms.Padding(0, 30, 40, 30);
             this.Size = new System.Drawing.Size(868, 639);
             this.Load += new System.EventHandler(this.UCChoferes_Load);
             this.panel5.ResumeLayout(false);

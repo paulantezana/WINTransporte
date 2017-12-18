@@ -30,7 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label tipoLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCTipoVehiculo));
             this.panel5 = new System.Windows.Forms.Panel();
             this.tipoTextBox = new System.Windows.Forms.TextBox();
@@ -84,7 +85,7 @@
             // 
             tipoLabel.AutoSize = true;
             tipoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tipoLabel.Location = new System.Drawing.Point(24, 88);
+            tipoLabel.Location = new System.Drawing.Point(25, 88);
             tipoLabel.Name = "tipoLabel";
             tipoLabel.Size = new System.Drawing.Size(116, 16);
             tipoLabel.TabIndex = 27;
@@ -102,10 +103,12 @@
             this.panel5.Controls.Add(this.btnCancelar);
             this.panel5.Controls.Add(this.btnGuardar);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(523, 50);
+            this.panel5.Location = new System.Drawing.Point(523, 30);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(300, 425);
+            this.panel5.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.panel5.Size = new System.Drawing.Size(300, 445);
             this.panel5.TabIndex = 11;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // tipoTextBox
             // 
@@ -178,7 +181,7 @@
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(213)))), ((int)(((byte)(217)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.btnCancelar.Location = new System.Drawing.Point(98, 374);
+            this.btnCancelar.Location = new System.Drawing.Point(98, 394);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(85, 30);
             this.btnCancelar.TabIndex = 25;
@@ -196,7 +199,7 @@
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(114)))), ((int)(((byte)(220)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(189, 374);
+            this.btnGuardar.Location = new System.Drawing.Point(189, 394);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(85, 30);
             this.btnGuardar.TabIndex = 22;
@@ -210,9 +213,9 @@
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 50);
+            this.panel4.Location = new System.Drawing.Point(0, 30);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(523, 425);
+            this.panel4.Size = new System.Drawing.Size(523, 445);
             this.panel4.TabIndex = 12;
             // 
             // panel3
@@ -225,7 +228,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 74);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.panel3.Size = new System.Drawing.Size(523, 301);
+            this.panel3.Size = new System.Drawing.Size(523, 321);
             this.panel3.TabIndex = 6;
             // 
             // tipo_vehiculosDataGridView
@@ -233,27 +236,33 @@
             this.tipo_vehiculosDataGridView.AllowUserToAddRows = false;
             this.tipo_vehiculosDataGridView.AllowUserToDeleteRows = false;
             this.tipo_vehiculosDataGridView.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.tipo_vehiculosDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.tipo_vehiculosDataGridView.AutoGenerateColumns = false;
             this.tipo_vehiculosDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.tipo_vehiculosDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tipo_vehiculosDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.tipo_vehiculosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tipo_vehiculosDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tipo_vehiculosDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.tipo_vehiculosDataGridView.ColumnHeadersHeight = 33;
             this.tipo_vehiculosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.tipo_vehiculosDataGridView.DataSource = this.tipo_vehiculosBindingSource;
             this.tipo_vehiculosDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tipo_vehiculosDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.tipo_vehiculosDataGridView.Location = new System.Drawing.Point(20, 0);
             this.tipo_vehiculosDataGridView.Name = "tipo_vehiculosDataGridView";
             this.tipo_vehiculosDataGridView.ReadOnly = true;
-            this.tipo_vehiculosDataGridView.Size = new System.Drawing.Size(483, 276);
+            this.tipo_vehiculosDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.tipo_vehiculosDataGridView.RowTemplate.Height = 27;
+            this.tipo_vehiculosDataGridView.Size = new System.Drawing.Size(483, 296);
             this.tipo_vehiculosDataGridView.TabIndex = 14;
             // 
             // dataGridViewTextBoxColumn1
@@ -288,7 +297,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.tipo_vehiculosBindingNavigator.Location = new System.Drawing.Point(20, 276);
+            this.tipo_vehiculosBindingNavigator.Location = new System.Drawing.Point(20, 296);
             this.tipo_vehiculosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.tipo_vehiculosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.tipo_vehiculosBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -442,7 +451,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.textBuscar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 375);
+            this.panel2.Location = new System.Drawing.Point(0, 395);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.panel2.Size = new System.Drawing.Size(523, 50);
@@ -494,7 +503,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Name = "UCTipoVehiculo";
-            this.Padding = new System.Windows.Forms.Padding(0, 50, 40, 30);
+            this.Padding = new System.Windows.Forms.Padding(0, 30, 40, 30);
             this.Size = new System.Drawing.Size(863, 505);
             this.Load += new System.EventHandler(this.UCTipoVehiculo_Load);
             this.panel5.ResumeLayout(false);

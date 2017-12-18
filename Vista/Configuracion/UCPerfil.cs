@@ -18,7 +18,7 @@ namespace Vista.Configuracion
     {
         private Usuario usuario = UsuarioController.usuario;
 
-        private UsuarioModel usuarioModel = new UsuarioModel();
+        private UsuarioController usuarioController = new UsuarioController();
 
         public UCPerfil()
         {
@@ -28,9 +28,9 @@ namespace Vista.Configuracion
         private void UCPerfil_Load(object sender, EventArgs e)
         {
             textUsuario.Text = usuario.usuario;
-            textNombre.Text = usuario.nombre;
-            textEmail.Text = usuario.email;
+            textNombre.Text = usuario.nombres;
             textFoto.Text = usuario.foto;
+            textEmail.Text = usuario.email;
             loadImage();
         }
 
@@ -78,66 +78,54 @@ namespace Vista.Configuracion
             }
             errorProvider1.Clear();
 
-            if (textEmail.Text != textEmail.Text)
+            if (textEmail.Text == "")
             {
-                errorProvider1.SetError(textEmail, "Las email no coinciden");
+                errorProvider1.SetError(textEmail, "El campo email esta vacía");
                 textEmail.Focus();
                 return;
             }
             errorProvider1.Clear();
-            errorProvider1.Clear();
-           // usuarioModel.updateUsuario(textUsuario.Text,textNombre.Text, textEmail.Text, textFoto.Text, usuario.rool, usuario.idUsuario);
+
+
+            string password = usuario.clave;
+            if (textOldClave.Text != "")
+            {
+                if (textOldClave.Text != usuario.clave)
+                {
+                    errorProvider1.SetError(textOldClave, "la contraseña anterior es incorecta");
+                    textOldClave.Focus();
+                    return;
+                }
+                errorProvider1.Clear();
+
+                if (textNewClave.Text == "")
+                {
+                    errorProvider1.SetError(textNewClave, "El campo nueva contraseña esta vacía");
+                    textNewClave.Focus();
+                    return;
+                }
+                errorProvider1.Clear();
+
+                if (textConfirmNewClave.Text == "")
+                {
+                    errorProvider1.SetError(textConfirmNewClave, "El campo confirmar contraseña esta vacía");
+                    textConfirmNewClave.Focus();
+                    return;
+                }
+                errorProvider1.Clear();
+
+                if (textNewClave.Text != textConfirmNewClave.Text)
+                {
+                    errorProvider1.SetError(textConfirmNewClave, "Las contraseñas no coinciden");
+                    textConfirmNewClave.Focus();
+                    return;
+                }
+                errorProvider1.Clear();
+                password = textNewClave.Text;
+            }
+            usuarioController.updateUsuario(textUsuario.Text,password,textNombre.Text,textEmail.Text,textFoto.Text,usuario.idUsuario);
             MessageBox.Show("El usuario se actualizo exitosamente. \n para ver los cambios reinicie la aplicacion", "Perfil", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void btnGuardarClave_Click(object sender, EventArgs e)
-        {
-            if (textOldClave.Text == "")
-            {
-                errorProvider1.SetError(textOldClave, "El campo contraseña anterior esta vacía");
-                textOldClave.Focus();
-                return;
-            }
-            errorProvider1.Clear();
-
-            if (textNewClave.Text == "")
-            {
-                errorProvider1.SetError(textNewClave, "El campo nueva contraseña esta vacía");
-                textNewClave.Focus();
-                return;
-            }
-            errorProvider1.Clear();
-
-            if (textConfirmNewClave.Text == "")
-            {
-                errorProvider1.SetError(textConfirmNewClave, "El campo confirmar nueva contraseña esta vacía");
-                textConfirmNewClave.Focus();
-                return;
-            }
-            errorProvider1.Clear();
-
-            if (textOldClave.Text != usuario.clave)
-            {
-                errorProvider1.SetError(textOldClave, "La contraseña anterior que ha ingresado es incorrecta");
-                textOldClave.Focus();
-                return;
-            }
-            errorProvider1.Clear();
-
-            if (textNewClave.Text != textConfirmNewClave.Text)
-            {
-                errorProvider1.SetError(textConfirmNewClave, "Las contraseñas no coinciden");
-                textConfirmNewClave.Focus();
-                return;
-            }
-            errorProvider1.Clear();
-
-            errorProvider1.Clear();
-            usuarioModel.cambiarClave(textNewClave.Text, usuario.idUsuario);
-            MessageBox.Show("La contraseña se cambio exitosamente", "Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            textOldClave.Clear();
-            textNewClave.Clear();
-            textConfirmNewClave.Clear();
-        }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidad;
 using Controlador;
+using Vista.Componentes;
 
 namespace Vista.Crud
 {
@@ -125,6 +126,12 @@ namespace Vista.Crud
         {
             FormImprimirTipoVehi formImprimir = new FormImprimirTipoVehi();
             formImprimir.ShowDialog();
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            DrawShape drawShape = new DrawShape();
+            drawShape.leftLine(panel5);
         }
     }
 }

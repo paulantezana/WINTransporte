@@ -44,14 +44,14 @@
             this.lblRool = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbcProfile = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.lblUserName = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelAside.SuspendLayout();
             this.panelAsideLeft.SuspendLayout();
             this.panelHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbcProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // panelAside
@@ -217,7 +217,7 @@
             this.panelHeader.Controls.Add(this.button3);
             this.panelHeader.Controls.Add(this.btnSettings);
             this.panelHeader.Controls.Add(this.btnHelp);
-            this.panelHeader.Controls.Add(this.pictureBox1);
+            this.panelHeader.Controls.Add(this.pbcProfile);
             this.panelHeader.Controls.Add(this.button2);
             this.panelHeader.Controls.Add(this.lblUserName);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -232,15 +232,17 @@
             this.lblRool.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRool.AutoSize = true;
             this.lblRool.BackColor = System.Drawing.Color.Transparent;
+            this.lblRool.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRool.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRool.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(48)))), ((int)(((byte)(55)))));
             this.lblRool.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblRool.Location = new System.Drawing.Point(448, 24);
+            this.lblRool.Location = new System.Drawing.Point(485, 24);
             this.lblRool.Name = "lblRool";
             this.lblRool.Size = new System.Drawing.Size(29, 13);
             this.lblRool.TabIndex = 21;
             this.lblRool.Text = "Rool";
             this.lblRool.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblRool.Click += new System.EventHandler(this.lblRool_Click);
             // 
             // button4
             // 
@@ -268,17 +270,19 @@
             this.button3.TabIndex = 19;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // pbcProfile
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(566, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.pbcProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbcProfile.BackColor = System.Drawing.Color.Transparent;
+            this.pbcProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbcProfile.Image = ((System.Drawing.Image)(resources.GetObject("pbcProfile.Image")));
+            this.pbcProfile.Location = new System.Drawing.Point(448, 8);
+            this.pbcProfile.Name = "pbcProfile";
+            this.pbcProfile.Size = new System.Drawing.Size(28, 28);
+            this.pbcProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbcProfile.TabIndex = 16;
+            this.pbcProfile.TabStop = false;
+            this.pbcProfile.Click += new System.EventHandler(this.pbcProfile_Click);
             // 
             // button2
             // 
@@ -298,15 +302,17 @@
             this.lblUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUserName.AutoSize = true;
             this.lblUserName.BackColor = System.Drawing.Color.Transparent;
-            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(48)))), ((int)(((byte)(55)))));
             this.lblUserName.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblUserName.Location = new System.Drawing.Point(448, 8);
+            this.lblUserName.Location = new System.Drawing.Point(485, 8);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(114, 18);
+            this.lblUserName.Size = new System.Drawing.Size(130, 18);
             this.lblUserName.TabIndex = 17;
             this.lblUserName.Text = "Kirsten Mckellar";
             this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblUserName.Click += new System.EventHandler(this.lblUserName_Click);
             // 
             // panelMain
             // 
@@ -331,11 +337,12 @@
             this.Text = "Instituto de educación superior tecnológica publica";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormHome_FormClosing);
+            this.Load += new System.EventHandler(this.FormHome_Load);
             this.panelAside.ResumeLayout(false);
             this.panelAsideLeft.ResumeLayout(false);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbcProfile)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -348,7 +355,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblUserName;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbcProfile;
         public System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnChangeUser;

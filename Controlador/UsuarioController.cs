@@ -17,10 +17,33 @@ namespace Controlador
 
         private UsuarioModel userModel = new UsuarioModel();
 
+        // Login Usuario
         public bool loginUsuario(string userName, string password)
         {
             usuario = userModel.login(userName, password);
             return usuario == null ? false : true;
+        }
+
+        // Actualizar usuario
+        public void updateUsuario(string usuario, string clave, string nombre, string email, string foto, int id_usuario)
+        {
+            userModel.updateUsuario(usuario,clave,nombre,email,foto,id_usuario);
+        }
+
+        // Permisos de los roles
+        public void puedeConsultar(int ID_Rol, string Applicacion)
+        {
+            userModel.puedeConsultar(ID_Rol, Applicacion);
+        }
+
+        public void puedeEditar(int ID_Rol, string Applicacion)
+        {
+            userModel.puedeEditar(ID_Rol, Applicacion);
+        }
+
+        public void puedeEliminar(int ID_Rol, string Applicacion)
+        {
+            userModel.puedeEliminar(ID_Rol, Applicacion);
         }
     }
 }

@@ -34,12 +34,6 @@ namespace Vista.Navegacion
             this.formHome = formHome;
         }
 
-        private void btnPerfil_Click(object sender, EventArgs e)
-        {
-            togglePanels("perfil");
-            btnPerfil.BackColor = Color.White;
-        }
-
         private void togglePanels(string userControlPanel)
         {
             colorBtn();
@@ -93,6 +87,11 @@ namespace Vista.Navegacion
             btnPerfil.BackColor = Color.FromArgb(242, 246, 252);
             btnRoles.BackColor = Color.FromArgb(242, 246, 252);
             btnUsuario.BackColor = Color.FromArgb(242, 246, 252);
+        }
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            togglePanels("perfil");
+            btnPerfil.BackColor = Color.White;
         }
 
         private void btnRoles_Click(object sender, EventArgs e)

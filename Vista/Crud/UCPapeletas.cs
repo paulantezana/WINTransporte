@@ -145,5 +145,11 @@ namespace Vista.Crud
             FormImportarPapeletas formImportar = new FormImportarPapeletas();
             formImportar.ShowDialog();
         }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            DrawShape drawShape = new DrawShape();
+            drawShape.leftLine(panel5);
+        }
     }
 }

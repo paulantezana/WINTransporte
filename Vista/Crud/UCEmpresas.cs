@@ -36,8 +36,8 @@ namespace Vista.Crud
 
         private void cargarEmpresas()
         {
-            empresasTableAdapter.Fill(dBTransporte.empresas);
-            //this.empresasTableAdapter.EmpresaBuscar(this.dBTransporte.empresas, textBuscar.Text);
+            //empresasTableAdapter.Fill(dBTransporte.empresas);
+            this.empresasTableAdapter.EmpresaBuscar(this.dBTransporte.empresas, textBuscar.Text);
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -205,6 +205,12 @@ namespace Vista.Crud
         private void textBuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
             cargarEmpresas();
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            DrawShape drawShape = new DrawShape();
+            drawShape.leftLine(panel5);
         }
     }
 }

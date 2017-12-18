@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using Vista.Componentes;
 
 namespace Vista.Configuracion
 {
@@ -35,6 +37,7 @@ namespace Vista.Configuracion
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+            estado(false);
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -79,6 +82,44 @@ namespace Vista.Configuracion
         {
             usuariosTableAdapter.Fill(dBTransporte.usuarios);
             rolTableAdapter.Fill(dBTransporte.Rol);
+            estado(false);
+        }
+
+        private void btnCargarFoto_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            fotoTextBox.Text = openFileDialog1.FileName;
+            loadImage();
+        }
+
+        private void loadImage()
+        {
+            if (fotoTextBox.Text == string.Empty)
+            {
+                pbxPerfil.Image = null;
+            }
+            else
+            {
+                if (File.Exists(fotoTextBox.Text))
+                {
+                    pbxPerfil.Load(fotoTextBox.Text);
+                }
+                else
+                {
+                    pbxPerfil.Image = null;
+                }
+            }
+        }
+
+        private void usuariosDataGridView_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            loadImage();
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            DrawShape drawShape = new DrawShape();
+            drawShape.leftLine(panel5);
         }
     }
 }

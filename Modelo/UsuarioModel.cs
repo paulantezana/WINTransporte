@@ -21,20 +21,36 @@ namespace Modelo
             DBTransporte.usuariosRow usuariosRow = (DBTransporte.usuariosRow)usuariosDataTable.Rows[0];
             user.usuario = usuariosRow.usuario;
             user.idUsuario = usuariosRow.id_usuario;
-            user.nombre = usuariosRow.nombre;
+            user.nombres = usuariosRow.nombre;
+            user.email = usuariosRow.email;
             user.clave = usuariosRow.clave;
             user.foto = usuariosRow.foto;
-            user.email = usuariosRow.email;
-            user.idRol = usuariosRow.ID_Rol;
+            user.idRool = usuariosRow.ID_Rol;
             return user;
         }
+
+        // Actualizacion del perfil de usuario
         public void updateUsuario(string usuario, string clave, string nombre, string email, string foto, int id_usuario)
         {
-            adapter.UpdateUsuario(usuario,clave, nombre, email, foto, id_usuario);
+            adapter.UpdateUsuario(usuario,clave,nombre,email,foto,id_usuario);
         }
-        public void cambiarClave(string clave, int id_usuario)
+
+        // Permisos de los usuarios por roles en cada applicacion
+        public void puedeConsultar(int ID_Rol, string Applicacion)
         {
-            adapter.CambiarClave(clave, id_usuario);
+            //rolesTableAdapter.PuedeConsultar(ID_Rol, Applicacion);
         }
+
+        public void puedeEditar(int ID_Rol, string Applicacion)
+        {
+            //rolesTableAdapter.PuedeEditar(ID_Rol, Applicacion);
+        }
+
+        public void puedeEliminar(int ID_Rol, string Applicacion)
+        {
+            //rolesTableAdapter.PuedeEliminar(ID_Rol, Applicacion);
+        }
+
+        // Finalizando
     }
 }

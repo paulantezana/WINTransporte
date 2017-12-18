@@ -13211,8 +13211,8 @@ SELECT id_empresa, codigo, nombre, gerente, propietario, telefono, direccion, ci
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT id_empresa, codigo, nombre, gerente, propietario, telefono, direccion, ciu" +
-                "dad, id_tipo_empresa FROM dbo.empresas\r\nWHERE codigo = @buscar OR  nombre = @bus" +
-                "car";
+                "dad, id_tipo_empresa FROM dbo.empresas\r\nWHERE codigo LIKE \'%\' +  @buscar + \'%\' O" +
+                "R  nombre LIKE \'%\' + @buscar + \'%\'";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@buscar", global::System.Data.SqlDbType.VarChar, 32, global::System.Data.ParameterDirection.Input, 0, 0, "codigo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -13754,11 +13754,17 @@ SELECT ID_Roles, ID_Rol, Applicacion, Consultar, Editar, Eliminar FROM Roles WHE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID_Roles, ID_Rol, Applicacion, Consultar, Editar, Eliminar FROM dbo.Roles";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT ID_Roles, ID_Rol, Applicacion, Consultar, Editar, Eliminar FROM dbo.Roles\r" +
+                "\nWHERE ID_Rol = @ID_Rol";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Rol", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Rol", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13783,6 +13789,20 @@ SELECT ID_Roles, ID_Rol, Applicacion, Consultar, Editar, Eliminar FROM Roles WHE
             DBTransporte.RolesDataTable dataTable = new DBTransporte.RolesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int BuscarRoles(DBTransporte.RolesDataTable dataTable, int ID_Rol) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID_Rol));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

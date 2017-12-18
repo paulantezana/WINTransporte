@@ -161,11 +161,11 @@
   <data name="tsbCancelarRol.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADbSURBVEhL7ZVNDsIgEEa5kLoCEzdGehPd6gXskbssS//6
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADbSURBVEhL7ZVNDsIgEEY5kNEVGFdGehPd6gXsjbstS//6
         wdBQrYDt2GjSl5CSGSZvCLQVM/+L2akVTbP5uMZoWZpC3Y1WZwolwVpXI0sKxUFXVaFuKMKz1upIqbfU
         hTx1a9ZLSsVpujtUW3W1HSZ21u4EElezp1QeObLREk9Mxibx9MnYJZ4X2TckHivT7mZZiZvzSkD7boUj
         ODMWQgnek3BnbLKOhM4E4/mC0PJh9EkoJTBnkcUkHsRGyXIkHuQGyab/qG4WF3RLoSRYa2uaWgrlMcmP
-        b+aHEOIBho424StQIC4AAAAASUVORK5CYII=
+        b+aHEOIB2Gc2veh9ceUAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="rolesBindingNavigator.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -257,11 +257,11 @@
   <data name="rolesBindingNavigatorCancelItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADbSURBVEhL7ZVNDsIgEEY5UV0xLlwY6U10qxewV+6uLP3r
-        B0NDtQK22GjSl5CSGSZvCLQVC/+L3tGKp8l8XKOVrHRJd63ozKEoWGtrZMWhMOiqLumGIjwbRUdOvaUp
-        5alfsy44Fabt7lBv6Wo6jOys2wkktmbPqTRSZJMljpAsm8QxJMsucbzIviFxGJmyN8tI7DyvBHTvlj+8
-        M8uCL8F74u8sm6wn4TPBeL4gvHwcQxJOCcyzyEISB2KTZCkSB3KjZPN/VDfFBd1yKArWmpq2lkNpzPLj
-        W/ghhHgANLU3BRy4SFEAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADbSURBVEhL7ZVNDsIgEEa5kLoCEzdGehPd6gXskbssS//6
+        wdBQrYDt2GjSl5CSGSZvCLQVM/+L2akVTbP5uMZoWZpC3Y1WZwolwVpXI0sKxUFXVaFuKMKz1upIqbfU
+        hTx1a9ZLSsVpujtUW3W1HSZ21u4EElezp1QeObLREk9Mxibx9MnYJZ4X2TckHivT7mZZiZvzSkD7boUj
+        ODMWQgnek3BnbLKOhM4E4/mC0PJh9EkoJTBnkcUkHsRGyXIkHuQGyab/qG4WF3RLoSRYa2uaWgrlMcmP
+        b+aHEOIBho424StQIC4AAAAASUVORK5CYII=
 </value>
   </data>
 </root>

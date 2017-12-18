@@ -28,18 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCCruds));
             this.btnChoferes = new System.Windows.Forms.Button();
             this.btnVehiuclos = new System.Windows.Forms.Button();
             this.btnRutas = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEmpresas = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnPapeletas = new System.Windows.Forms.Button();
             this.btnLicencias = new System.Windows.Forms.Button();
             this.btnTipoEmpresa = new System.Windows.Forms.Button();
             this.btnTipoVehiculo = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnChoferes
@@ -53,11 +51,11 @@
             this.btnChoferes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChoferes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnChoferes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChoferes.Location = new System.Drawing.Point(16, 230);
+            this.btnChoferes.Location = new System.Drawing.Point(0, 187);
             this.btnChoferes.Name = "btnChoferes";
-            this.btnChoferes.Size = new System.Drawing.Size(164, 45);
+            this.btnChoferes.Size = new System.Drawing.Size(160, 45);
             this.btnChoferes.TabIndex = 22;
-            this.btnChoferes.Text = " Choferes";
+            this.btnChoferes.Text = "    Choferes";
             this.btnChoferes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChoferes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChoferes.UseVisualStyleBackColor = false;
@@ -74,11 +72,11 @@
             this.btnVehiuclos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVehiuclos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnVehiuclos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVehiuclos.Location = new System.Drawing.Point(16, 185);
+            this.btnVehiuclos.Location = new System.Drawing.Point(0, 142);
             this.btnVehiuclos.Name = "btnVehiuclos";
-            this.btnVehiuclos.Size = new System.Drawing.Size(164, 45);
+            this.btnVehiuclos.Size = new System.Drawing.Size(160, 45);
             this.btnVehiuclos.TabIndex = 21;
-            this.btnVehiuclos.Text = " Vehiculos";
+            this.btnVehiuclos.Text = "    Vehiculos";
             this.btnVehiuclos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVehiuclos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVehiuclos.UseVisualStyleBackColor = false;
@@ -95,25 +93,15 @@
             this.btnRutas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRutas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnRutas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRutas.Location = new System.Drawing.Point(16, 140);
+            this.btnRutas.Location = new System.Drawing.Point(0, 97);
             this.btnRutas.Name = "btnRutas";
-            this.btnRutas.Size = new System.Drawing.Size(164, 45);
+            this.btnRutas.Size = new System.Drawing.Size(160, 45);
             this.btnRutas.TabIndex = 20;
-            this.btnRutas.Text = " Rutas";
+            this.btnRutas.Text = "    Rutas";
             this.btnRutas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRutas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRutas.UseVisualStyleBackColor = false;
             this.btnRutas.Click += new System.EventHandler(this.btnRutas_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(125, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
             // 
             // btnEmpresas
             // 
@@ -126,26 +114,15 @@
             this.btnEmpresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpresas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnEmpresas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpresas.Location = new System.Drawing.Point(16, 95);
+            this.btnEmpresas.Location = new System.Drawing.Point(0, 52);
             this.btnEmpresas.Name = "btnEmpresas";
-            this.btnEmpresas.Size = new System.Drawing.Size(164, 45);
+            this.btnEmpresas.Size = new System.Drawing.Size(160, 45);
             this.btnEmpresas.TabIndex = 18;
-            this.btnEmpresas.Text = " Empresas";
+            this.btnEmpresas.Text = "    Empresas";
             this.btnEmpresas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmpresas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEmpresas.UseVisualStyleBackColor = false;
             this.btnEmpresas.Click += new System.EventHandler(this.btnEmpresas_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(18, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 29);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Crud";
             // 
             // btnPapeletas
             // 
@@ -158,11 +135,11 @@
             this.btnPapeletas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPapeletas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnPapeletas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPapeletas.Location = new System.Drawing.Point(16, 275);
+            this.btnPapeletas.Location = new System.Drawing.Point(0, 232);
             this.btnPapeletas.Name = "btnPapeletas";
-            this.btnPapeletas.Size = new System.Drawing.Size(164, 45);
+            this.btnPapeletas.Size = new System.Drawing.Size(160, 45);
             this.btnPapeletas.TabIndex = 23;
-            this.btnPapeletas.Text = " Papeletas";
+            this.btnPapeletas.Text = "    Papeletas";
             this.btnPapeletas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPapeletas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPapeletas.UseVisualStyleBackColor = false;
@@ -179,11 +156,11 @@
             this.btnLicencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLicencias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnLicencias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLicencias.Location = new System.Drawing.Point(16, 320);
+            this.btnLicencias.Location = new System.Drawing.Point(0, 277);
             this.btnLicencias.Name = "btnLicencias";
-            this.btnLicencias.Size = new System.Drawing.Size(164, 45);
+            this.btnLicencias.Size = new System.Drawing.Size(160, 45);
             this.btnLicencias.TabIndex = 24;
-            this.btnLicencias.Text = " Licencias";
+            this.btnLicencias.Text = "    Licencias";
             this.btnLicencias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLicencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLicencias.UseVisualStyleBackColor = false;
@@ -200,11 +177,11 @@
             this.btnTipoEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTipoEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnTipoEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTipoEmpresa.Location = new System.Drawing.Point(16, 365);
+            this.btnTipoEmpresa.Location = new System.Drawing.Point(0, 322);
             this.btnTipoEmpresa.Name = "btnTipoEmpresa";
-            this.btnTipoEmpresa.Size = new System.Drawing.Size(164, 45);
+            this.btnTipoEmpresa.Size = new System.Drawing.Size(160, 45);
             this.btnTipoEmpresa.TabIndex = 25;
-            this.btnTipoEmpresa.Text = " Tipos Empresa";
+            this.btnTipoEmpresa.Text = "    Tipos Empresa";
             this.btnTipoEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTipoEmpresa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTipoEmpresa.UseVisualStyleBackColor = false;
@@ -221,37 +198,45 @@
             this.btnTipoVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTipoVehiculo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnTipoVehiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTipoVehiculo.Location = new System.Drawing.Point(16, 410);
+            this.btnTipoVehiculo.Location = new System.Drawing.Point(0, 367);
             this.btnTipoVehiculo.Name = "btnTipoVehiculo";
-            this.btnTipoVehiculo.Size = new System.Drawing.Size(164, 45);
+            this.btnTipoVehiculo.Size = new System.Drawing.Size(160, 45);
             this.btnTipoVehiculo.TabIndex = 26;
-            this.btnTipoVehiculo.Text = " Tipos Vehiculo";
+            this.btnTipoVehiculo.Text = "    Tipos Vehiculo";
             this.btnTipoVehiculo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTipoVehiculo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTipoVehiculo.UseVisualStyleBackColor = false;
             this.btnTipoVehiculo.Click += new System.EventHandler(this.btnTipoVehiculo_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
+            this.panel1.Controls.Add(this.btnEmpresas);
+            this.panel1.Controls.Add(this.btnTipoVehiculo);
+            this.panel1.Controls.Add(this.btnRutas);
+            this.panel1.Controls.Add(this.btnTipoEmpresa);
+            this.panel1.Controls.Add(this.btnVehiuclos);
+            this.panel1.Controls.Add(this.btnLicencias);
+            this.panel1.Controls.Add(this.btnChoferes);
+            this.panel1.Controls.Add(this.btnPapeletas);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(20, 30);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(160, 515);
+            this.panel1.TabIndex = 28;
             // 
             // UCCruds
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(222)))), ((int)(((byte)(240)))));
-            this.Controls.Add(this.btnTipoVehiculo);
-            this.Controls.Add(this.btnTipoEmpresa);
-            this.Controls.Add(this.btnLicencias);
-            this.Controls.Add(this.btnPapeletas);
-            this.Controls.Add(this.btnChoferes);
-            this.Controls.Add(this.btnVehiuclos);
-            this.Controls.Add(this.btnRutas);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnEmpresas);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Name = "UCCruds";
+            this.Padding = new System.Windows.Forms.Padding(20, 30, 0, 30);
             this.Size = new System.Drawing.Size(180, 575);
             this.Load += new System.EventHandler(this.UCCruds_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -260,12 +245,11 @@
         private System.Windows.Forms.Button btnChoferes;
         private System.Windows.Forms.Button btnVehiuclos;
         private System.Windows.Forms.Button btnRutas;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnEmpresas;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPapeletas;
         private System.Windows.Forms.Button btnLicencias;
         private System.Windows.Forms.Button btnTipoEmpresa;
         private System.Windows.Forms.Button btnTipoVehiculo;
+        private System.Windows.Forms.Panel panel1;
     }
 }

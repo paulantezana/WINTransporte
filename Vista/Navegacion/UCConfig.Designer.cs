@@ -32,6 +32,8 @@
             this.btnUsuario = new System.Windows.Forms.Button();
             this.btnRoles = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGeneral
@@ -45,11 +47,11 @@
             this.btnGeneral.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGeneral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnGeneral.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGeneral.Location = new System.Drawing.Point(16, 230);
+            this.btnGeneral.Location = new System.Drawing.Point(0, 182);
             this.btnGeneral.Name = "btnGeneral";
-            this.btnGeneral.Size = new System.Drawing.Size(164, 45);
+            this.btnGeneral.Size = new System.Drawing.Size(160, 45);
             this.btnGeneral.TabIndex = 26;
-            this.btnGeneral.Text = "General";
+            this.btnGeneral.Text = "    General";
             this.btnGeneral.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGeneral.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGeneral.UseVisualStyleBackColor = false;
@@ -66,11 +68,11 @@
             this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuario.Location = new System.Drawing.Point(16, 185);
+            this.btnUsuario.Location = new System.Drawing.Point(0, 137);
             this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(164, 45);
+            this.btnUsuario.Size = new System.Drawing.Size(160, 45);
             this.btnUsuario.TabIndex = 25;
-            this.btnUsuario.Text = "Usuarios";
+            this.btnUsuario.Text = "    Usuarios";
             this.btnUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUsuario.UseVisualStyleBackColor = false;
@@ -87,11 +89,11 @@
             this.btnRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnRoles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRoles.Location = new System.Drawing.Point(16, 140);
+            this.btnRoles.Location = new System.Drawing.Point(0, 92);
             this.btnRoles.Name = "btnRoles";
-            this.btnRoles.Size = new System.Drawing.Size(164, 45);
+            this.btnRoles.Size = new System.Drawing.Size(160, 45);
             this.btnRoles.TabIndex = 24;
-            this.btnRoles.Text = "Roles";
+            this.btnRoles.Text = "    Roles";
             this.btnRoles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRoles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRoles.UseVisualStyleBackColor = false;
@@ -108,27 +110,39 @@
             this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerfil.Location = new System.Drawing.Point(16, 95);
+            this.btnPerfil.Location = new System.Drawing.Point(0, 47);
             this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(164, 45);
+            this.btnPerfil.Size = new System.Drawing.Size(160, 45);
             this.btnPerfil.TabIndex = 23;
-            this.btnPerfil.Text = "Perfil";
+            this.btnPerfil.Text = "    Perfil";
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPerfil.UseVisualStyleBackColor = false;
             this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
+            this.panel1.Controls.Add(this.btnPerfil);
+            this.panel1.Controls.Add(this.btnGeneral);
+            this.panel1.Controls.Add(this.btnRoles);
+            this.panel1.Controls.Add(this.btnUsuario);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(20, 30);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(160, 503);
+            this.panel1.TabIndex = 27;
             // 
             // UCConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(222)))), ((int)(((byte)(240)))));
-            this.Controls.Add(this.btnGeneral);
-            this.Controls.Add(this.btnUsuario);
-            this.Controls.Add(this.btnRoles);
-            this.Controls.Add(this.btnPerfil);
+            this.Controls.Add(this.panel1);
             this.Name = "UCConfig";
+            this.Padding = new System.Windows.Forms.Padding(20, 30, 0, 30);
             this.Size = new System.Drawing.Size(180, 563);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -139,5 +153,6 @@
         private System.Windows.Forms.Button btnUsuario;
         private System.Windows.Forms.Button btnRoles;
         private System.Windows.Forms.Button btnPerfil;
+        private System.Windows.Forms.Panel panel1;
     }
 }
